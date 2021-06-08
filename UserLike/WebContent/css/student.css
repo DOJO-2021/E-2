@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+/*---------- 全体 ----------*/
+html * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*　チェック用アウトライン
+　　*{outline:1px solid #FF0000;}
+
+カラーパレット
+#b3d4fc　水色
+#ffa500　オレンジ
+#898989　グレー
+#FFFFFF　白
+*/
+
+/*--------------- ふわふわ背景 --------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ログインページの<li>一つにつき一つのまるを作る初期設定 */
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px; /* 円の直径 */
+    height: 20px; /* 円の直径 */
+    background: rgba(179, 212, 252, 0.8); /* まるの色 水色のRGBA 0.8は透過度合い */
+    animation: animate 25s linear infinite; /* 動き全体にかかる時間 */
+    bottom: -150px; /* 動きはじめる位置 */
+
+}
+
+/* 1つめの<li>の設定 */
+.circles li:nth-child(1){
+    left: 25%; /* 画面の横幅を100%とした際、画面左端から何%の位置か */
+    width: 80px; /* 円の直径 */
+    height: 80px; /* 円の直径 */
+    animation-delay: 0s; /* 動き始めるタイミング */
+}
+
+/* 2つめの<li>の設定 */
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s; /* 動き始めるタイミング */
+    animation-duration: 12s; /* 動き全体にかかる時間 */
+    background: rgba(255, 165, 0, 0.8); /* まるの色 オレンジのRGBA 0.8は透過度合い */
+}
+
+/* 3つめの<li>の設定 */
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+/* 4つめの<li>の設定 */
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+       background: rgba(255, 165, 0, 0.8); /* まるの色 オレンジのRGBA 0.8は透過度合い */
+}
+
+/* 5つめの<li>の設定 */
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+/* 6つめの<li>の設定 */
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+   background: rgba(255, 165, 0, 0.8); /* まるの色 オレンジのRGBA 0.8は透過度合い */
+}
+
+/* 7つめの<li>の設定 */
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+/* 8つめの<li>の設定 */
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+/* 9つめの<li>の設定 */
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+/* 10個めの<li>の設定 */
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+ /*---------------- レスポンシブ ------------------*/
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
