@@ -10,6 +10,7 @@
 	<title>ヤザワスイッチ | 受講者一覧</title>
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 </head>
 
@@ -24,6 +25,14 @@
 
 		<main>
 			<!--メイン-->
+
+			<!-- 一覧表示のテーブル入力ループ -->
+			<table>
+
+			</table>
+			<form method="POST" action="TeacherPrfServlet" id="form" style="width:90%"><!-- 選択したデータを編集できるようにする -->
+				<input type="hidden" name="id">
+			</form>
 
 		</main>
 

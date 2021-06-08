@@ -2,8 +2,8 @@
 
 /*---------- 全体 ----------*/
 html * {
-  box-sizing: border-box;
-  margin: 0;
+box-sizing: border-box;
+margin: 0;
 }
 
 /*　チェック用アウトライン
@@ -16,17 +16,22 @@ html * {
 #FFFFFF　白
 */
 
+/* ロゴの画像 */
+.logo_image{
+	width: 120px;
+}
+
 body {
-  background-color: #ffffff;
-  color: inherit;
+	background-color: #ffffff;
+	color: inherit;
 }
 
 .wrapper {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 h2 {
-  text-align: center;
+	text-align: center;
 }
 
 
@@ -38,42 +43,42 @@ h2 {
 
 /*-------- トップに戻るボタン ---------*/
 #page_top{
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background: #898989;
-  opacity: 0.6;
-  border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: #898989;
+	opacity: 0.6;
+	border-radius: 50%;
 }
 #page_top a{
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-decoration: none;
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
 }
 #page_top a::before{
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f0d8';
-  font-size: 25px;
-  color: #fff;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: -5px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: '\f0d8';
+	font-size: 25px;
+	color: #fff;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: -5px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {
-  h2 {
-    padding-top: 160px;
-  }
+	h2 {
+		padding-top: 160px;
+	}
 }

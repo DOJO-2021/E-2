@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ</title>
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 </head>
 
@@ -17,7 +18,7 @@
 	<div class="wrapper">
 			<!--ヘッダー-->
 			<header class="header">
-				<h1 class="logo"><a href="/USerLike/MainServlet"><img src="img/logo.png"></a></h1>
+				<h1 class="logo"><a href="/USerLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 			</header>
 
 
