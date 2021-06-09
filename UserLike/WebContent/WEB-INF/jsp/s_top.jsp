@@ -25,7 +25,7 @@
 
 		<main>
 			<!--メイン-->
-
+			<input type="image" src="img/button/Understood.png" alt="わかった">
 		</main>
 
 		<footer class="footer"><!--フッター-->

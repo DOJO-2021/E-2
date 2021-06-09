@@ -5,7 +5,7 @@
 
 <head>
 	<!--情報-->
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | 新規登録</title>
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
@@ -17,15 +17,109 @@
 
 <body>
 	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="s_header.jsp" />
-			</header>
+		<!--ヘッダー-->
+		<header class="header">
+			<jsp:include page="s_header.jsp" />
+		</header>
 
 
 		<main>
 			<!--メイン-->
-
+			<h1>受講者用新規登録</h1><hr>
+			<form method="GET" action="result.html">
+			<div class="cp_iptxt">
+				<label>ID</label><br>
+				<input class="ef" type="text" placeholder="ID">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_iptxt">
+				<label>パスワード</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_iptxt">
+				<label>パスワード(再入力)</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_iptxt">
+				<label>名前</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_iptxt">
+				<label>メールアドレス</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<table class="info">
+			  <tr>
+			    <th>性別</th>
+			    <td>
+			      <input type="radio" name="gender" value="man" checked>男
+			      <input type="radio" name="gender" value="woman">女
+			    </td>
+			  </tr>
+			  <tr>
+			    <th>クラス名</th>
+			    <td>
+			      <input type="radio" name="c_name" value="a" checked>A
+			      <input type="radio" name="c_name" value="b">B
+			      <input type="radio" name="c_name" value="c">C
+			      <input type="radio" name="c_name" value="d">D
+			      <input type="radio" name="c_name" value="e">E
+			    </td>
+			  </tr>
+			  <tr>
+			    <th>プログラミング経験</th>
+			    <td>
+			      <input type="radio" name="exp" value="yes" checked>あり
+			      <input type="radio" name="exp" value="no">なし
+			    </td>
+			  </tr>
+			</table>
+			<div class="cp_ip">
+				<label>出身学部</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>出身地</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>趣味</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>特技</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>好きな音楽</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>バイト経験</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>課外活動経験</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_ip">
+				<label>自己PR</label><br>
+				<input class="ef" type="text" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<a href="result.html" class="btn-circle-flat">登録</a>
+			</form>
 		</main>
 
 		<footer class="footer"><!--フッター-->

@@ -41,7 +41,18 @@
 
 		<main>
 			<!--メイン-->
+			<h1>ログイン</h1>
+			<form method="POST" action="/UserLike/TeacherLoginServlet">
+				<p>ユーザーID</p>
+				<input type="text" name="ID" placeholder = "ID入力">
 
+				<p>パスワード</p>
+				<input type="password" name="PW" placeholder = "パスワード入力">
+				<input type="submit" name="LOGIN" value="ログイン">
+
+				<a href = "/UserLike/TeacherNewServlet">パスワードを忘れた方</a>
+				<a href = "/UserLike/TeacherNewServlet">初めての方</a>
+			</form>
 		</main>
 
 		<footer class="footer"><!--フッター-->

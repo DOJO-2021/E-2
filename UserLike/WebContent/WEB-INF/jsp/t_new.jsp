@@ -17,15 +17,45 @@
 
 <body>
 	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="t_header.jsp" />
-			</header>
+		<!--ヘッダー-->
+		<header class="header">
+			<jsp:include page="t_header.jsp" />
+		</header>
 
 
 		<main>
 			<!--メイン-->
+			<h1>講師新規登録画面</h1>
+			<form>
+				<div class="t_id">
+					<label>ユーザーID</label><br>
+					<input type ="text" name="id" placeholder="ID入力">
+				</div>
 
+				<div class="t_pw">
+					<label>パスワード</label><br>
+					<input type="text" name="pw" placeholder="パスワード入力">
+				</div>
+
+				<div class="t_pw_2">
+					<label>パスワード(再入力)</label><br>
+					<input type="text" name="pw" placeholder="パスワード入力">
+				</div>
+
+				<div class="class_name">
+					<label>クラス名</label><br>
+					<input type="radio" name="class" value="A" checked>A
+					<input type="radio" name="class" value="B">B
+					<input type="radio" name="class" value="C">C
+					<input type="radio" name="class" value="D">D
+					<input type="radio" name="class" value="E">E
+				</div>
+
+				<!-- 登録ボタン -->
+				<div class="button">
+					<input type="submit" name="submit" value="登録">
+				</div>
+			</form>
 		</main>
 
 		<footer class="footer"><!--フッター-->
