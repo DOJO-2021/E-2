@@ -7,7 +7,6 @@
 	<!--情報-->
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="file:///C:/pleiades/workspace/E-2/UserLike/WebContent/img/favicon.ico" />
 	<title>ヤザワスイッチ</title>
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -19,9 +18,11 @@
 	<div class="wrapper">
 			<!--ヘッダー-->
 			<header class="header">
+			<div class="mainitem">
 				<h1 class="logo"><a href="/USerLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 			<!-- ヘッダー部分ナビゲーション -->
-		    <nav>
+
+		    <nav class="navitem">
 		      <ul>
 		         <li><a href="#"></a>Home</li>
 		         <li><a href="#"></a>service</li>
@@ -29,17 +30,17 @@
 		         <li><a href="#"></a>contact</li>
 		      </ul>
 		    </nav>
-
+            </div>
 			</header>
 
 
 		<main>
 			<!--メイン-->
             <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
-           <nav>
+           <nav class="navnew">
              <ul>
-                 <li><a href="#">講師の方はこちら</a></li>
-                 <li><a href="#">受講生の方はこちら</a></li>
+                 <li><a href="/UserLike/TeacherNewServlet">講師の方はこちら</a></li>
+                 <li><a href="/UserLike/StudentNewServlet">受講生の方はこちら</a></li>
              </ul>
            </nav>
        <!-- メインロゴ挿入 -->

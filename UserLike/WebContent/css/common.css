@@ -28,6 +28,7 @@ body {
 
 .wrapper {
 	margin: 0 auto;
+	max-width: 1200px;
 }
 
 h2 {
@@ -38,7 +39,10 @@ h2 {
 
 
 
-
+/*-------- 反応ボタン ---------*/
+.reaction_button{
+	width: 100%;
+}
 
 
 /*-------- トップに戻るボタン ---------*/
@@ -75,7 +79,33 @@ h2 {
 	margin: auto;
 	text-align: center;
 }
-
+/*----------------------  main.jsp  -------------------------------------*/
+/*-------------logo とnavを横に並べる----------------*/
+.mainitem {
+    display: flex;
+    padding:20px 8px;
+}
+.navitem li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 30px;
+}
+/*---------------- mainlogo大きさ変更   --------------*/
+.mainlogo_image {
+	width: 60%;
+}
+/*----------------------ヤザワスイッチlogoを真ん中に移動---------------------------*/
+.mainlogo {
+	text-align: center;
+	margin: 50px;
+}
+/*--------------  メイン部分nav 配置及び詳細設定  ---------------------*/
+.navnew li {
+	display: block;
+	list-style-type: none;
+	text-align: right;
+	margin: 20px;
+}
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {
 	h2 {

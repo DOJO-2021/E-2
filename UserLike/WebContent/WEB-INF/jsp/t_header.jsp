@@ -1,10 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<div class="t-heditem">
 <h1 class="logo"><a href="/UserLike/TeacherTopServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 <nav class="nav">
 	<ul>
-		<li><a href="/UserLike/TeacherPrfServlet"></a></li>
-		<li><a href="/UserLike/TeacherServlet"></a></li>
+		<li><a href="/UserLike/TeacherTopServlet">TOP</a></li>
+		<li><a href="/UserLike/TeacherListServlet">UserList</a></li>
+		<li><a href="/UserLike/TeacherLoginServlet">Logout</a></li>
 	</ul>
 </nav>
+</div>
+
+
+<style>
+/*--------- logoとnavを横に並べる  ------*/
+.t-heditem {
+    display: flex;
+    padding:20px 8px;
+}
+.nav li {
+    display: inline;
+	list-style-type: none;
+	padding-right: 30px;
+}
+/*-----------  logo 大きさ設定  -------------------*/
+.logo_image {
+    width: 70px;
+}
+</style>

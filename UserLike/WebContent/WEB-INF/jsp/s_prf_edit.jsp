@@ -27,76 +27,44 @@
 			<!--メイン-->
 			<h1>プロフィール編集</h1>
 			<form>
-				<table>
-					<tr>
-					<td><input type="text"  name="" value="{}"></td>
-					</tr>
+				<input type="text"  name="" value="${sample}">
 
-					<tr>
-					<th>受講者ID</th>
-					<td><input type="text"  name="S_ID" value="{}"></td>
-					</tr>
+				<label class="item_title">性別</label>
+				<input type="text"  name="GENDER" value="{}">
 
-					<tr>
-					<th>性別</th>
-					<td><input type="text"  name="GENDER" value="{}"></td>
-					</tr>
+				<label class="item_title">クラス</label>
+				<input type="text"  name="C_NAME" value="{}">
 
-					<tr>
-					<th>クラス</th>
-					<td><input type="text"  name="C_NAME" value="{}"></td>
-					</tr>
+				<label class="item_title">Email</label>
+				<input type="text"  name="S_MAIL" value="{}">
 
-					<tr>
-					<th>Email</th>
-					<td><input type="text"  name="S_MAIL" value="{}"></td>
-					</tr>
+				<label class="item_title">プログラミング経験なし</label>
+				<input type="text"  name="EXP" value="{}">
 
-					<tr>
-					<th>プログラミング経験なし</th>
-					<td><input type="text"  name="EXP" value="{}"></td>
-					</tr>
+				<label class="item_title">出身学部</label>
+				<input type="text"  name="COLLEGE" value="{}">
 
-					<tr>
-					<th>出身学部</th>
-					<td><input type="text"  name="COLLEGE" value="{}"></td>
-					</tr>
+				<label class="item_title">出身地</label>
+				<input type="text"  name="B_PLACE" value="{}">
 
-					<tr>
-					<th>出身地</th>
-					<td><input type="text"  name="B_PLACE" value="{}"></td>
-					</tr>
+				<label class="item_title">趣味</label>
+				<input type="text"  name="HOBBY" value="{}">
 
-					<tr>
-					<th>趣味</th>
-					<td><input type="text"  name="HOBBY" value="{}"></td>
-					</tr>
+				<label class="item_title">特技</label>
+				<input type="text"  name="SKILL" value="{}">
 
-					<tr>
-					<th>特技</th>
-					<td><input type="text"  name="SKILL" value="{}"></td>
-					</tr>
+				<label class="item_title">好きな音楽</label>
+				<input type="text"  name="MUSIC" value="{}">
 
-					<tr>
-					<th>好きな音楽</th>
-					<td><input type="text"  name="MUSIC" value="{}"></td>
-					</tr>
+				<label class="item_title">バイト経験</label>
+				<input type="text"  name="JOB" value="{}">
 
-					<tr>
-					<th>バイト経験</th>
-					<td><input type="text"  name="JOB" value="{}"></td>
-					</tr>
+				<label class="item_title">課外活動経験</label>
+				<input type="text"  name="ACTIVITY" value="{}">
 
-					<tr>
-					<th>課外活動経験</th>
-					<td><input type="text"  name="ACTIVITY" value="{}"></td>
-					</tr>
+				<label class="item_title">自己PR</label>
+				<input type="text"  name="PR" value="{}">
 
-					<tr>
-					<th>自己PR</th>
-					<td><input type="text"  name="PR" value="{}"></td>
-					</tr>
-				</table>
 			</form>
 		</main>
 

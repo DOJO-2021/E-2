@@ -17,15 +17,90 @@
 
 <body>
 	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="t_header.jsp" />
-			</header>
-
+		<!--ヘッダー-->
+		<header class="header">
+			<jsp:include page="t_header.jsp" />
+		</header>
 
 		<main>
 			<!--メイン-->
+			<!-- 受講者自身のプロフィールを確認できる画面 -->
+			<h1>プロフィール</h1>
 
+
+			<!-- 写真 -->
+
+
+			<input type="hidden"  name="S_ID" value="{}">
+
+			<div id="S_name">
+			<p>なまえ なまえ</p>
+			</div>
+
+			<div id="S_ID" >
+			<label class="item_title">受講者ID</label>
+			<p>${sample}</p>
+			</div>
+
+			<div id="GENDER" >
+			<label class="item_title">性別</label>
+			<p></p>
+			</div>
+
+			<div id="C_NAME">
+			<label class="item_title">クラス</label>
+			<p></p>
+			</div>
+
+			<div id="S_MAIL">
+			<label class="item_title">Emai</label>
+			<p></p>
+			</div>
+
+			<div id="EXP">
+			<label class="item_title">プログラミング経験</label>
+			<p></p>
+			</div>
+
+			<div id="COLLEGE">
+			<label class="item_title">出身学部</label>
+			<p></p>
+			</div>
+
+			<div id="B_PLACE">
+			<label class="item_title">出身地</label>
+			<p></p>
+			</div>
+
+			<div id="HOBBY">
+			<label class="item_title">趣味</label>
+			<p></p>
+			</div>
+
+			<div id="SKILL">
+			<label class="item_title">特技</label>
+			<p></p>
+			</div>
+
+			<div id="MUSIC">
+			<label class="item_title">好きな音楽</label>
+			<p></p>
+			</div>
+
+			<div id="JOB">
+			<label class="item_title">バイト経験</label>
+			<p></p>
+			</div>
+
+			<div id="ACTIVITY">
+			<label class="item_title">課外活動経験</label>
+			<p></p>
+			</div>
+
+			<div id="PR">
+			<label class="item_title">自己PR</label>
+			<p></p>
+			</div>
 		</main>
 
 		<footer class="footer"><!--フッター-->
