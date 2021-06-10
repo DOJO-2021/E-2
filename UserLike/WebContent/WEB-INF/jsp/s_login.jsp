@@ -16,51 +16,50 @@
 
 
 <body>
-	<!--ふわふわ背景-->
-	<div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+	<!--ヘッダー-->
+	<header class="header">
+		<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
+	</header>
 
-	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="s_header.jsp" />
-			</header>
-
-
+	<div class="context">
 		<main>
 			<!--メイン-->
 			<h1>ログイン</h1>
 			<form method="POST" action="/UserLike/StudentLoginServlet">
 				<p>ユーザーID</p>
-				<input type="text" name="ID" placeholder = "ID入力">
+				<input type="text" name="S_ID" placeholder = "ID入力">
 
 				<p>パスワード</p>
-				<input type="password" name="PW" placeholder = "パスワード入力">
+				<input type="password" name="S_PW" placeholder = "パスワード入力">
 				<input type="submit" name="LOGIN" value="ログイン">
 
 				<a href = "/UserLike/StudentNewServlet">パスワードを忘れた方</a>
 				<a href = "/UserLike/StudentNewServlet">初めての方</a>
 			</form>
 		</main>
-
-		<footer class="footer"><!--フッター-->
-			<jsp:include page="footer.jsp" />
-		</footer>
-
-		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
-		<div id="page_top"><a href="#"></a></div>
 	</div>
+
+	<!--ふわふわ背景-->
+	<div class="area" >
+           <ul class="circles">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+    </div >
+
+	<footer class="footer"><!--フッター-->
+		<jsp:include page="footer.jsp" />
+	</footer>
+
+	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
+	<div id="page_top"><a href="#"></a></div>
 </body>
 </html>

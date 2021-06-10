@@ -28,19 +28,11 @@ body{
 }
 
 
+
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
-
 }
-
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
-
 
 .area{
     background: #fff;
@@ -50,7 +42,7 @@ body{
 
 .circles{
     position: absolute;
-    top: 0;
+    top: -100;
     left: 0;
     width: 100%;
     height: 100%;

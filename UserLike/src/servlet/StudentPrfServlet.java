@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/*
+import dao.PrfDAO;
+import model.Prf;
+import model.Result;
+*/
+
 /**
  * Servlet implementation class StudentPrfServlet
  */
@@ -30,7 +36,17 @@ public class StudentPrfServlet extends HttpServlet {
 
 
 		//プロフ情報取得
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
+/*		String s_id = request.getParameter("S_ID");
 
+		//自分のプロフィールを検索する
+		PrfDAO PrfDAO = new PrfDAO();
+		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
+
+		//検索結果をリクエストスコープから取得する
+		request.setAttribute("profList",profList);
+*/
 
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/s_prf.jsp");
@@ -48,8 +64,8 @@ public class StudentPrfServlet extends HttpServlet {
 		}
 		*/
 
-		// リクエストパラメータを取得する
-		request.setCharacterEncoding("UTF-8");
+		//ページにフォワードする
+		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+		dispatchar.forward(request,response);
 	}
-
 }

@@ -19,9 +19,8 @@
 	<div class="wrapper">
 		<!--ヘッダー-->
 		<header class="header">
-			<jsp:include page="t_header.jsp" />
+			<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 		</header>
-
 
 		<main>
 			<!--メイン-->

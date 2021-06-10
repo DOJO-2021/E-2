@@ -50,6 +50,32 @@ public class TeacherListServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
+/*		String s_name = request.getParameter("S_NAME");
+		String s_id = request.getParameter("S_ID");
+		String gender = request.getParameter("GENDER");
+		String c_name = request.getParameter("C_NAME");
+		String s_mail = request.getParameter("S_MAIL");
+		String exp = request.getParameter("EXP");
+		String college = request.getParameter("COLLEGE");
+		String b_place = request.getParameter("B_PLACE");
+		String hobby = request.getParameter("HOBBY");
+		String skill = request.getParameter("SKILL");
+		String music = request.getParameter("MUSIC");
+		String job = request.getParameter("JOB");
+		String  activity= request.getParameter("ACTIVITY");
+		String pr = request.getParameter("PR");
+
+
+		//自分のプロフィールを検索する
+		PrfDAO PrfDAO = new PrfDAO();
+		List<Prf> profList =PrfDAO.select(new Prf("icon","s_name",null,"gender","c_name","s_mail","exp", "college","b_place","hobby","skill","music","job","activity","pr"));
+
+		//検索結果をリクエストスコープから取得する
+		request.setAttribute("profList",profList);
+*/
+
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
 	}
 
 }

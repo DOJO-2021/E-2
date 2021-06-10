@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/*
+import dao.PrfDAO;
+import model.Prf;
+import model.Result;
+*/
+
 /**
  * Servlet implementation class TeacherPrfServlet
  */
@@ -30,8 +36,17 @@ public class TeacherPrfServlet extends HttpServlet {
 
 
 		//前のページからプロフ情報取得
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
+/*		String s_id = request.getParameter("S_ID");
 
+		//受講者のプロフィールを検索する
+		PrfDAO PrfDAO = new PrfDAO();
+		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
 
+		//検索結果をリクエストスコープから取得する
+		request.setAttribute("profList",profList);
+*/
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_prf.jsp");
 		dispatcher.forward(request, response);
@@ -50,6 +65,20 @@ public class TeacherPrfServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
+/*		String s_id = request.getParameter("S_ID");
+
+		//削除を行う
+		PrfDAO PrfDAO = new PrfDAO();
+		if(PrfDAO.delete(s_id)) {
+			request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike"));
+		}else {
+			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
+		}
+
+*/
+		//結果ページにフォワードする
+		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+		dispatchar.forward(request,response);
 	}
 
 }

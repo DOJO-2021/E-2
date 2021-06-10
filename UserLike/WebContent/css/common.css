@@ -16,12 +16,45 @@ margin: 0;
 #FFFFFF　白
 */
 
-/* ロゴの画像 */
-.logo_image{
-	width: 120px;
+
+
+/*--------- logoとnavを横に並べる  ------*/
+.t-heditem {
+    display: flex;
+    padding:20px 8px;
+    position: fixed;
+	z-index: 1000;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.logo {
+	margin-right: 70px;
+	margin-left:10px;
+}
+
+.nav {
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.nav li {
+    display: inline;
+	list-style-type: none;
+	padding-right: 30px;
+	vertical-align: middle;
+	list-style-type: none;
+}
+/*-----------  logo 大きさ設定  -------------------*/
+.logo_image {
+    width: 70px;
 }
 
 body {
+	display: inline-block;
 	background-color: #ffffff;
 	color: inherit;
 }
@@ -33,9 +66,8 @@ body {
 
 h2 {
 	text-align: center;
+	padding-top: 80px;
 }
-
-
 
 
 
@@ -109,6 +141,6 @@ h2 {
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {
 	h2 {
-		padding-top: 160px;
+		padding-top: 80px;
 	}
 }

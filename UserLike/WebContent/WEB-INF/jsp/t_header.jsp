@@ -11,21 +11,3 @@
 	</ul>
 </nav>
 </div>
-
-
-<style>
-/*--------- logoとnavを横に並べる  ------*/
-.t-heditem {
-    display: flex;
-    padding:20px 8px;
-}
-.nav li {
-    display: inline;
-	list-style-type: none;
-	padding-right: 30px;
-}
-/*-----------  logo 大きさ設定  -------------------*/
-.logo_image {
-    width: 70px;
-}
-</style>

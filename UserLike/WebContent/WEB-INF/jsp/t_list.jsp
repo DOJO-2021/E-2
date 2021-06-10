@@ -26,14 +26,32 @@
 		<main>
 			<!--メイン-->
 
-			<!-- 一覧表示のテーブル入力ループ -->
+
+			<h2>受講者一覧</h2>
+
 			<table>
 
+				<thead>
+					<!--テーブル名-->
+				    <tr id="heading">
+				      <th>クラス名</th><th>受講者名</th><th>性別</th><th>プログラミング経験</th><th>理解度</th>
+				    </tr>
+		    	</thead>
+
+		    	<tbody>
+			    	<!-- 一覧表示のテーブル入力ループ -->
+			    	<c:forEach var="e" items="${cardList}"><!--テーブルの中身-->
+				    	<tr class="data_row">
+				    	<td></td><td></td><td></td><td></td><td></td>
+					    </tr>
+					</c:forEach>
+				</tbody>
+
 			</table>
+
 			<form method="POST" action="TeacherPrfServlet" id="form" style="width:90%"><!-- 選択したデータを編集できるようにする -->
 				<input type="hidden" name="id">
 			</form>
-
 		</main>
 
 		<footer class="footer"><!--フッター-->

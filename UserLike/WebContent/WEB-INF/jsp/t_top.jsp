@@ -17,10 +17,10 @@
 
 <body>
 	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="t_header.jsp" />
-			</header>
+		<!--ヘッダー-->
+		<header class="header">
+			<jsp:include page="t_header.jsp" />
+		</header>
 
 
 		<main>
