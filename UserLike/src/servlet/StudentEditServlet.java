@@ -34,11 +34,9 @@ public class StudentEditServlet extends HttpServlet {
 		}
 		*/
 
-
-		//前のページからプロフィール情報を持ってくる
-		// リクエストパラメータを取得する
-		request.setCharacterEncoding("UTF-8");
-/*		String s_id = request.getParameter("S_ID");
+		//ログインしているユーザーのIDを取得
+/*		HttpSession session = request.getSession();
+		String s_id = session.getAttribute("s_id");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();

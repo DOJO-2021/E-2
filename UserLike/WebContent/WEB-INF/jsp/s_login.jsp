@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | ログイン</title>
+	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -21,26 +22,31 @@
 		<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 	</header>
 
-	<div class="context">
+
 		<main>
 			<!--メイン-->
-			<h1>ログイン</h1>
+			<div class="log-form">
 			<form method="POST" action="/UserLike/StudentLoginServlet">
+			<h4>ログイン</h4>
 				<p>ユーザーID</p>
-				<input type="text" name="S_ID" placeholder = "ID入力">
+				<input type="text" name="ID" class="log-input">
 
 				<p>パスワード</p>
-				<input type="password" name="S_PW" placeholder = "パスワード入力">
-				<input type="submit" name="LOGIN" value="ログイン">
+				<input type="password" name="PW" class="log-input">
 
+				<button class="log-btn">ログイン</button>
+
+              <div class="log-first">
 				<a href = "/UserLike/StudentNewServlet">パスワードを忘れた方</a>
 				<a href = "/UserLike/StudentNewServlet">初めての方</a>
+			  </div>
 			</form>
+			</div>
 		</main>
-	</div>
+
 
 	<!--ふわふわ背景-->
-	<div class="area" >
+        <div class="area" >
            <ul class="circles">
                <li></li>
                <li></li>

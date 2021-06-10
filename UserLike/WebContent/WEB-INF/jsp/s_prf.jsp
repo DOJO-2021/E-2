@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | プロフィール</title>
+	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -27,6 +28,13 @@
 			<!--メイン-->
 			<!-- 受講者自身のプロフィールを確認できる画面 -->
 			<h1>プロフィール</h1>
+
+			<!-- 編集ボタン -->
+			<form class="edit" method="GET" action="/USerLike/StudentEditServlet">
+			<div class="button">
+				<input type="submit" name="edit" value="編集">
+			</div>
+			</form>
 
 
 			<!-- 写真 -->

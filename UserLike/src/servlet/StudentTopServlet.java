@@ -37,6 +37,30 @@ public class StudentTopServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+		/* テスト中はコメントアウト
+		HttpSession session = request.getSession();
+		if (session.getAttribute("s_id") == null) {
+			response.sendRedirect("/UserLike/StudentLoginServlet");
+			return;
+		}
+		*/
+
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
+/*		String understood = request.getParameter("understood");
+		String cantunderstand = request.getParameter("cantunderstand");
+
+		//自分のプロフィールを検索する
+		PrfDAO PrfDAO = new PrfDAO();
+		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
+
+		//検索結果をリクエストスコープから取得する
+		request.setAttribute("profList",profList);
+*/
+	}
 
 
 }

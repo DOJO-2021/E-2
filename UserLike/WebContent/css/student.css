@@ -17,6 +17,66 @@ html * {
 #FFFFFF　白
 */
 
+/*--------------------------    s_login.jsp    ------------------------------------------*/
+
+/*------------ログインフォーム  --------------*/
+
+.log-form {
+	background:#fff;
+    border-radius:8px;
+    padding:35px;
+    padding-top:30px;
+    width:400px;
+    margin:50px auto;
+    border:1px solid #eee;
+    box-shadow:15px 15px 0px rgba(0,0,0,.1);
+}
+h4 {
+  text-align:center;
+  font-size:1.4em;
+  font-weight:700;
+  color:#708090;
+  margin-bottom:24px;
+}
+
+span {
+  font-weight:200;
+}
+.log-input {
+  width:100%;
+  background:#f5f5f5;
+  border:0;
+  padding:20px;
+  border-radius:6px;
+  margin-bottom:10px;
+  border:1px solid #eee;
+}
+.log-btn {
+  position:relative;
+  width:100%;
+  padding:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius:6px;
+  border:0;
+  background:#ffa500;
+  font-size:1.2em;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,.1);
+  box-shadow:0px 3px 0px #c1524e;
+}
+
+.log-btn:active {
+  top:3px;
+  box-shadow:none;
+}
+
+.log-first {
+  text-align: center;
+  font-size: 12px;
+}
+
+
 /*--------------- ふわふわ背景 --------------*/
 *{
     margin: 0px;

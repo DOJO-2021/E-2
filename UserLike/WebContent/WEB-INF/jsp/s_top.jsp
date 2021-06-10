@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | トップ</title>
+	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -26,8 +27,28 @@
 		<main>
 			<!--メイン-->
 			<div class="reaction_button">
-				<input type="image" src="img/button/Understood.png" alt="わかった">
-				<input type="image" src="img/button/CantUnderstand.png" alt="わからない"><br>
+					<!--大理解度ボタン-->
+					<div>
+					<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()">
+
+					</div>
+
+					<div>
+					<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()">
+
+					</div>
+
+				<form class="und_button" method="POST" action="/USerLike/StudentTopServlet">
+					<p><span id="understood">0</span>回</p>
+					<p><span id="cantundstand">0</span>回</p>
+					<!-- 送信ボタン -->
+					<p class="send">
+						<input type="submit" name="send" value="送信">
+					</p>
+				</form>
+
+
+				<!--小反応ボタン-->
 				<input type="image" class="reaction" src="img/button/Funny.png" alt="笑い">
 				<input type="image" class="reaction" src="img/button/Clap.png" alt="拍手">
 				<input type="image" class="reaction" src="img/button/Help!.png" alt="ヘルプ">
@@ -48,13 +69,24 @@
 				<input type="image" class="reaction" src="img/button/Finished.png" alt="作業終わりました">
 				<input type="image" class="reaction" src="img/button/Question.png" alt="質問があります">
 			</div>
-
 		</main>
 
 		<footer class="footer"><!--フッター-->
 			<jsp:include page="footer.jsp" />
 		</footer>
+		<script type="text/javascript">
+		var not1 = 0;
+		function counter1(){
+		not1++;
+		document.getElementById("understood").innerHTML = not1;
+		}
 
+		var not2 = 0;
+		function counter2(){
+		not2++;
+		document.getElementById("cantunderstand").innerHTML = not2;
+		}
+		</script>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

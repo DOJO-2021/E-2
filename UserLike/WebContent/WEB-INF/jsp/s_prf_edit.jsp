@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | プロフィール編集</title>
+	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -65,6 +66,10 @@
 				<label class="item_title">自己PR</label>
 				<input type="text"  name="PR" value="{}">
 
+				<!-- 保存ボタン -->
+				<div class="button">
+					<input type="submit" name="submit" value="保存">
+				</div>
 			</form>
 		</main>
 

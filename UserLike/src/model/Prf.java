@@ -3,7 +3,6 @@ import java.io.Serializable;
 
 public class Prf implements Serializable {
 	private String s_id;
-	private String s_pw;
 	private String s_name;
 	private String s_mail;
 	private String gender;
@@ -20,11 +19,10 @@ public class Prf implements Serializable {
 
 
 	// 引数があるコンストラクタ
-	public Prf(String s_id, String s_pw, String s_name, String s_mail, String gender, String c_name, String exp,
+	public Prf(String s_id, String s_name, String s_mail, String gender, String c_name, String exp,
 			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr) {
 		super();
 		this.s_id = s_id;
-		this.s_pw = s_pw;
 		this.s_name = s_name;
 		this.s_mail = s_mail;
 		this.gender = gender;
@@ -44,7 +42,6 @@ public class Prf implements Serializable {
 	public Prf() {
 		super();
 		this.s_id = "";
-		this.s_pw = "";
 		this.s_name = "";
 		this.s_mail = "";
 		this.gender = "";
@@ -60,6 +57,10 @@ public class Prf implements Serializable {
 		this.pr = "";
 	}
 
+	public Prf(String string, String string2, String string3, String string4, String string5) {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	public String getS_id() {
 		return s_id;
 	}
@@ -68,13 +69,6 @@ public class Prf implements Serializable {
 		this.s_id = s_id;
 	}
 
-	public String getS_pw() {
-		return s_pw;
-	}
-
-	public void setS_pw(String s_pw) {
-		this.s_pw = s_pw;
-	}
 
 	public String getS_name() {
 		return s_name;

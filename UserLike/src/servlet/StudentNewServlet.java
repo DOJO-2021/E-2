@@ -55,13 +55,22 @@ public class StudentNewServlet extends HttpServlet {
 		String activity= request.getParameter("activity");
 		String pr = request.getParameter("pr");
 
-		// 登録処理を行う
-		PrfDAO pDao = new PrfDAO();
-		if (pDao.insert(new Prf(s_id, s_pw, s_name, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr))) {	// 登録成功
-			request.setAttribute("result",
-			new Result("登録成功！", "レコードを登録しました。", "/UserLike/StudentPrfServlet"));
+		// IDとパスワードの登録処理を行う
+		StudentIdpwDAO sDao = new StudentIdpwDAO();
+		if (sDao.insert(new StuIdpw(s_id, s_pw))) {
+
+			// アカウント登録成功したらプロフィールの登録処理を行う
+			PrfDAO pDao = new PrfDAO();
+			if (pDao.insert(new Prf(s_id, s_name, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr))) {	// プロフ登録成功
+				request.setAttribute("result",
+				new Result("登録成功！", "レコードを登録しました。", "/UserLike/StudentPrfServlet"));
+			}
+			else {												// プロフ登録失敗
+				request.setAttribute("result",
+				new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/StudentNewServlet"));
+			}
 		}
-		else {												// 登録失敗
+		else {												// アカウント登録失敗
 			request.setAttribute("result",
 			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/StudentNewServlet"));
 		}

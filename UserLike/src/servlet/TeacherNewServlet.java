@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.TeacherIdpwDAO;
+import model.Result;
+import model.TeachIdpw;
+
 /**
  * Servlet implementation class TeacherNewServlet
  */
@@ -33,14 +37,14 @@ public class TeacherNewServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-/*		String t_id = request.getParameter("t_id");
+		String t_id = request.getParameter("t_id");
 		String t_pw = request.getParameter("t_pw");
 		String c_name = request.getParameter("c_name");
 
 
 		// 登録処理を行う
-		PrfDAO pDao = new PrfDAO();
-		if (pDao.insert(new Prf(t_id, t_pw, c_name))) {	// 登録成功
+		TeacherIdpwDAO tDao = new TeacherIdpwDAO();
+		if (tDao.insert(new TeachIdpw(t_id, t_pw, c_name))) {	// 登録成功
 			request.setAttribute("result",
 			new Result("登録成功！", "レコードを登録しました。", "/UserLike/TeacherNewServlet"));
 		}
@@ -48,7 +52,7 @@ public class TeacherNewServlet extends HttpServlet {
 			request.setAttribute("result",
 			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/TeacherNewServlet"));
 		}
-*/
+
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
 		dispatcher.forward(request, response);

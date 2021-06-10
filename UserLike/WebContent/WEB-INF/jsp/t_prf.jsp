@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | プロフィール</title>
+	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
@@ -25,8 +26,14 @@
 		<main>
 			<!--メイン-->
 			<!-- 受講者自身のプロフィールを確認できる画面 -->
-			<h1>プロフィール</h1>
+			<h2>プロフィール</h2>
 
+			<!-- 削除ボタン -->
+			<form class="delete" method="POST" action="/USerLike/TeacherPrfServlet">
+			<div class="button">
+				<input type="submit" name="submit" value="削除">
+			</div>
+			</form>
 
 			<!-- 写真 -->
 
