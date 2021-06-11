@@ -48,8 +48,8 @@ footer {
 /*------------ログインフォーム  --------------*/
 
 .s-log-form {
-
-	background:#fff;
+    position: relative;
+	background: #FFFF;
     border-radius:8px;
     padding:35px;
     padding-top:30px;
@@ -57,6 +57,7 @@ footer {
     margin:50px auto;
     border:1px solid #eee;
     box-shadow:15px 15px 0px rgba(0,0,0,.1);
+    z-index: 2;
 }
 h4 {
   text-align:center;
@@ -76,6 +77,7 @@ span {
   padding:20px;
   border-radius:6px;
   margin-bottom:10px;
+  margin-right: 30px;
   border:1px solid #eee;
 }
 .s-log-btn {
@@ -117,6 +119,7 @@ body{
 .context {
     width: 100%;
     position: absolute;
+     top:50vh;
 }
 
 .area{
@@ -127,12 +130,14 @@ body{
 
 .circles{
     position: absolute;
-    top: -100;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
 }
+
 
 /* ログインページの<li>一つにつき一つのまるを作る初期設定 */
 .circles li{
