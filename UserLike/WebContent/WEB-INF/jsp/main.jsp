@@ -16,6 +16,7 @@
 
 <body>
 	<div class="wrapper">
+		<div class="container">
 			<!--ヘッダー-->
 			<header class="header">
 			<div class="mainitem">
@@ -52,6 +53,7 @@
 			<jsp:include page="footer.jsp" />
 		</footer>
 
+		</div>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

@@ -64,17 +64,16 @@ public class TeacherPrfServlet extends HttpServlet {
 		*/
 
 		// リクエストパラメータを取得する
-		request.setCharacterEncoding("UTF-8");
-/*		String s_id = request.getParameter("S_ID");
+/*		request.setCharacterEncoding("UTF-8");
+		String s_id = request.getParameter("S_ID");
 
 		//削除を行う
-		PrfDAO PrfDAO = new PrfDAO();
+		PrfDAO PrfDAO = new PrfDAO(s_id);
 		if(PrfDAO.delete(s_id)) {
 			request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike"));
 		}else {
 			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
 		}
-
 */
 		//結果ページにフォワードする
 		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");

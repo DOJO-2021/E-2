@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<!-- vue.js開発バージョン、便利なコンソールの警告が含まれています -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 
@@ -52,6 +54,10 @@
 					</p>
 				</form>
 
+				<div id="app">
+				  {{ message }}
+				</div>
+
 				<!--小反応ボタン-->
 				<input type="image" class="reaction" src="img/button/Funny.png" alt="笑い">
 				<input type="image" class="reaction" src="img/button/Clap.png" alt="拍手">
@@ -79,19 +85,29 @@
 			<jsp:include page="footer.jsp" />
 		</footer>
 		</div>
+
+		<script><!--vueテスト-->
+		var app = new Vue({
+			  el: '#app',
+			  data: {
+			    message: 'Hello Vue!'
+			  }
+			})
+		</script>
+
 		<script type="text/javascript">
 		var not = 0;
 		function counter1(){
 		not++;
 		document.getElementById("understood").innerHTML = not;
 		}
-
 		var not = 0;
 		function counter2(){
 		not++;
 		document.getElementById("cantunderstand").innerHTML = not;
 		}
 		</script>
+
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

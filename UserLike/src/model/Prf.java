@@ -4,6 +4,7 @@ import java.io.Serializable;
 public class Prf implements Serializable {
 	private String s_id;
 	private String s_name;
+	private String icon;
 	private String s_mail;
 	private String gender;
 	private String c_name;
@@ -16,14 +17,16 @@ public class Prf implements Serializable {
 	private String job;
 	private String activity;
 	private String pr;
+	private int know;
 
 
 	// 引数があるコンストラクタ
-	public Prf(String s_id, String s_name, String s_mail, String gender, String c_name, String exp,
-			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr) {
+	public Prf(String s_id, String s_name,String icon, String s_mail, String gender, String c_name, String exp,
+			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr, int know) {
 		super();
 		this.s_id = s_id;
 		this.s_name = s_name;
+		this.icon = icon;
 		this.s_mail = s_mail;
 		this.gender = gender;
 		this.c_name = c_name;
@@ -36,6 +39,7 @@ public class Prf implements Serializable {
 		this.job = job;
 		this.activity = activity;
 		this.pr = pr;
+		this.know = know;
 	}
 
 	// 引数がないコンストラクタ
@@ -43,6 +47,7 @@ public class Prf implements Serializable {
 		super();
 		this.s_id = "";
 		this.s_name = "";
+		this.icon = "";
 		this.s_mail = "";
 		this.gender = "";
 		this.c_name = "";
@@ -55,11 +60,10 @@ public class Prf implements Serializable {
 		this.job = "";
 		this.activity = "";
 		this.pr = "";
+		this.know = 0;
 	}
 
-	public Prf(String string, String string2, String string3, String string4, String string5) {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
+
 
 	public String getS_id() {
 		return s_id;
@@ -76,6 +80,14 @@ public class Prf implements Serializable {
 
 	public void setS_name(String s_name) {
 		this.s_name = s_name;
+	}
+
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
 	}
 
 	public String getS_mail() {
@@ -167,5 +179,12 @@ public class Prf implements Serializable {
 
 	public void setPr(String pr) {
 		this.pr = pr;
+	}
+	public int getKnow() {
+		return know;
+	}
+
+	public void setKnow(int know) {
+		this.know = know;
 	}
 }

@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.PrfDAO;
+import model.Prf;
 
 /**
  * Servlet implementation class TeacherListServlet
@@ -30,6 +34,13 @@ public class TeacherListServlet extends HttpServlet {
 
 
 		//プロフ情報取得
+		PrfDAO prf = new PrfDAO();
+		List<Prf> prfList = prf.showall();
+		System.out.println(3);
+
+
+		// 検索結果をリクエストスコープに格納する
+		request.setAttribute("prfList", prfList);
 
 
 		// ページにフォワードする

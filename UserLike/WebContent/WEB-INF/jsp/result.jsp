@@ -16,6 +16,7 @@
 
 <body>
 	<div class="wrapper">
+		<div class="container">
 			<!--ヘッダー-->
 			<header class="header">
 				<h1 class="logo"><a href="${result.backTo}"><img src="img/logo.png" class="logo_image"></a></h1>
@@ -35,6 +36,7 @@
 			<jsp:include page="footer.jsp" />
 		</footer>
 
+		</div>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

@@ -74,7 +74,7 @@ public class TeacherIdpwDAO {
 			// SQL文を準備する
 			String sql = "insert into T_IDPW values (?, ?, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
-			//pStmt.setString(3, c_name);
+
 
 			// SQL文を完成させる
 			if (card.getT_id() != null) {
@@ -89,16 +89,16 @@ public class TeacherIdpwDAO {
 			else {
 				pStmt.setString(2, "null");
 			}
-
-			// SQL文を実行する
-			if (pStmt.executeUpdate() == 1) {
-				result = true;
-			}
 			if (card.getC_name() != null) {
 				pStmt.setString(3, card.getC_name());
 			}
 			else {
 				pStmt.setString(3, "null");
+			}
+
+			// SQL文を実行する
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
 			}
 		}
 		catch (SQLException e) {

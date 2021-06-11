@@ -16,19 +16,19 @@ public class StuIdpw implements Serializable {
 		this.s_pw = "";
 	}
 
-	public String getId() {
+	public String getS_id() {
 		return s_id;
 	}
 
-	public void setId(String s_id) {
+	public void setS_id(String s_id) {
 		this.s_id = s_id;
 	}
 
-	public String getPw() {
+	public String getS_pw() {
 		return s_pw;
 	}
 
-	public void setPw(String s_pw) {
+	public void setS_pw(String s_pw) {
 		this.s_pw = s_pw;
 	}
 }

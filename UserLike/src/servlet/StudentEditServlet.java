@@ -62,9 +62,9 @@ public class StudentEditServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-	//	String icon= request.getParameter("ICON"); アイコン画像入れられたら追加
-		String s_name = request.getParameter("S_NAME");
 		String s_id = request.getParameter("S_ID");
+		String s_name = request.getParameter("S_NAME");
+		String icon= request.getParameter("ICON");
 		String gender = request.getParameter("GENDER");
 		String c_name = request.getParameter("C_NAME");
 		String s_mail = request.getParameter("S_MAIL");
@@ -77,10 +77,11 @@ public class StudentEditServlet extends HttpServlet {
 		String job = request.getParameter("JOB");
 		String  activity= request.getParameter("ACTIVITY");
 		String pr = request.getParameter("PR");
+		int know = Integer.parseInt(request.getParameter("know"));
 
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
-		if(PrfDAO.update(new Prf(s_name,s_id,gender,c_name,s_mail,exp,college,b_place,hobby,skill,music,job,activity,pr))) {
+		if(PrfDAO.update(new Prf(s_id, s_name, icon, gender, c_name, s_mail, exp, college, b_place, hobby, skill, music, job,activity, pr, know))) {
 			//更新成功
 			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/MainServlet"));
 		}else {

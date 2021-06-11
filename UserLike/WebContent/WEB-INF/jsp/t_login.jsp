@@ -17,31 +17,37 @@
 
 
 <body>
+ <div class="wrapper">
+  <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
 		<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 	</header>
 
-	<div class="context">
+
 		<main>
+ <div class="area" >
 			<!--メイン-->
-			<h4>ログイン</h4>
+			<div class="t-log-form">
 			<form method="POST" action="/UserLike/TeacherLoginServlet">
+			<h4>ログイン</h4>
 				<p>ユーザーID</p>
-				<input type="text" name="T_ID" placeholder = "ID入力">
+				<input type="text" name="ID" class="t-log-input">
 
 				<p>パスワード</p>
-				<input type="password" name="T_PW" placeholder = "パスワード入力">
-				<input type="submit" name="LOGIN" value="ログイン">
+				<input type="password" name="PW" class="t-log-input">
 
+				<button class="t-log-btn">ログイン</button>
+
+              <div class="t-log-first">
 				<a href = "/UserLike/TeacherNewServlet">パスワードを忘れた方</a>
 				<a href = "/UserLike/TeacherNewServlet">初めての方</a>
+			  </div>
 			</form>
-		</main>
-	</div>
+			</div>
+</div >
+<!--ふわふわ背景-->
 
-	<!--ふわふわ背景
-	<div class="area" >
            <ul class="circles">
                <li></li>
                <li></li>
@@ -54,12 +60,16 @@
                <li></li>
                <li></li>
            </ul>
-    </div >
--->
+
+
+		</main>
+
+
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
-
+  </div>
+ </div>
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
 </body>

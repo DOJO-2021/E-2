@@ -17,6 +17,8 @@
 
 
 <body>
+ <div class="wrapper">
+  <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
 		<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
@@ -24,29 +26,28 @@
 
 
 		<main>
+ <div class="area" >
 			<!--メイン-->
-			<div class="log-form">
+			<div class="s-log-form">
 			<form method="POST" action="/UserLike/StudentLoginServlet">
 			<h4>ログイン</h4>
 				<p>ユーザーID</p>
-				<input type="text" name="ID" class="log-input">
+				<input type="text" name="ID" class="s-log-input">
 
 				<p>パスワード</p>
-				<input type="password" name="PW" class="log-input">
+				<input type="password" name="PW" class="s-log-input">
 
-				<button class="log-btn">ログイン</button>
+				<button class="s-log-btn">ログイン</button>
 
-              <div class="log-first">
+              <div class="s-log-first">
 				<a href = "/UserLike/StudentNewServlet">パスワードを忘れた方</a>
 				<a href = "/UserLike/StudentNewServlet">初めての方</a>
 			  </div>
 			</form>
 			</div>
-		</main>
+</div >
+<!--ふわふわ背景-->
 
-
-	<!--ふわふわ背景
-        <div class="area" >
            <ul class="circles">
                <li></li>
                <li></li>
@@ -59,13 +60,19 @@
                <li></li>
                <li></li>
            </ul>
-    </div >
--->
+
+
+		</main>
+
+
+
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
+ </div>
+</div>
 </body>
 </html>

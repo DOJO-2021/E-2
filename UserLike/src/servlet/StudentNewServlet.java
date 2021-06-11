@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.PrfDAO;
+import dao.StudentIdpwDAO;
+import model.Prf;
+import model.Result;
+import model.StuIdpw;
+
 /*
 import dao.PrfDAO;
 import model.Prf;
@@ -39,9 +45,10 @@ public class StudentNewServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-/*		String s_id = request.getParameter("s_id");
+		String s_id = request.getParameter("s_id");
 		String s_pw = request.getParameter("s_pw");
 		String s_name = request.getParameter("s_name");
+		String icon = request.getParameter("ICON");
 		String s_mail = request.getParameter("s_mail");
 		String gender = request.getParameter("gender");
 		String c_name = request.getParameter("c_name");
@@ -55,13 +62,14 @@ public class StudentNewServlet extends HttpServlet {
 		String activity= request.getParameter("activity");
 		String pr = request.getParameter("pr");
 
+
 		// IDとパスワードの登録処理を行う
 		StudentIdpwDAO sDao = new StudentIdpwDAO();
 		if (sDao.insert(new StuIdpw(s_id, s_pw))) {
 
 			// アカウント登録成功したらプロフィールの登録処理を行う
 			PrfDAO pDao = new PrfDAO();
-			if (pDao.insert(new Prf(s_id, s_name, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr))) {	// プロフ登録成功
+			if (pDao.insert(new Prf(s_id, s_name,icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, 0))) {	// プロフ登録成功
 				request.setAttribute("result",
 				new Result("登録成功！", "レコードを登録しました。", "/UserLike/StudentPrfServlet"));
 			}
@@ -74,7 +82,7 @@ public class StudentNewServlet extends HttpServlet {
 			request.setAttribute("result",
 			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/StudentNewServlet"));
 		}
-*/
+
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
 		dispatcher.forward(request, response);

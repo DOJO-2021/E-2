@@ -18,6 +18,7 @@
 
 <body>
 	<div class="wrapper">
+		<div class="container">
 		<!--ヘッダー-->
 		<header class="header">
 			<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
@@ -59,7 +60,7 @@
 		<footer class="footer"><!--フッター-->
 			<jsp:include page="footer.jsp" />
 		</footer>
-
+		</div>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

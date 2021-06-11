@@ -14,11 +14,14 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script><!--グラフ機能読み込み-->
+	<!-- vue.js開発バージョン、便利なコンソールの警告が含まれています -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 
 <body>
 	<div class="wrapper">
+		<div class="container">
 		<!--ヘッダー-->
 		<header class="header">
 			<jsp:include page="t_header.jsp" />
@@ -27,8 +30,18 @@
 		<main>
 			<!--メイン-->
 			<h2>リアクション状況</h2>
-		<div class="chart-container" style="position: relative; height:40vh; width:80vw">
+		<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
 		    <canvas id="myChart"></canvas>
+		    <a><img src="img/button/Funny.png" class="logo_image"></a>
+			<a><img src="img/button/Clap.png" class="logo_image"></a>
+			<a><img src="img/button/Help!.png" class="logo_image"></a>
+			<div id="app">
+			  {{ message }}
+			</div>
+		</div>
+
+		<div>
+
 		</div>
 
 		</main>
@@ -37,9 +50,20 @@
 			<jsp:include page="footer.jsp" />
 		</footer>
 
+		</div>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>
+
+	<script><!--vueテストー-->
+	var app = new Vue({
+		  el: '#app',
+		  data: {
+		    message: 'Hello Vue!'
+		  }
+		})
+	</script>
+
 	<script>
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -47,7 +71,7 @@
 	    type: 'bar',
 
 	    // データセットのデータ
-	    data: {
+		data: {
 	        labels: ["9時", "10時", "11時", "12時", "13時", "14時", "15時", "16時", "17時"],
 	        datasets: [{
 	            label: "わかった",
@@ -61,7 +85,10 @@
 	            borderColor: 'rgb(179, 212, 252)',
 	            data: [15, 24, 62, 21, 37, 48, 20, 14, 8],
 	        }]
+
+
 	    },
+
 
 	    // ここに設定オプションを書きます
 	    options: {}
