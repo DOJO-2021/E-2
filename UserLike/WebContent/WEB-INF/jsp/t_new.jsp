@@ -26,34 +26,32 @@
 		<main>
 			<!--メイン-->
 			<h1>講師新規登録画面</h1>
-			<form>
+			<form method="POST" action="/UserLike/TeacherNewServlet">
 				<div class="t_id">
 					<label>ユーザーID</label><br>
-					<input type ="text" name="id" placeholder="ID入力">
+					<input type ="text" name="T_ID" placeholder="ID入力">
 				</div>
 
 				<div class="t_pw">
 					<label>パスワード</label><br>
-					<input type="text" name="pw" placeholder="パスワード入力">
+					<input type="password" name="T_PW" placeholder="パスワード入力">
+					<input type="password" name="" placeholder="パスワード入力">
 				</div>
 
-				<div class="t_pw_2">
-					<label>パスワード(再入力)</label><br>
-					<input type="text" name="pw" placeholder="パスワード入力">
-				</div>
+
 
 				<div class="class_name">
 					<label>クラス名</label><br>
-					<input type="radio" name="class" value="A" checked>A
-					<input type="radio" name="class" value="B">B
-					<input type="radio" name="class" value="C">C
-					<input type="radio" name="class" value="D">D
-					<input type="radio" name="class" value="E">E
+					<input type="radio" name="C_NAME" value="A" checked>A
+					<input type="radio" name="C_NAME" value="B">B
+					<input type="radio" name="C_NAME" value="C">C
+					<input type="radio" name="C_NAME" value="D">D
+					<input type="radio" name="C_NAME" value="E">E
 				</div>
 
 				<!-- 登録ボタン -->
 				<div class="button">
-					<input type="submit" name="submit" value="登録">
+					<input type="submit" name="REGIST" value="登録">
 				</div>
 			</form>
 		</main>

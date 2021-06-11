@@ -18,35 +18,39 @@
 
 <body>
 	<div class="wrapper">
+		<div class="container">
 			<!--ヘッダー-->
 			<header class="header">
 				<jsp:include page="s_header.jsp" />
 			</header>
 
 
-		<main>
+<main>
 			<!--メイン-->
-			<div class="reaction_button">
+                <div class="reaction_button">
 					<!--大理解度ボタン-->
-					<div>
+				<div class="knowns">
+					<div class="know">
 					<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()">
 
 					</div>
 
-					<div>
+					<div class="unknow">
 					<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()">
 
 					</div>
+                </div>
 
 				<form class="und_button" method="POST" action="/USerLike/StudentTopServlet">
-					<p><span id="understood">0</span>回</p>
-					<p><span id="cantundstand">0</span>回</p>
+					<p class="nun-know">わかった: <span id="understood">0</span></p>
+					<p class="nun-unknow">わからない: <span id="cantunderstand">0</span></p>
+
+
 					<!-- 送信ボタン -->
 					<p class="send">
 						<input type="submit" name="send" value="送信">
 					</p>
 				</form>
-
 
 				<!--小反応ボタン-->
 				<input type="image" class="reaction" src="img/button/Funny.png" alt="笑い">
@@ -74,17 +78,18 @@
 		<footer class="footer"><!--フッター-->
 			<jsp:include page="footer.jsp" />
 		</footer>
+		</div>
 		<script type="text/javascript">
-		var not1 = 0;
+		var not = 0;
 		function counter1(){
-		not1++;
-		document.getElementById("understood").innerHTML = not1;
+		not++;
+		document.getElementById("understood").innerHTML = not;
 		}
 
-		var not2 = 0;
+		var not = 0;
 		function counter2(){
-		not2++;
-		document.getElementById("cantunderstand").innerHTML = not2;
+		not++;
+		document.getElementById("cantunderstand").innerHTML = not;
 		}
 		</script>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->

@@ -45,7 +45,7 @@
 		</main>
 
 
-	<!--ふわふわ背景-->
+	<!--ふわふわ背景
         <div class="area" >
            <ul class="circles">
                <li></li>
@@ -60,7 +60,7 @@
                <li></li>
            </ul>
     </div >
-
+-->
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>

@@ -18,19 +18,19 @@ public class TeachIdpw implements Serializable {
 		this.c_name = "";
 	}
 
-	public String getId() {
+	public String getT_id() {
 		return t_id;
 	}
 
-	public void setId(String t_id) {
+	public void setT_id(String t_id) {
 		this.t_id = t_id;
 	}
 
-	public String getPw() {
+	public String getT_pw() {
 		return t_pw;
 	}
 
-	public void setPw(String t_pw) {
+	public void setT_pw(String t_pw) {
 		this.t_pw = t_pw;
 	}
 

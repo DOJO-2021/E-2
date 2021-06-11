@@ -9,11 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*
 import dao.PrfDAO;
 import model.Prf;
 import model.Result;
-*/
+
 
 /**
  * Servlet implementation class StudentEditServlet
@@ -63,7 +62,7 @@ public class StudentEditServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-/*		String icon= request.getParameter("ICON");
+	//	String icon= request.getParameter("ICON"); アイコン画像入れられたら追加
 		String s_name = request.getParameter("S_NAME");
 		String s_id = request.getParameter("S_ID");
 		String gender = request.getParameter("GENDER");
@@ -87,7 +86,7 @@ public class StudentEditServlet extends HttpServlet {
 		}else {
 			request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/MainServlet"));
 		}
-*/
+
 		//ページにフォワードする
 		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
 		dispatchar.forward(request,response);

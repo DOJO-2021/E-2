@@ -18,6 +18,7 @@
 
 <body>
 	<div class="wrapper">
+	   <div class="container">
 			<!--ヘッダー-->
 			<header class="header">
 				<jsp:include page="s_header.jsp" />
@@ -27,10 +28,10 @@
 		<main>
 			<!--メイン-->
 			<!-- 受講者自身のプロフィールを確認できる画面 -->
-			<h1>プロフィール</h1>
+			<h2>プロフィール</h2>
 
 			<!-- 編集ボタン -->
-			<form class="edit" method="GET" action="/USerLike/StudentEditServlet">
+			<form class="edit" method="GET" action="/UserLike/StudentEditServlet">
 			<div class="button">
 				<input type="submit" name="edit" value="編集">
 			</div>
@@ -41,74 +42,74 @@
 
 
 			<div id="s_name">
-			<p>なまえ なまえ</p>
+			<p>${s_name}</p>
 			</div>
 
 			<div id="GENDER" >
 			<label class="item_title">性別</label>
-			<p>${sample}</p>
+			<p>${gender}</p>
 			</div>
 
 			<div id="C_NAME">
 			<label class="item_title">クラス</label>
-			<p></p>
+			<p>${c_name}</p>
 			</div>
 
 			<div id="S_MAIL">
 			<label class="item_title">Email</label>
-			<p></p>
+			<p>${s_mail}</p>
 			</div>
 
 			<div id="EXP">
 			<label class="item_title">プログラミング経験</label>
-			<p></p>
+			<p>${exp}</p>
 			</div>
 
 			<div id="COLLEGE">
 			<label class="item_title">出身学部</label>
-			<p></p>
+			<p>${college}</p>
 			</div>
 
 			<div id="B_PLACE">
 			<label class="item_title">出身地</label>
-			<p></p>
+			<p>${b_place}</p>
 			</div>
 
 			<div id="HOBBY">
 			<label class="item_title">趣味</label>
-			<p></p>
+			<p>${hobby}</p>
 			</div>
 
 			<div id="SKILL">
 			<label class="item_title">特技</label>
-			<p></p>
+			<p>${skill}</p>
 			</div>
 
 			<div id="MUSIC">
 			<label class="item_title">好きな音楽</label>
-			<p></p>
+			<p>${music}</p>
 			</div>
 
 			<div id="JOB">
 			<label class="item_title">バイト経験</label>
-			<p></p>
+			<p>${job}</p>
 			</div>
 
 			<div id="ACTIVITY">
 			<label class="item_title">課外活動経験</label>
-			<p></p>
+			<p>${activity}</p>
 			</div>
 
 			<div id="PR">
 			<label class="item_title">自己PR</label>
-			<p></p>
+			<p>${pr}</p>
 			</div>
 		</main>
 
 		<footer class="footer"><!--フッター-->
 			<jsp:include page="footer.jsp" />
 		</footer>
-
+      </div>
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>

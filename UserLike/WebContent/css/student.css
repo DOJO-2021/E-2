@@ -17,11 +17,38 @@ html * {
 #FFFFFF　白
 */
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  background-color: #fff;
+}
+
+main {
+  flex: 1;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+footer {
+  background-color:  #fff;
+}
+
 /*--------------------------    s_login.jsp    ------------------------------------------*/
 
 /*------------ログインフォーム  --------------*/
 
-.log-form {
+.s-log-form {
+
 	background:#fff;
     border-radius:8px;
     padding:35px;
@@ -42,7 +69,7 @@ h4 {
 span {
   font-weight:200;
 }
-.log-input {
+.s-log-input {
   width:100%;
   background:#f5f5f5;
   border:0;
@@ -51,7 +78,7 @@ span {
   margin-bottom:10px;
   border:1px solid #eee;
 }
-.log-btn {
+.s-log-btn {
   position:relative;
   width:100%;
   padding:20px;
@@ -66,12 +93,12 @@ span {
   box-shadow:0px 3px 0px #c1524e;
 }
 
-.log-btn:active {
+.s-log-btn:active {
   top:3px;
   box-shadow:none;
 }
 
-.log-first {
+.s-log-first {
   text-align: center;
   font-size: 12px;
 }
@@ -86,8 +113,6 @@ span {
 body{
     font-family: 'Exo', sans-serif;
 }
-
-
 
 .context {
     width: 100%;
@@ -211,6 +236,58 @@ body{
 }
 
 
+/*-------------------------   s_prf.jsp    --------------------------------------*/
+/*----------  レイアウトを整える     -------------*/
+  .s-prf-area {
+  width: 1000px;
+  height: 100%;
+  min-height: 185px;
+  margin:0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+  box-shadow: 0 5px 5px -5px #333;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.tab_class {
+  width: 50%;
+  height: 30px;
+  background-color:#DCDCDC;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+  border-radius: 6px;
+}
+
+/*----------------  ラジオボタンを非表示にする      ----------------------*/
+input[name="tab_name"] {
+  display: none;
+}
+
+/*---------------   選択されたタブの背景色と文字色を変更する   ---------------------*/
+input:checked + .tab_class {  /*----- 「+」マークは隣接セレクタ 直後に出てくる要素に適用する   ----*/
+  background-color: #ffa500;
+  color: aliceblue;
+}
+
+/*------------------   コンテンツを一旦全て非表示にする   ---------------------*/
+.content_class {
+  display: none;
+  width: 100%;
+
+}
+
+/*------------------  選択されたタブのコンテンツを表示する   -------------------*/
+input:checked + .tab_class + .content_class {
+  display: block;
+}
  /*---------------- レスポンシブ ------------------*/
 @keyframes animate {
 
@@ -225,5 +302,4 @@ body{
         opacity: 0;
         border-radius: 50%;
     }
-
 }

@@ -77,14 +77,14 @@ public class TeacherIdpwDAO {
 			//pStmt.setString(3, c_name);
 
 			// SQL文を完成させる
-			if (card.getId() != null) {
-				pStmt.setString(1, card.getId());
+			if (card.getT_id() != null) {
+				pStmt.setString(1, card.getT_id());
 			}
 			else {
 				pStmt.setString(1, "null");
 			}
-			if (card.getPw() != null) {
-				pStmt.setString(2, card.getPw());
+			if (card.getT_pw() != null) {
+				pStmt.setString(2, card.getT_pw());
 			}
 			else {
 				pStmt.setString(2, "null");

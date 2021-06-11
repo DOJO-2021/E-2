@@ -39,12 +39,12 @@
             <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
            <nav class="navnew">
              <ul>
-                 <li><a href="/UserLike/TeacherNewServlet">講師の方はこちら</a></li>
-                 <li><a href="/UserLike/StudentNewServlet">受講生の方はこちら</a></li>
+                 <li><a href="/UserLike/TeacherLoginServlet">講師の方はこちら</a></li>
+                 <li><a href="/UserLike/StudentLoginServlet">受講生の方はこちら</a></li>
              </ul>
            </nav>
-       <!-- メインロゴ挿入 -->
-       <h3 class="mainlogo"><a href="/USerLike/MainServlet"><img src="img/5.png" class="mainlogo_image"></a></h3>
+	       <!-- メインロゴ挿入 -->
+	       <h3 class="mainlogo"><a href="/USerLike/MainServlet"><img src="img/5.png" class="mainlogo_image"></a></h3>
 
 		</main>
 

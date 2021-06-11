@@ -37,20 +37,20 @@ public class TeacherNewServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String t_id = request.getParameter("t_id");
-		String t_pw = request.getParameter("t_pw");
-		String c_name = request.getParameter("c_name");
+		String t_id = request.getParameter("T_ID");
+		String t_pw = request.getParameter("T_PW");
+		String c_name = request.getParameter("C_NAME");
 
 
 		// 登録処理を行う
 		TeacherIdpwDAO tDao = new TeacherIdpwDAO();
 		if (tDao.insert(new TeachIdpw(t_id, t_pw, c_name))) {	// 登録成功
 			request.setAttribute("result",
-			new Result("登録成功！", "レコードを登録しました。", "/UserLike/TeacherNewServlet"));
+			new Result("登録成功！", "レコードを登録しました。", "/UserLike/TeacherLoginServlet"));
 		}
 		else {												// 登録失敗
 			request.setAttribute("result",
-			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/TeacherNewServlet"));
+			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/TeacherLoginServlet"));
 		}
 
 		// 結果ページにフォワードする

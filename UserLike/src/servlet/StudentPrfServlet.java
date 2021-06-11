@@ -52,19 +52,19 @@ public class StudentPrfServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+/*	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/* テスト中はコメントアウト
+		 テスト中はコメントアウト
 		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-		*/
+
 
 		//ページにフォワードする
-		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/s_prf_edit.jsp");
 		dispatchar.forward(request,response);
-	}
+	}*/
 }

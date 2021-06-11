@@ -15,21 +15,60 @@ margin: 0;
 #898989　グレー
 #FFFFFF　白
 */
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
 
+header {
+  background-color: #fff;
+}
+
+main {
+  flex: 1;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+footer {
+  background-color: #fff;
+}
 
 /*--------- logoとnavを横に並べる  ------*/
 .t-heditem {
     display: flex;
     padding:20px 8px;
-    position: fixed;
+     /*  position: fixed;  */
 	z-index: 1000;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     overflow: hidden;
 }
+.s-heditem {
+    display: flex;
+    padding:20px 8px;
+   /*  position: fixed;  */
+	z-index: 1000;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
 
+}
 .logo {
 	margin-right: 70px;
 	margin-left:10px;
@@ -59,10 +98,7 @@ body {
 	color: inherit;
 }
 
-.wrapper {
-	margin: 0 auto;
-	max-width: 1200px;
-}
+
 
 h2 {
 	text-align: center;
@@ -74,8 +110,31 @@ h2 {
 /*-------- 反応ボタン ---------*/
 .reaction_button{
 	width: 100%;
+	text-align: center;
 }
 
+.know {
+	display:inline-block;
+	margin-right: 50px;
+}
+.know:hover {
+	background: #FFFFF0;
+}
+.unknow {
+	display:inline-block;
+}
+.nun-know {
+	display:inline-block;
+	margin: 20px 40px;
+}
+.nun-unknow {
+	display:inline-block;
+	margin: 20px 40px;
+}
+.reaction {
+	width: 110px;
+	height: 110px;
+}
 
 /*-------- トップに戻るボタン ---------*/
 #page_top{
@@ -122,7 +181,7 @@ h2 {
 	list-style-type: none;
 	padding-right: 30px;
 }
-/*---------------- mainlogo大きさ変更   --------------*/
+/*----------------ヤザワスイッチ mainlogo大きさ変更   --------------*/
 .mainlogo_image {
 	width: 60%;
 }

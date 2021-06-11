@@ -48,17 +48,27 @@ public class StudentTopServlet extends HttpServlet {
 		}
 		*/
 
+		//ログインしているユーザーのIDを取得
+/*		HttpSession session = request.getSession();
+		String s_id = session.getAttribute("s_id");
+
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-/*		String understood = request.getParameter("understood");
+		String understood = request.getParameter("understood");
 		String cantunderstand = request.getParameter("cantunderstand");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
 		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
 
-		//検索結果をリクエストスコープから取得する
-		request.setAttribute("profList",profList);
+		//更新を行う
+		PrfDAO PrfDAO = new PrfDAO();
+		if(PrfDAO.update(new Prf(s_name,s_id,gender,c_name,s_mail,exp,college,b_place,hobby,skill,music,job,activity,pr))) {
+			//更新成功
+			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/MainServlet"));
+		}else {
+			request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/MainServlet"));
+		}
 */
 	}
 
