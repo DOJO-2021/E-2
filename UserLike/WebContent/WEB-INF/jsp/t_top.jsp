@@ -35,13 +35,26 @@
 		    <a><img src="img/button/Funny.png" class="logo_image"></a>
 			<a><img src="img/button/Clap.png" class="logo_image"></a>
 			<a><img src="img/button/Help!.png" class="logo_image"></a>
+			<a id="Thanks"><span  v-if="seen"><img src="img/button/Thanks.png" class="logo_image"></span></a>
+			<a><img src="img/button/Goodmorning.png" class="logo_image"></a>
+			<a><img src="img/button/Greetings.png" class="logo_image"></a>
+			<a><img src="img/button/Finally.png" class="logo_image"></a>
+			<a><img src="img/button/Group.png" class="logo_image"></a>
+			<a><img src="img/button/Session.png" class="logo_image"></a>
+			<a><img src="img/button/Wait.png" class="logo_image"></a>
+			<a><img src="img/button/TooQuick.png" class="logo_image"></a>
+			<a><img src="img/button/AhHa.png" class="logo_image"></a>
+			<a><img src="img/button/Onemore.png" class="logo_image"></a>
+			<a><img src="img/button/Great.png" class="logo_image"></a>
+			<a><img src="img/button/Share.png" class="logo_image"></a>
+			<a><img src="img/button/Suggestion.png" class="logo_image"></a>
+			<a><img src="img/button/Eiken.png" class="logo_image"></a>
+			<a><img src="img/button/Finished.png" class="logo_image"></a>
+			<a><img src="img/button/Question.png" class="logo_image"></a>
+
 			<div id="app">
 			  {{ message }}
 			</div>
-		</div>
-
-		<div>
-
 		</div>
 
 		</main>
@@ -54,6 +67,15 @@
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 		<div id="page_top"><a href="#"></a></div>
 	</div>
+
+	<script type="text/javascript">
+	var app3 = new Vue({
+	  el: '#Thanks',
+	  data: {
+	    seen: false
+	  }
+	})
+	</script>
 
 	<script><!--vueテストー-->
 	var app = new Vue({

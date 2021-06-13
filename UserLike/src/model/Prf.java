@@ -43,24 +43,10 @@ public class Prf implements Serializable {
 	}
 
 	// 引数がないコンストラクタ
-	public Prf() {
+	public Prf(String s_id) {
 		super();
-		this.s_id = "";
-		this.s_name = "";
-		this.icon = "";
-		this.s_mail = "";
-		this.gender = "";
-		this.c_name = "";
-		this.exp = "";
-		this.college = "";
-		this.b_place = "";
-		this.hobby = "";
-		this.skill = "";
-		this.music = "";
-		this.job = "";
-		this.activity = "";
-		this.pr = "";
-		this.know = 0;
+		this.s_id = s_id;
+
 	}
 
 

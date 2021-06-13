@@ -72,7 +72,7 @@ import model.StuIdpw;
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "insert into T_IDPW values (?, ?)";
+			String sql = "insert into S_IDPW values (?, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる

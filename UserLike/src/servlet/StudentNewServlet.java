@@ -15,12 +15,6 @@ import model.Prf;
 import model.Result;
 import model.StuIdpw;
 
-/*
-import dao.PrfDAO;
-import model.Prf;
-import model.Result;
-*/
-
 /**
  * Servlet implementation class StudentNewServlet
  */
@@ -28,9 +22,7 @@ import model.Result;
 public class StudentNewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 登録ページにフォワードする
@@ -38,9 +30,7 @@ public class StudentNewServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// リクエストパラメータを取得する

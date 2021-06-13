@@ -29,16 +29,17 @@
 
 <main>
 			<!--メイン-->
+			<h2>リアクション</h2>
                 <div class="reaction_button">
 					<!--大理解度ボタン-->
 				<div class="knowns">
 					<div class="know">
-					<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()">
+					<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()" class="imgknow">
 
 					</div>
 
 					<div class="unknow">
-					<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()">
+					<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()" class="imgunknow">
 
 					</div>
                 </div>
@@ -59,25 +60,25 @@
 				</div>
 
 				<!--小反応ボタン-->
-				<input type="image" class="reaction" src="img/button/Funny.png" alt="笑い">
-				<input type="image" class="reaction" src="img/button/Clap.png" alt="拍手">
-				<input type="image" class="reaction" src="img/button/Help!.png" alt="ヘルプ">
-				<input type="image" class="reaction" src="img/button/Thanks.png" alt="ありがとうございます">
-				<input type="image" class="reaction" src="img/button/Goodmorning.png" alt="おはようございます">
-				<input type="image" class="reaction" src="img/button/Greetings.png" alt="おつかれさまです">
-				<input type="image" class="reaction" src="img/button/Finally.png" alt="キター!!">
-				<input type="image" class="reaction" src="img/button/Group.png" alt="グループ活動求む">
-				<input type="image" class="reaction" src="img/button/Session.png" alt="セッション希望">
-				<input type="image" class="reaction" src="img/button/Wait.png" alt="ちょっとまった">
-				<input type="image" class="reaction" src="img/button/TooQuick.png" alt="ちょっと早い">
-				<input type="image" class="reaction" src="img/button/AhHa.png" alt="なるほど">
-				<input type="image" class="reaction" src="img/button/Onemore.png" alt="もう一度お願いします">
-				<input type="image" class="reaction" src="img/button/Great.png" alt="最高です">
-				<input type="image" class="reaction" src="img/button/Share.png" alt="共有してください">
-				<input type="image" class="reaction" src="img/button/Suggestion.png" alt="提案があります">
-				<input type="image" class="reaction" src="img/button/Eiken.png" alt="英検3級">
-				<input type="image" class="reaction" src="img/button/Finished.png" alt="作業終わりました">
-				<input type="image" class="reaction" src="img/button/Question.png" alt="質問があります">
+				<input type="image" class="reaction" src="img/button2/Funny2.png" alt="笑い">
+				<input type="image" class="reaction" src="img/button2/Clap2.png" alt="拍手">
+				<input type="image" class="reaction" src="img/button2/Help!2.png" alt="ヘルプ">
+				<input type="image" class="reaction" src="img/button2/Thanks2.png" alt="ありがとうございます">
+				<input type="image" class="reaction" src="img/button2/Goodmorning2.png" alt="おはようございます">
+				<input type="image" class="reaction" src="img/button2/Greetings2.png" alt="おつかれさまです">
+				<input type="image" class="reaction" src="img/button2/Finally2.png" alt="キター!!">
+				<input type="image" class="reaction" src="img/button2/Group2.png" alt="ク゛ルーフ゜活動求む">
+				<input type="image" class="reaction" src="img/button2/Session2.png" alt="セッション希望">
+				<input type="image" class="reaction" src="img/button2/Stop2.png" alt="ちょっとまった">
+				<input type="image" class="reaction" src="img/button2/TooQuick2.png" alt="ちょっと早い">
+				<input type="image" class="reaction" src="img/button2/AhHa2.png" alt="なるほど">
+				<input type="image" class="reaction" src="img/button2/Onemore2.png" alt="もう一度お願いします">
+				<input type="image" class="reaction" src="img/button2/Great2.png" alt="最高です">
+				<input type="image" class="reaction" src="img/button2/Share2.png" alt="共有してください">
+				<input type="image" class="reaction" src="img/button2/Suggestion2.png" alt="提案があります">
+				<input type="image" class="reaction" src="img/button2/Eiken2.png" alt="英検3級">
+				<input type="image" class="reaction" src="img/button2/Finished2.png" alt="作業終わりました">
+				<input type="image" class="reaction" src="img/button2/Question2.png" alt="質問があります">
 			</div>
 		</main>
 

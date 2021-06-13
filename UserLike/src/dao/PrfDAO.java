@@ -83,7 +83,7 @@ public class PrfDAO {
 
 
 	//【検索】ID検索
-	public List<Prf> show (Prf prf) {
+	public List<Prf> show(String s_id) {
 		Connection conn = null;
 		List<Prf> prfList = new ArrayList<Prf>();
 
@@ -98,7 +98,7 @@ public class PrfDAO {
 			// SQL文を準備する
 			String sql = "select * from profile where s_id=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
-			pStmt.setString(1,prf.getS_id());
+			pStmt.setString(1,s_id);
 
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -421,7 +421,7 @@ public class PrfDAO {
 
 
 	//【削除】引数numberで指定されたレコードを削除し、成功したらtrueを返す
-/*	public boolean delete(String s_id) {
+	public boolean delete(String s_id) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -438,7 +438,7 @@ public class PrfDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, s_id());
+			pStmt.setString(1, s_id);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -465,7 +465,6 @@ public class PrfDAO {
 
 		// 結果を返す
 		return result;
-	}*/
-
+	}
 }
 

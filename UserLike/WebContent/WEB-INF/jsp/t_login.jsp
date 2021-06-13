@@ -40,8 +40,9 @@
 				<button class="t-log-btn">ログイン</button>
 
               <div class="t-log-first">
-				<a href = "/UserLike/TeacherNewServlet">パスワードを忘れた方</a>
-				<a href = "/UserLike/TeacherNewServlet">初めての方</a>
+				<a href ="/UserLike/TeacherNewServlet">パスワードを忘れた方</a>
+				<a>　</a>
+				<a href ="/UserLike/TeacherNewServlet">初めての方</a>
 			  </div>
 			</form>
 			</div>

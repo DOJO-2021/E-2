@@ -41,6 +41,7 @@
 
               <div class="s-log-first">
 				<a href = "/UserLike/StudentNewServlet">パスワードを忘れた方</a>
+				<a>　</a>
 				<a href = "/UserLike/StudentNewServlet">初めての方</a>
 			  </div>
 			</form>
