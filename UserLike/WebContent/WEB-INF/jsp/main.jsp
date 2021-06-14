@@ -41,8 +41,8 @@
             <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
            <nav class="navnew">
              <ul>
-                 <li><a href="/UserLike/TeacherLoginServlet">講師の方はこちら</a></li>
-                 <li><a href="/UserLike/StudentLoginServlet">受講生の方はこちら</a></li>
+                 <li><a href="/UserLike/TeacherLoginServlet" class="t-min">講師の方はこちら</a></li>
+                 <li><a href="/UserLike/StudentLoginServlet" class="s-min">受講生の方はこちら</a></li>
              </ul>
            </nav>
 	       <!-- メインロゴ挿入 -->

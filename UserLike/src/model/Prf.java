@@ -42,15 +42,6 @@ public class Prf implements Serializable {
 		this.know = know;
 	}
 
-	// 引数がないコンストラクタ
-	public Prf(String s_id) {
-		super();
-		this.s_id = s_id;
-
-	}
-
-
-
 	public String getS_id() {
 		return s_id;
 	}

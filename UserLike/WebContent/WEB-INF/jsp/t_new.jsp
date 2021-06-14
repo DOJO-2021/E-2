@@ -27,25 +27,43 @@
 		<main>
 		<div class="area" >
 			<!--メイン-->
-			<div class="t-new-form">
+			<div class="t-new-form"  style="position: relative;
+										    background: #fff;
+										    border-radius:8px;   /*枠の丸み*/
+										    padding:35px;
+										    padding-top:30px;
+										    width:500px;
+										    margin:50px auto;
+										    border:1px solid #ffa500;   /* 枠の線の細さと色*/
+										    z-index: 2">
 			<form method="POST" action="/UserLike/StudentLoginServlet">
 			<h4>新規登録</h4>
-				<p>ユーザーID</p>
-				<input type="text" name="t_id" class="t-new-input">
+​				<div class="cp_iptxt">
+					<label>ユーザーID</label><br>
+					<input type="text" name="t_id" class="t-new-input validate[required,maxSize[20]]" placeholder="ID">
+					<span class="focus_line"></span>
+				</div>
 ​
-				<p>パスワード</p>
-				<input type="password" name="t_pw" class="t-new-input">
-​
-				<p>パスワード(再入力)</p>
-				<input type="password" name="t_pw2" class="t-new-input">
-​
-				<p>クラス名</p>
-				<input id="g1" checked="checked" name="radio01" type="radio" /><label class="radio01" for="g1">a</label><br>
-				<input id="g2" name="radio01" type="radio" /><label class="radio01" for="g2">b</label><br>
-				<input id="g3" name="radio01" type="radio" /><label class="radio01" for="g3">c</label><br>
-				<input id="g4" name="radio01" type="radio" /><label class="radio01" for="g4">d</label><br>
-				<input id="g5" name="radio01" type="radio" /><label class="radio01" for="g5">e</label><br>
-				​
+				<div class="cp_iptxt">
+					<label>パスワード(6文字以上)</label><br>
+					<input type="password" name="t_pw" class="t-new-input validate[required,minSize[6]]" name="password" placeholder="password">
+					<span class="focus_line"></span>
+				</div><br>
+
+				<div class="cp_iptxt">
+					<label>パスワード(再入力)</label><br>
+					<input  type="password" name="t_pw2" class="t-new-input validate[required,equals[password]]" placeholder="password">
+					<span class="focus_line"></span>
+				</div><br>
+
+				<div>
+					<p>クラス名</p>
+					<input id=c1 checked="checked" name="c_name" type="radio" value="A" /><label class="radio01" for="c1">A</label>
+					<input id=c2 name="c_name" type="radio" value="B" /><label class="radio01" for="c2">B</label>
+					<input id=c3 name="c_name" type="radio" value="C" /><label class="radio01" for="c3">C</label>
+					<input id=c4 name="c_name" type="radio" value="D" /><label class="radio01" for="c4">D</label>
+					<input id=c5 name="c_name" type="radio" value="E" /><label class="radio01" for="c5">E</label>				​
+				</div><br>
 				​
 				<button class="t-new-btn">登録</button>
 ​

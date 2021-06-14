@@ -19,7 +19,6 @@ html * {
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 .container {
@@ -67,7 +66,6 @@ a {
 main {
   flex: 1;
   background-color: #fff;
-  overflow-y: scroll;
 }
 
 footer {
@@ -368,6 +366,9 @@ span {
 ​
 /*--------ラジオボタン  ----------*/
 ​
+.radio01 [type=radio]{
+    display: none;
+}
 input[type=radio] {
     display: none;
 }
@@ -387,7 +388,7 @@ input[type=radio] {
     display: block;
     height: 16px;
     left: 5px;
-    margin-top: -8px;
+    margin-top: -9px;
     position: absolute;
     top: 50%;
     width: 16px;
