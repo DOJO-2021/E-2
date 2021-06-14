@@ -15,10 +15,7 @@ margin: 0;
 #898989　グレー
 #FFFFFF　白
 */
-.wrapper {
-	margin: 0 auto;
-	max-width: 1200px;
-}
+
 body {
   margin: 0;
   overflow: hidden;
