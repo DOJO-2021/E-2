@@ -41,7 +41,6 @@ main {
 footer {
   background-color: #fff;
 }
-
 /*--------- logoとnavを横に並べる  ------*/
 .t-heditem {
     display: flex;
@@ -51,15 +50,7 @@ footer {
     margin-bottom: 20px;
     overflow: hidden;
 }
-.s-heditem {
-    display: flex;
-    padding: 20px 8px;
-	z-index: 1000;
-    width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden;
 
-}
 .logo {
 	margin-left:30px;
 	margin-top:6px;
@@ -84,6 +75,26 @@ footer {
 	vertical-align: middle;
 	list-style-type: none;
 }
+.nav {
+	vertical-align: middle;
+	margin-top: 10px;
+}
+
+.nav ul {
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-top: -56px;
+}
+
+.nav li {
+    display: inline;
+	list-style-type: none;
+	padding-right: 30px;
+	vertical-align: middle;
+	list-style-type: none;
+}
+
 /*-----------  logo 大きさ設定  -------------------*/
 .logo_image {
     width: 70px;

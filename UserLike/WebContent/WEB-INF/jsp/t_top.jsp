@@ -32,25 +32,25 @@
 			<h2>リアクション状況</h2>
 		<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
 		    <canvas id="myChart"></canvas>
-		    <a><img src="img/button/Funny.png" class="logo_image"></a>
-			<a><img src="img/button/Clap.png" class="logo_image"></a>
-			<a><img src="img/button/Help!.png" class="logo_image"></a>
-			<a id="Thanks"><span  v-if="seen"><img src="img/button/Thanks.png" class="logo_image"></span></a>
-			<a><img src="img/button/Goodmorning.png" class="logo_image"></a>
-			<a><img src="img/button/Greetings.png" class="logo_image"></a>
-			<a><img src="img/button/Finally.png" class="logo_image"></a>
-			<a><img src="img/button/Group.png" class="logo_image"></a>
-			<a><img src="img/button/Session.png" class="logo_image"></a>
-			<a><img src="img/button/Wait.png" class="logo_image"></a>
-			<a><img src="img/button/TooQuick.png" class="logo_image"></a>
-			<a><img src="img/button/AhHa.png" class="logo_image"></a>
-			<a><img src="img/button/Onemore.png" class="logo_image"></a>
-			<a><img src="img/button/Great.png" class="logo_image"></a>
-			<a><img src="img/button/Share.png" class="logo_image"></a>
-			<a><img src="img/button/Suggestion.png" class="logo_image"></a>
-			<a><img src="img/button/Eiken.png" class="logo_image"></a>
-			<a><img src="img/button/Finished.png" class="logo_image"></a>
-			<a><img src="img/button/Question.png" class="logo_image"></a>
+		    <a id="Funny"><span v-if="seen"><img src="img/button/Funny.png" class="logo_image"></span></a>
+			<a id="Clap"><span v-if="seen"><img src="img/button/Clap.png" class="logo_image"></span></a>
+			<a id="Help"><span v-if="seen"><img src="img/button/Help!.png" class="logo_image"></span></a>
+			<a id="Thanks"><span v-if="seen"><img src="img/button/Thanks.png" class="logo_image"></span></a>
+			<a id="Goodmorning"><span v-if="seen"><img src="img/button/Goodmorning.png" class="logo_image"></span></a>
+			<a id="Greetings"><span v-if="seen"><img src="img/button/Greetings.png" class="logo_image"></span></a>
+			<a id="Finally"><span v-if="seen"><img src="img/button/Finally.png" class="logo_image"></span></a>
+			<a id="Group"><span v-if="seen"><img src="img/button/Group.png" class="logo_image"></span></a>
+			<a id="Session"><span v-if="seen"><img src="img/button/Session.png" class="logo_image"></span></a>
+			<a id="Wait"><span v-if="seen"><img src="img/button/Wait.png" class="logo_image"></span></a>
+			<a id="TooQuick"><span v-if="seen"><img src="img/button/TooQuick.png" class="logo_image"></span></a>
+			<a id="AhHa"><span v-if="seen"><img src="img/button/AhHa.png" class="logo_image"></span></a>
+			<a id="Onemore"><span v-if="seen"><img src="img/button/Onemore.png" class="logo_image"></span></a>
+			<a id="Great"><span v-if="seen"><img src="img/button/Great.png" class="logo_image"></span></a>
+			<a id="Share"><span v-if="seen"><img src="img/button/Share.png" class="logo_image"></span></a>
+			<a id="Suggestion"><span v-if="seen"><img src="img/button/Suggestion.png" class="logo_image"></span></a>
+			<a id="Eiken"><span v-if="seen"><img src="img/button/Eiken.png" class="logo_image"></span></a>
+			<a id="Finished"><span v-if="seen"><img src="img/button/Finished.png" class="logo_image"></span></a>
+			<a id="Question"><span v-if="seen"><img src="img/button/Question.png" class="logo_image"></span></a>
 
 			<div id="app">
 			  {{ message }}
@@ -68,24 +68,7 @@
 		<div id="page_top"><a href="#"></a></div>
 	</div>
 
-	<script type="text/javascript">
-	var app3 = new Vue({
-	  el: '#Thanks',
-	  data: {
-	    seen: false
-	  }
-	})
-	</script>
-
-	<script><!--vueテストー-->
-	var app = new Vue({
-		  el: '#app',
-		  data: {
-		    message: 'Hello Vue!'
-		  }
-		})
-	</script>
-
+	<script src="js/vue.js"></script><!--vue設定-->
 	<script>
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var chart = new Chart(ctx, {

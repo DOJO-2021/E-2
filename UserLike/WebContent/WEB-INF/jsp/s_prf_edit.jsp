@@ -28,7 +28,7 @@
 		<main>
 			<!--メイン-->
 			<h2>プロフィール編集</h2>
-			<form>
+			<form method="POST" action="/UserLike/StudentEditServlet">
 				<input type="text"  name="" value="${s_name}">
 
 				<label class="item_title">性別</label>

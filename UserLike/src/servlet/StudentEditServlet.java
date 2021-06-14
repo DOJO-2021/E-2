@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.PrfDAO;
 import model.Prf;
@@ -25,25 +27,24 @@ public class StudentEditServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/* テスト中はコメントアウト
 		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-		*/
+
 
 		//ログインしているユーザーのIDを取得
-/*		HttpSession session = request.getSession();
-		String s_id = session.getAttribute("s_id");
+		String s_id = null;
+		s_id = (String) session.getAttribute("s_id");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
+		List<Prf> profList =PrfDAO.show(s_id);
 
 		//検索結果をリクエストスコープから取得する
 		request.setAttribute("profList",profList);
-*/
+
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/s_prf_edit.jsp");
 		dispatcher.forward(request, response);
@@ -53,13 +54,12 @@ public class StudentEditServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/* テスト中はコメントアウト
 		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-		*/
+
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");

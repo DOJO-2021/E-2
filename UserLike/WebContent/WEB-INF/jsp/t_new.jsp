@@ -25,36 +25,33 @@
 		</header>
 
 		<main>
+		<div class="area" >
 			<!--メイン-->
-			<h1>講師新規登録画面</h1>
-			<form method="POST" action="/UserLike/TeacherNewServlet">
-				<div class="t_id">
-					<label>ユーザーID</label><br>
-					<input type ="text" name="T_ID" placeholder="ID入力">
-				</div>
-
-				<div class="t_pw">
-					<label>パスワード</label><br>
-					<input type="password" name="T_PW" placeholder="パスワード入力">
-					<input type="password" name="" placeholder="パスワード入力">
-				</div>
-
-
-
-				<div class="class_name">
-					<label>クラス名</label><br>
-					<input type="radio" name="C_NAME" value="A" checked>A
-					<input type="radio" name="C_NAME" value="B">B
-					<input type="radio" name="C_NAME" value="C">C
-					<input type="radio" name="C_NAME" value="D">D
-					<input type="radio" name="C_NAME" value="E">E
-				</div>
-
-				<!-- 登録ボタン -->
-				<div class="button">
-					<input type="submit" name="REGIST" value="登録">
-				</div>
+			<div class="t-new-form">
+			<form method="POST" action="/UserLike/StudentLoginServlet">
+			<h4>新規登録</h4>
+				<p>ユーザーID</p>
+				<input type="text" name="t_id" class="t-new-input">
+​
+				<p>パスワード</p>
+				<input type="password" name="t_pw" class="t-new-input">
+​
+				<p>パスワード(再入力)</p>
+				<input type="password" name="t_pw2" class="t-new-input">
+​
+				<p>クラス名</p>
+				<input id="g1" checked="checked" name="radio01" type="radio" /><label class="radio01" for="g1">a</label><br>
+				<input id="g2" name="radio01" type="radio" /><label class="radio01" for="g2">b</label><br>
+				<input id="g3" name="radio01" type="radio" /><label class="radio01" for="g3">c</label><br>
+				<input id="g4" name="radio01" type="radio" /><label class="radio01" for="g4">d</label><br>
+				<input id="g5" name="radio01" type="radio" /><label class="radio01" for="g5">e</label><br>
+				​
+				​
+				<button class="t-new-btn">登録</button>
+​
 			</form>
+			</div>
+		</div >
 		</main>
 
 		<footer class="footer"><!--フッター-->

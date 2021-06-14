@@ -36,7 +36,34 @@ header {
 a {
 	text-decoration : none;
 }
-
+.t_link:hover{
+  color : #ffa500;
+}
+.t_link:active{
+  color : #ffa500;
+}
+.t_link{
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+.t_link::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #ffa500;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+.t_link:visited{
+	color : #ffa500;
+}
+.t_link:hover::after{
+  width: 100%;
+}
 main {
   flex: 1;
   background-color: #fff;
@@ -81,7 +108,9 @@ th{
 table.dataTable {
 	clear: none;
 }
-
+#foo-table_info {
+	padding-left: 5px;
+}
 /*--------------------------    T_login.jsp    ------------------------------------------*/
 
 /*------------ログインフォーム  --------------*/
@@ -277,6 +306,113 @@ body{
     animation-duration: 11s;
 }
 
+/*--------------------------    t_new.jsp    ------------------------------------------*/
+​
+/*------------新規登録フォーム  --------------*/
+​
+.t-new-form {
+    position: relative;
+    background: #fff;
+    border-radius:8px;   /*枠の丸み*/
+    padding:35px;
+    padding-top:30px;
+    width:500px;
+    margin:50px auto;
+    border:1px solid #ffa500;   /* 枠の線の細さと色*/
+    z-index: 2;
+}
+h4 {
+  text-align:center;
+  font-size:1.4em;
+  font-weight:700;
+  color:#898989;
+  margin-bottom:24px;
+}
+​
+span {
+  font-weight:200;
+}
+.t-new-input {
+  width:100%;
+  background:#FFEFD5;
+  border:0;
+  padding:20px;
+  border-radius:6px;
+  margin-bottom:10px;
+  border:1px solid #fff;
+}
+.t-new-btn {
+  position:relative;
+  width:100%;
+  padding:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius:6px;
+  border:0;
+  background:#ffa500;
+  font-size:1.2em;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,.1);
+}
+​
+.t-new-btn:active {
+  top:3px;
+  box-shadow:none;
+}
+​
+.t-new-first {
+  text-align: center;
+  font-size: 12px;
+}
+​
+​
+/*--------ラジオボタン  ----------*/
+​
+input[type=radio] {
+    display: none;
+}
+.radio01 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+.radio01::before {
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.radio01::after {
+    background: #ffa500;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 11px;
+    left: 10px;
+    margin-top: -4.5px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+input[type=radio]:checked + .radio01::after {
+    opacity: 1;
+}
+input[type="radio"],input[type="checkbox"]{
+  position: relative;
+  top: 2px;
+}
+
 
  /*---------------- レスポンシブ ------------------*/
 @keyframes animate {
@@ -293,8 +429,6 @@ body{
         border-radius: 50%;
     }
 }
-
-
 
 
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/

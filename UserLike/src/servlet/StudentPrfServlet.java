@@ -25,18 +25,15 @@ public class StudentPrfServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-/*		HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-		*/
-
-		HttpSession session = request.getSession();
 
 		//ログインしているユーザーのIDを取得
 		String s_id = null;
-		s_id = (String) session.getAttribute(s_id);
+		s_id = (String) session.getAttribute("s_id");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
@@ -53,12 +50,12 @@ public class StudentPrfServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-/*		HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-*/
+
 		//ページにフォワードする
 		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/s_prf_edit.jsp");
 		dispatchar.forward(request,response);

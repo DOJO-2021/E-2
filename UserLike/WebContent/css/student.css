@@ -36,6 +36,34 @@ header {
 a {
 	text-decoration : none;
 }
+.s_link:hover{
+  color : #b3d4fc;
+}
+.s_link:active{
+  color : #b3d4fc;
+}
+.s_link{
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+.s_link::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #b3d4fc;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+.s_link:visited{
+	color : #b3d4fc;
+}
+.s_link:hover::after{
+  width: 100%;
+}
 
 main {
   flex: 1;
@@ -243,6 +271,118 @@ body{
     animation-delay: 0s;
     animation-duration: 11s;
 }
+
+/*--------------------------    s_new.jsp    ------------------------------------------*/
+​
+/*------------新規登録フォーム  --------------*/
+​
+.s-new-form {
+    position: relative;
+    background: #fff;
+    border-radius:8px;   /*枠の丸み*/
+    padding:35px;
+    padding-top:30px;
+    width:500px;
+    margin:50px auto;
+    border:1px solid #b3d4fc;   /* 枠の線の細さと色*/
+    z-index: 2;
+}
+h4 {
+  text-align:center;
+  font-size:1.4em;
+  font-weight:700;
+  color:#898989;
+  margin-bottom:24px;
+}
+​
+span {
+  font-weight:200;
+}
+.s-new-input {
+  width:100%;
+  background:#D7EEFF;
+  border:0;
+  padding:20px;
+  border-radius:6px;
+  margin-bottom:10px;
+  border:1px solid #fff;
+}
+.s-new-btn {
+  position:relative;
+  width:100%;
+  padding:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius:6px;
+  border:0;
+  background:#b3d4fc;
+  font-size:1.2em;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,.1);
+}
+​
+.s-new-btn:active {
+  top:3px;
+  box-shadow:none;
+}
+​
+.s-new-first {
+  text-align: center;
+  font-size: 12px;
+}
+​
+​
+/*--------ラジオボタン  ----------*/
+input {
+  width: 0px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+​
+label {
+  position: relative;
+  padding-left: 25px;
+  font-size: 18px;
+  cursor: pointer;
+}
+​
+label:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: solid 2px #ccc;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+​
+input:checked + label:before,
+input:focus + label:before {
+  border-color: #aaa;
+}
+​
+label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #b3d4fc;
+  border-radius: 50%;
+  color: transparent;
+  transform: scale(0);
+  transition:
+    transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+    color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+​
+input:checked + label:after {
+  transform: scale(1);
+}
+​
 
 
 /*-------------------------   s_prf.jsp    --------------------------------------*/
