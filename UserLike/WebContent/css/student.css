@@ -247,56 +247,61 @@ body{
 
 /*-------------------------   s_prf.jsp    --------------------------------------*/
 /*----------  レイアウトを整える     -------------*/
-  .s-prf-area {
-  width: 1000px;
+ .s-prf-area {
+  width: 100%;
   height: 100%;
   min-height: 185px;
-  margin:0 auto;
+  margin: 0 10px;
   flex-wrap: wrap;
   display: flex;
   background-color: #fff;
-  border: 1px solid #ccc;
+ /* border: 1px solid #ccc;  */
   border-top: 0;
   box-shadow: 0 5px 5px -5px #333;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 4px;
+  justify-content: center;
 }
 
 .tab_class {
   width: 50%;
   height: 30px;
-  background-color:#DCDCDC;
-  line-height: 50px;
+  background-color:#ffff;
+  line-height: 30px;
   font-size: 14px;
   text-align: center;
   display: block;
   float: left;
   order: -1;
-  border-radius: 6px;
+  color: #808080;
+  border-radius: 4px;
+  border: solid 1px #ffa500;
 }
 
-/*----------------  ラジオボタンを非表示にする      ----------------------*/
+/*--- ラジオボタンを非表示にする ---*/
 input[name="tab_name"] {
   display: none;
 }
 
-/*---------------   選択されたタブの背景色と文字色を変更する   ---------------------*/
+/*---  選択されたタブの背景色と文字色を変更する---*/
 input:checked + .tab_class {  /*----- 「+」マークは隣接セレクタ 直後に出てくる要素に適用する   ----*/
   background-color: #ffa500;
   color: aliceblue;
 }
 
-/*------------------   コンテンツを一旦全て非表示にする   ---------------------*/
+/*---  コンテンツを一旦全て非表示にする ---*/
 .content_class {
   display: none;
   width: 100%;
 
 }
-
-/*------------------  選択されたタブのコンテンツを表示する   -------------------*/
+/*------  選択されたタブのコンテンツを表示する  ---------*/
 input:checked + .tab_class + .content_class {
   display: block;
 }
+
+
+
  /*---------------- レスポンシブ ------------------*/
 @keyframes animate {
 

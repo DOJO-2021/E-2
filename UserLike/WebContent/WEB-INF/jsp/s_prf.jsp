@@ -25,85 +25,100 @@
 			</header>
 
 
-		<main>
+<main>
 			<!--メイン-->
 			<!-- 受講者自身のプロフィールを確認できる画面 -->
-			<h2>プロフィール</h2>
 
-			<!-- 編集ボタン -->
+
+			<!-- 写真 -->
+
+        <div class="s-prf-area">
+          <input type="radio" name="tab_name" id="tab1" checked>
+          <label class="tab_class" for="tab1">プロフィール</label>
+          <div class="content_class">
+
+        	<!-- 編集ボタン -->
 			<form class="edit" method="GET" action="/UserLike/StudentEditServlet">
 			<div class="button">
 				<input type="submit" name="edit" value="編集">
 			</div>
 			</form>
 
-
-			<!-- 写真 -->
-
-
 			<div id="s_name">
-			<p>${s_name}</p>
+				<label class="item_title">名前</label>
+				<p>${s_name}</p>
 			</div>
 
 			<div id="GENDER" >
-			<label class="item_title">性別</label>
-			<p>${gender}</p>
+				<label class="item_title">性別</label>
+				<p>${gender}</p>
 			</div>
 
 			<div id="C_NAME">
-			<label class="item_title">クラス</label>
-			<p>${c_name}</p>
+				<label class="item_title">クラス</label>
+				<p>${c_name}</p>
 			</div>
 
 			<div id="S_MAIL">
-			<label class="item_title">Email</label>
-			<p>${s_mail}</p>
+				<label class="item_title">Email</label>
+				<p>${s_mail}</p>
 			</div>
 
 			<div id="EXP">
-			<label class="item_title">プログラミング経験</label>
-			<p>${exp}</p>
+				<label class="item_title">プログラミング経験</label>
+				<p>${exp}</p>
 			</div>
 
 			<div id="COLLEGE">
-			<label class="item_title">出身学部</label>
-			<p>${college}</p>
+				<label class="item_title">出身学部</label>
+				<p>${college}</p>
 			</div>
 
 			<div id="B_PLACE">
-			<label class="item_title">出身地</label>
-			<p>${b_place}</p>
+				<label class="item_title">出身地</label>
+				<p>${b_place}</p>
 			</div>
 
 			<div id="HOBBY">
-			<label class="item_title">趣味</label>
-			<p>${hobby}</p>
+				<label class="item_title">趣味</label>
+				<p>${hobby}</p>
 			</div>
 
 			<div id="SKILL">
-			<label class="item_title">特技</label>
-			<p>${skill}</p>
+				<label class="item_title">特技</label>
+				<p>${skill}</p>
 			</div>
 
 			<div id="MUSIC">
-			<label class="item_title">好きな音楽</label>
-			<p>${music}</p>
+				<label class="item_title">好きな音楽</label>
+				<p>${music}</p>
 			</div>
 
 			<div id="JOB">
-			<label class="item_title">バイト経験</label>
-			<p>${job}</p>
+				<label class="item_title">バイト経験</label>
+				<p>${job}</p>
 			</div>
 
 			<div id="ACTIVITY">
-			<label class="item_title">課外活動経験</label>
-			<p>${activity}</p>
+				<label class="item_title">課外活動経験</label>
+				<p>${activity}</p>
 			</div>
 
 			<div id="PR">
-			<label class="item_title">自己PR</label>
-			<p>${pr}</p>
+				<label class="item_title">自己PR</label>
+				<p>${pr}</p>
 			</div>
+
+            </div>
+
+
+			<input type="radio" name="tab_name" id="tab2" >
+	    	<label class="tab_class" for="tab2">理解度情報</label>
+		    <div class="content_class">
+		    	<p>タブ2のコンテンツを表示します</p>
+		    </div>
+
+	    </div>
 		</main>
 
 		<footer class="footer"><!--フッター-->

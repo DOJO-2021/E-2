@@ -15,6 +15,12 @@ import model.Prf;
 import model.Result;
 import model.StuIdpw;
 
+/*
+import dao.PrfDAO;
+import model.Prf;
+import model.Result;
+*/
+
 /**
  * Servlet implementation class StudentNewServlet
  */
@@ -22,7 +28,9 @@ import model.StuIdpw;
 public class StudentNewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 登録ページにフォワードする
@@ -30,27 +38,29 @@ public class StudentNewServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String s_id = request.getParameter("s_id");
-		String s_pw = request.getParameter("s_pw");
-		String s_name = request.getParameter("s_name");
+		String s_id = request.getParameter("S_ID");
+		String s_pw = request.getParameter("S_PW");
+		String s_name = request.getParameter("S_NAME");
 		String icon = request.getParameter("ICON");
-		String s_mail = request.getParameter("s_mail");
-		String gender = request.getParameter("gender");
-		String c_name = request.getParameter("c_name");
-		String exp = request.getParameter("exp");
-		String college = request.getParameter("college");
-		String b_place = request.getParameter("b_plece");
-		String hobby = request.getParameter("hobby");
-		String skill = request.getParameter("skill");
-		String music = request.getParameter("music");
-		String job = request.getParameter("job");
-		String activity= request.getParameter("activity");
-		String pr = request.getParameter("pr");
+		String s_mail = request.getParameter("S_MAIL");
+		String gender = request.getParameter("GENDER");
+		String c_name = request.getParameter("C_NAME");
+		String exp = request.getParameter("EXP");
+		String college = request.getParameter("COLLEGE");
+		String b_place = request.getParameter("B_PLACE");
+		String hobby = request.getParameter("HOBBY");
+		String skill = request.getParameter("SKILL");
+		String music = request.getParameter("MUSIC");
+		String job = request.getParameter("JOB");
+		String activity= request.getParameter("ACTIVITY");
+		String pr = request.getParameter("PR");
 
 
 		// IDとパスワードの登録処理を行う

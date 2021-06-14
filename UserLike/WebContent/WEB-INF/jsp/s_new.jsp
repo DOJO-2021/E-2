@@ -8,27 +8,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | 新規登録</title>
-	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
-	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
+    <link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
-	<link rel="stylesheet" href="css/validationEngine.jquery.css"><!-- jQuery読み込み / 入力チェック用CSS -->
-	<script src="js/jquery.validationEngine.js"></script><!-- jQuery読み込み / 入力チェック -->
-	<script src="js/languages/jquery.validationEngine-ja.js" charset="UTF-8"></script><!-- jQuery読み込み / 入力チェック -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
-
-<!-- jquery / 入力チェック -->
-	<script type="text/javascript">
-    	jQuery(function(){
-       	 //<form>タグのidを指定
-       	 jQuery("#formCheck").validationEngine(
-           	 'attach', {
-              	  promptPosition: "topLeft"//エラーメッセージ位置の指定
-           	 }
-       	 );
-   	 });
-	</script>
-
 </head>
 
 
@@ -42,99 +25,104 @@
 		<main>
 			<!--メイン-->
 			<h1>受講者用新規登録</h1><hr>
-			<form id="formCheck" method="GET" action="result.html" >
+			<form method="POST" action="/UserLike/StudentNewServlet">
 			<div class="cp_iptxt">
 				<label>ID</label><br>
-				<input class="validate[required]" type="text" placeholder="ID">
+				<input class="ef" type="text" name="S_ID" placeholder="ID">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_iptxt">
 				<label>パスワード</label><br>
-				<input class="validate[required]" type="text" name="password" placeholder="">
+				<input class="ef" type="text" name="S_PW" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_iptxt">
 				<label>パスワード(再入力)</label><br>
-				<input class="validate[required,equals[password]]"  type="text" placeholder="">
+				<input class="ef" type="text" name ="" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_iptxt">
 				<label>名前</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="S_NAME" placeholder="">
+				<span class="focus_line"></span>
+			</div>
+			<div class="cp_iptxt">
+				<label> 画像</label><br>
+				<input class="ef" type="text" name="ICON" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_iptxt">
 				<label>メールアドレス</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="S_MAIL" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<table class="info">
 			  <tr>
 			    <th>性別</th>
 			    <td>
-			      <input type="radio" name="gender" value="man" checked>男
-			      <input type="radio" name="gender" value="woman">女
+			      <input type="radio" name="GENDER" value="man" checked>男
+			      <input type="radio" name="GENDER" value="woman">女
 			    </td>
 			  </tr>
 			  <tr>
 			    <th>クラス名</th>
 			    <td>
-			      <input type="radio" name="c_name" value="a" checked>A
-			      <input type="radio" name="c_name" value="b">B
-			      <input type="radio" name="c_name" value="c">C
-			      <input type="radio" name="c_name" value="d">D
-			      <input type="radio" name="c_name" value="e">E
+			      <input type="radio" name="C_NAME" value="a" checked>A
+			      <input type="radio" name="C_NAME" value="b">B
+			      <input type="radio" name="C_NAME" value="c">C
+			      <input type="radio" name="C_NAME" value="d">D
+			      <input type="radio" name="C_NAME" value="e">E
 			    </td>
 			  </tr>
 			  <tr>
 			    <th>プログラミング経験</th>
 			    <td>
-			      <input type="radio" name="exp" value="yes" checked>あり
-			      <input type="radio" name="exp" value="no">なし
+			      <input type="radio" name="EXP" value="yes" checked>あり
+			      <input type="radio" name="EXP" value="no">なし
 			    </td>
 			  </tr>
 			</table>
 			<div class="cp_ip">
 				<label>出身学部</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="COLLEGE" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>出身地</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="B_PLACE" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>趣味</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="HOBBY" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>特技</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="SKILL" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>好きな音楽</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="MUSIC" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>バイト経験</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="JOB" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>課外活動経験</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="ACTIVITY" placeholder="">
 				<span class="focus_line"></span>
 			</div>
 			<div class="cp_ip">
 				<label>自己PR</label><br>
-				<input class="ef" type="text" placeholder="">
+				<input class="ef" type="text" name="PR" placeholder="">
 				<span class="focus_line"></span>
 			</div>
-			<a href="result.html" class="btn-circle-flat">登録</a>
+			<input type="submit" name="REGIST" value="登録">
 			</form>
 		</main>
 
