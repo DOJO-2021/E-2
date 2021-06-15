@@ -15,6 +15,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 	<!-- vue.js開発バージョン、便利なコンソールの警告が含まれています -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="push.js"></script><!--Push.js読み込み-->
 </head>
 
 
@@ -43,18 +44,18 @@
 
 					</div>
                 </div>
-
-				<form class="und_button" method="POST" action="/USerLike/StudentTopServlet">
+<form>
+			<!--  	<form class="und_button" method="POST" action="/USerLike/StudentTopServlet">  -->
 					<p class="nun-know">わかった: <span id="understood">0</span></p>
 					<p class="nun-unknow">わからない: <span id="cantunderstand">0</span></p>
 
 
 					<!-- 送信ボタン -->
 					<p class="send">
-						<input type="submit" name="send" value="送信">
+						<input type="submit" name="send" value="送信" id="notification">
 					</p>
 				</form>
-
+ <button id="notify-button">Notify Me!!</button>
 				<div id="app">
 				  {{ message }}
 				</div>
@@ -107,6 +108,21 @@
 		not++;
 		document.getElementById("cantunderstand").innerHTML = not;
 		}
+		</script>
+
+		<script>
+	    $("#notify-button").click(function(){
+	    	Push.Permission.has()
+	    	Push.create("Hello world!",{
+	            body: "This is example of Push.js Tutorial",
+	            icon: '/Logo_small.png',
+	            timeout: 2000,
+	            onClick: function () {
+	                window.focus();
+	                this.close();
+	            }
+	        });
+	    });
 		</script>
 
 		<script src="js/scroll.js"></script><!--トップに戻るボタン-->

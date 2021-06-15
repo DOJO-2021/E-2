@@ -5,7 +5,7 @@
 
 <head>
 	<!--情報-->
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ヤザワスイッチ | 新規登録</title>
 	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
@@ -13,6 +13,20 @@
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<script src="js/jquery.validationEngine.js"></script><!-- jQuery読み込み / 入力チェック -->
+	<script src="js/jquery.validationEngine-ja.js"></script><!-- jQuery読み込み / 入力チェック -->
+	<link rel="stylesheet" href="css/validationEngine.css"><!--CSS読み込み / 入力チェック用CSS-->
+
+	<!-- jquery / 入力チェック -->
+	<script type="text/javascript">
+    	jQuery(function(){
+       	 //<form>タグのidを指定
+       	 jQuery("#formCheck").validationEngine(
+           	 'attach', {
+              	  promptPosition: "topLeft"//エラーメッセージ位置の指定
+           	 });
+   	 });
+	</script>
 </head>
 
 
@@ -38,6 +52,7 @@
 										    z-index: 2">
 			<form method="POST" action="/UserLike/StudentLoginServlet">
 			<h4>新規登録</h4>
+
 ​				<div class="cp_iptxt">
 					<label>ユーザーID</label><br>
 					<input type="text" name="t_id" class="t-new-input validate[required,maxSize[20]]" placeholder="ID">
