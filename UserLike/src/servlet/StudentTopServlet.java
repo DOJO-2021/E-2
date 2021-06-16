@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.PrfDAO;
+import model.Prf;
+import model.Result;
+
 /**
  * Servlet implementation class StudentTopServlet
  */
@@ -39,36 +43,36 @@ public class StudentTopServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		/* テスト中はコメントアウト
 		HttpSession session = request.getSession();
 		if (session.getAttribute("s_id") == null) {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
-		*/
-
-		//ログインしているユーザーのIDを取得
-/*		HttpSession session = request.getSession();
-		String s_id = session.getAttribute("s_id");
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String understood = request.getParameter("understood");
-		String cantunderstand = request.getParameter("cantunderstand");
+	//	String understood = request.getParameter("understood");
+	//	String cantunderstand = request.getParameter("cantunderstand");
 
-		//自分のプロフィールを検索する
-		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> profList =PrfDAO.show(new Prf("s_id"));
+		//ログインしているユーザーのIDを取得
+		request.setCharacterEncoding("UTF-8");
+		String s_id = (String) session.getAttribute("s_id");
+
+		// リクエストパラメータを取得する
+		String know = request.getParameter("understood");
 
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
-		if(PrfDAO.update(new Prf(s_name,s_id,gender,c_name,s_mail,exp,college,b_place,hobby,skill,music,job,activity,pr))) {
+		if(PrfDAO.understand(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, know))) {
 			//更新成功
-			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/MainServlet"));
+			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/StudentTopServlet"));
 		}else {
-			request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/MainServlet"));
+			request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/StudentTopServlet"));
 		}
-*/
+
+		//ページにフォワードする
+		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+		dispatchar.forward(request,response);
 	}
 
 

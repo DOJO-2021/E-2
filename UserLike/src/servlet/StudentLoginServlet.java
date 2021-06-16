@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 
 import dao.StudentIdpwDAO;
 import model.Result;
-import model.StuLoginUser;
 
 /**
  * Servlet implementation class LoginServlet
@@ -44,7 +43,7 @@ public class StudentLoginServlet extends HttpServlet {
 		if (iDao.isLoginOK(s_id, s_pw)) {	// ログイン成功
 			// セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
-			session.setAttribute("s_id", new StuLoginUser(s_id));
+			session.setAttribute("s_id", s_id);
 
 			// メニューサーブレットにリダイレクトする
 			response.sendRedirect("/UserLike/StudentTopServlet");

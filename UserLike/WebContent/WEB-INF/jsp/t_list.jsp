@@ -14,6 +14,14 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 
+	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
+	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
+	<script type="text/javascript"><!-- jquery / ページフェード -->
+	$(document).ready(function() {
+		jQuery(".animsition").animsition();
+	});
+	</script>
+
  	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/r-2.2.9/datatables.min.css"/><!-- jqueryテーブルCSS読み込み -->
 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/r-2.2.9/datatables.min.js"></script><!-- jqueryテーブル読み込み -->
     <script>
@@ -24,19 +32,18 @@
         	 $("#foo-table").DataTable()
         	 var dt = $('#foo-table').DataTable();
         	//hide the first column
-        	dt.column(0).visible(false);
+        	dt.column(0).visible(true);
         });
     </script>
 </head>
 
 
 <body>
-	<div class="wrapper">
-			<!--ヘッダー-->
-			<header class="header">
-				<jsp:include page="t_header.jsp" />
-			</header>
-
+<div class="wrapper">
+	<!--ヘッダー-->
+	<header class="header">
+		<jsp:include page="t_header.jsp" />
+	</header>
 
 		<main>
 			<!--メイン-->
@@ -45,24 +52,31 @@
 		 	<table id="foo-table" class="table compact" style="width:95%">
 		        <thead>
 		            <tr>
-			            <th>ID</th>
 			            <th>クラス</th>
 			            <th>氏名</th>
 			            <th>性別</th>
 			            <th>経験</th>
 			            <th>理解度</th>
+			            <th>ID</th>
 		            </tr>
 		        </thead>
 
 		        <tbody>
 		        	<c:forEach var="e" items="${prfList}">
 		            <tr>
-			            <td>${e.s_id}</td>
 			            <td>${e.c_name}</td>
 			            <td>${e.s_name}</td>
 			            <td>${e.gender}</td>
 			            <td>${e.exp}</td>
 			            <td>${e.know}</td>
+			            <td>
+				            <form method="GET" action="/UserLike/TeacherPrfServlet">
+				            <div class="button">
+					            <input type="text" value="${e.s_id}" name="S_ID">
+								<input type="submit" value="送信">
+							</div>
+							</form>
+						</td>
 		            </tr>
 		            </c:forEach>
 		        </tbody>
@@ -74,12 +88,12 @@
 			</div>
 		</main>
 
-		<footer class="footer"><!--フッター-->
-			<jsp:include page="footer.jsp" />
-		</footer>
+	<footer class="footer"><!--フッター-->
+		<jsp:include page="footer.jsp" />
+	</footer>
 
-		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
-		<div id="page_top"><a href="#"></a></div>
-	</div>
+	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
+	<div id="page_top"><a href="#"></a></div>
+</div>
 </body>
 </html>

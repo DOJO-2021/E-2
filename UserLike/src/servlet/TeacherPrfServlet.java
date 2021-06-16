@@ -25,12 +25,12 @@ public class TeacherPrfServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+	/*	// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
 		if (session.getAttribute("t_id") == null) {
 			response.sendRedirect("/UserLike/TeacherLoginServlet");
 			return;
-		}
+		}*/
 
 		//前のページからプロフ情報取得
 		// リクエストパラメータを取得する
@@ -39,10 +39,14 @@ public class TeacherPrfServlet extends HttpServlet {
 
 		//受講者のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> profList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
 
-		//検索結果をリクエストスコープから取得する
-		request.setAttribute("profList",profList);
+		//検索結果をリクエストスコープに格納する
+		request.setAttribute("prfList",prfList);
+
+		//セッションにデータを格納
+		HttpSession hs = request.getSession();
+		hs.setAttribute("S_ID", s_id);
 
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_prf.jsp");
@@ -52,20 +56,22 @@ public class TeacherPrfServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		HttpSession session = request.getSession();
+	/*	HttpSession session = request.getSession();
 		if (session.getAttribute("t_id") == null) {
 			response.sendRedirect("/UserLike/TeacherLoginServlet");
 			return;
-		}
+		}*/
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String s_id = request.getParameter("S_ID");
+
+		HttpSession hs = request.getSession();
+		String s_id = (String) hs.getAttribute("S_ID");
 
 		//削除を行う
 		PrfDAO PrfDAO = new PrfDAO();
 		if(PrfDAO.delete(s_id)) {
-			request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike"));
+			request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike/TeacherListServlet"));
 		}else {
 			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
 		}

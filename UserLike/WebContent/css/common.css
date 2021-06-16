@@ -187,11 +187,11 @@ h2 {
 }
 .nun-know {
 	display:inline-block;
-	margin: 20px 40px;
+	margin: 20px 80px;
 }
 .nun-unknow {
 	display:inline-block;
-	margin: 20px 40px;
+	margin: 20px 80px;
 }
 .reaction {
 	width: 110px;
@@ -293,6 +293,33 @@ h2 {
 	text-align: right;
 	margin: 20px;
 }
+
+/*--------------  result.jsp  ---------------------*/
+.r_main{
+	overflow-y:hidden;
+	margin-top: 100px;
+}
+
+.r_title{
+	margin-bottom: 80px;
+}
+
+.result{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.r-log-back{
+	text-align: center;
+	margin-top: 80px;
+}
+
+.r-log-back a{
+	color: #000;
+	text-decoration : none;
+}
+
+
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {
 	.logo {

@@ -35,15 +35,15 @@ public class StudentEditServlet extends HttpServlet {
 
 
 		//ログインしているユーザーのIDを取得
-		String s_id = null;
-		s_id = (String) session.getAttribute("s_id");
+		request.setCharacterEncoding("UTF-8");
+		String s_id = (String) session.getAttribute("s_id");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> profList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
 
 		//検索結果をリクエストスコープから取得する
-		request.setAttribute("profList",profList);
+		request.setAttribute("prfList",prfList);
 
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/s_prf_edit.jsp");
@@ -78,11 +78,10 @@ public class StudentEditServlet extends HttpServlet {
 		String job = request.getParameter("JOB");
 		String  activity= request.getParameter("ACTIVITY");
 		String pr = request.getParameter("PR");
-		int know = Integer.parseInt(request.getParameter("know"));
 
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
-		if(PrfDAO.update(new Prf(s_id, s_name, icon, gender, c_name, s_mail, exp, college, b_place, hobby, skill, music, job,activity, pr, know))) {
+		if(PrfDAO.update(new Prf(s_id, s_name, icon, gender, c_name, s_mail, exp, college, b_place, hobby, skill, music, job,activity, pr, null))) {
 			//更新成功
 			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/MainServlet"));
 		}else {

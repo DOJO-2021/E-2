@@ -50,7 +50,7 @@ public class PrfDAO {
 				rs.getString("job"),
 				rs.getString("activity"),
 				rs.getString("pr"),
-				rs.getInt("Know")
+				rs.getString("Know")
 				);
 				prfList.add(list);
 			}
@@ -121,7 +121,7 @@ public class PrfDAO {
 				rs.getString("job"),
 				rs.getString("activity"),
 				rs.getString("pr"),
-				rs.getInt("Know")
+				rs.getString("Know")
 				);
 				prfList.add(list);
 			}
@@ -303,7 +303,7 @@ public class PrfDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update profile set s_name=?, s_mail=?, gender=?, c_name=?, exp=?, college=?, b_place=?, hobby=?, skill=?, music=?, job=?, activity=?, pr=?, where id=?";
+			String sql = "update profile set s_name=?, s_mail=?, gender=?, c_name=?, exp=?, college=?, b_place=?, hobby=?, skill=?, music=?, job=?, activity=?, pr=? where id=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
@@ -417,6 +417,58 @@ public class PrfDAO {
 		return result;
 	}
 
+	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
+	public boolean understand(Prf list) {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
+
+			// SQL文を準備する
+			String sql = "update profile set know=? where id=?";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を完成させる
+			if (list.getPr() != null) {
+				pStmt.setString(1, list.getPr());
+			}
+			else {
+				pStmt.setString(1, null);
+			}
+			pStmt.setString(2, list.getS_id());
+
+			// SQL文を実行する
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		// 結果を返す
+		return result;
+	}
 
 
 

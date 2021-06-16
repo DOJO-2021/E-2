@@ -17,12 +17,12 @@ public class Prf implements Serializable {
 	private String job;
 	private String activity;
 	private String pr;
-	private int know;
+	private String know;
 
 
 	// 引数があるコンストラクタ
 	public Prf(String s_id, String s_name,String icon, String s_mail, String gender, String c_name, String exp,
-			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr, int know) {
+			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr, String know) {
 		super();
 		this.s_id = s_id;
 		this.s_name = s_name;
@@ -157,11 +157,11 @@ public class Prf implements Serializable {
 	public void setPr(String pr) {
 		this.pr = pr;
 	}
-	public int getKnow() {
+	public String getKnow() {
 		return know;
 	}
 
-	public void setKnow(int know) {
+	public void setKnow(String know) {
 		this.know = know;
 	}
 }

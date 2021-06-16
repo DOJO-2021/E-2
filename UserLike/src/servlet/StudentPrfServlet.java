@@ -32,15 +32,15 @@ public class StudentPrfServlet extends HttpServlet {
 		}
 
 		//ログインしているユーザーのIDを取得
-		String s_id = null;
-		s_id = (String) session.getAttribute("s_id");
+		request.setCharacterEncoding("UTF-8");
+		String s_id = (String) session.getAttribute("s_id");
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> profList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
 
 		//検索結果をリクエストスコープから取得する
-		request.setAttribute("profList",profList);
+		request.setAttribute("prfList", prfList);
 
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/s_prf.jsp");
