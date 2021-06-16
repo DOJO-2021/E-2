@@ -58,7 +58,7 @@
 									    margin:50px auto;
 									    border:1px solid #ffa500;   /* 枠の線の細さと色*/
 									    z-index: 2">
-			<form id="formCheck" method="POST" action="/UserLike/StudentNewServlet">
+			<form id="formCheck" method="POST" action="/UserLike/TeacherNewServlet">
 			<h4>新規登録</h4>
 
 ​				<div class="cp_iptxt">
