@@ -42,9 +42,12 @@
                 <div class="reaction_button">
 				<!--大理解度ボタン-->
 				<div class="knowns">
+					<form class="und_button" method="POST" action="/UserLike/StudentTopServlet">
 					<div class="know">
 						<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()" class="imgknow">
 					</div>
+					</form>
+
 					<div class="unknow">
 						<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()" class="imgunknow">
 					</div>

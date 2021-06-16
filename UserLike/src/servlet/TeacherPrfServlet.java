@@ -25,12 +25,12 @@ public class TeacherPrfServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	/*	// もしもログインしていなかったらログインサーブレットにリダイレクトする
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
 		if (session.getAttribute("t_id") == null) {
 			response.sendRedirect("/UserLike/TeacherLoginServlet");
 			return;
-		}*/
+		}
 
 		//前のページからプロフ情報取得
 		// リクエストパラメータを取得する
