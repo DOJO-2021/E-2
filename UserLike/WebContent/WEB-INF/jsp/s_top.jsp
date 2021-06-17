@@ -58,25 +58,27 @@
                 </td></tr></table>
 
 				<!--小反応ボタン-->
-				<input type="image" class="reaction" src="img/button2/Funny2.png" alt="笑い">
-				<input type="image" class="reaction" src="img/button2/Clap2.png" alt="拍手">
-				<input type="image" class="reaction" src="img/button2/Help!2.png" alt="ヘルプ">
-				<input type="image" class="reaction" src="img/button2/Thanks2.png" alt="ありがとうございます">
-				<input type="image" class="reaction" src="img/button2/Goodmorning2.png" alt="おはようございます">
-				<input type="image" class="reaction" src="img/button2/Greetings2.png" alt="おつかれさまです">
-				<input type="image" class="reaction" src="img/button2/Finally2.png" alt="キター!!">
-				<input type="image" class="reaction" src="img/button2/Group2.png" alt="ク゛ルーフ゜活動求む">
-				<input type="image" class="reaction" src="img/button2/Session2.png" alt="セッション希望">
-				<input type="image" class="reaction" src="img/button2/Stop2.png" alt="ちょっとまった">
-				<input type="image" class="reaction" src="img/button2/TooQuick2.png" alt="ちょっと早い">
-				<input type="image" class="reaction" src="img/button2/AhHa2.png" alt="なるほど">
-				<input type="image" class="reaction" src="img/button2/Onemore2.png" alt="もう一度お願いします">
-				<input type="image" class="reaction" src="img/button2/Great2.png" alt="最高です">
-				<input type="image" class="reaction" src="img/button2/Share2.png" alt="共有してください">
-				<input type="image" class="reaction" src="img/button2/Suggestion2.png" alt="提案があります">
-				<input type="image" class="reaction" src="img/button2/Eiken2.png" alt="英検3級">
-				<input type="image" class="reaction" src="img/button2/Finished2.png" alt="作業終わりました">
-				<input type="image" class="reaction" src="img/button2/Question2.png" alt="質問があります">
+				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
+					<button type="submit" class="react" name="react" value="1"><img src="img/button2/Funny2.png" alt="笑い" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="2"><img src="img/button2/Clap2.png" alt="拍手" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="3"><img src="img/button2/Help!2.png" alt="ヘルプ" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="4"><img src="img/button2/Thanks2.png" alt="ありがとうございます" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="5"><img src="img/button2/Goodmorning2.png" alt="おはようございます" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="1"><img src="img/button2/Greetings2.png" alt="おつかれさまです" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="6"><img src="img/button2/Finally2.png" alt="キター!!" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="7"><img src="img/button2/Group2.png" alt="ク゛ルーフ゜活動求む" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="8"><img src="img/button2/Session2.png" alt="セッション希望" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="9"><img src="img/button2/Stop2.png" alt="ちょっとまった" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="10"><img src="img/button2/TooQuick2.png" alt="ちょっと早い" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="11"><img src="img/button2/AhHa2.png" alt="なるほど" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="12"><img src="img/button2/Onemore2.png" alt="もう一度お願いします" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="13"><img src="img/button2/Great2.png" alt="最高です" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="14"><img src="img/button2/Share2.png" alt="共有してください" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="15"><img src="img/button2/Suggestion2.png" alt="提案があります" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="16"><img src="img/button2/Eiken2.png" alt="英検3級" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="17"><img src="img/button2/Finished2.png" alt="作業終わりました" class="reaction"></button>
+					<button type="submit" class="react" name="react" value="18"><img src="img/button2/Question2.png" alt="質問があります" class="reaction"></button>
+				</form>
 			</div>
 		</main>
 

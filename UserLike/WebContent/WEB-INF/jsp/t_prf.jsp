@@ -139,8 +139,6 @@
 
   	    <div class="content_class">
 	    <c:forEach var="e" items="${prfList}">
-		    <p>わかった：${e.know}</p>
-		    <p>わからない：${e.unknow}</p>
 			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
 			<canvas id="myChart"></canvas>
 			</div>
@@ -166,7 +164,9 @@
 	        labels: ["わかった","わからない"],
 	        datasets: [{
 	            backgroundColor: ['rgb(255, 165, 0)','rgb(179, 212, 252)'],
-	            data: [110,61],
+	            <c:forEach var="e" items="${prfList}">
+	            data: [${e.know},${e.unknow}],
+	    	    </c:forEach>
 	        }],
 	    },
 	    // ここに設定オプションを書きます

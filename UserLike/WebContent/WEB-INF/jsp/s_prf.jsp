@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script><!--グラフ機能読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -133,9 +134,10 @@
     	<label class="tab_class" for="tab2">理解度情報</label>
 
 	    <div class="content_class">
-    	<c:forEach var="e" items="${prfList}">
-		    <p>わかった：${e.know}</p>
-		    <p>わからない：${e.unknow}</p>
+	    <c:forEach var="e" items="${prfList}">
+			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
+			<canvas id="myChart"></canvas>
+			</div>
 	    </c:forEach>
 	    </div>
 	    </div>
@@ -148,6 +150,25 @@
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
 
+	<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var chart = new Chart(ctx, {
+	    // 作成したいチャートのタイプ
+	    type: 'doughnut',
+	    // データセットのデータ
+		data: {
+	        labels: ["わかった","わからない"],
+	        datasets: [{
+	            backgroundColor: ['rgb(255, 165, 0)','rgb(179, 212, 252)'],
+	            <c:forEach var="e" items="${prfList}">
+	            data: [${e.know},${e.unknow}],
+	    	    </c:forEach>
+	        }],
+	    },
+	    // ここに設定オプションを書きます
+	    options: {}
+	});
+	</script>
 </div>
 </div>
 </body>

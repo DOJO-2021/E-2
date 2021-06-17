@@ -36,7 +36,6 @@ public class StudentEditServlet extends HttpServlet {
 
 		//ログインしているユーザーのIDを取得
 		String s_id = (String) session.getAttribute("s_id");
-		System.out.println(s_id);
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
@@ -59,6 +58,8 @@ public class StudentEditServlet extends HttpServlet {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
+
+		//ログインしているユーザーのIDを取得
 		String s_id = (String) session.getAttribute("s_id");
 
 
@@ -84,16 +85,12 @@ public class StudentEditServlet extends HttpServlet {
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
 		if (request.getParameter("SUBMIT").equals("保存")) {
-			System.out.println(9);
 			if(PrfDAO.update(new Prf(s_id, s_name, null, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job,activity, pr, 0, 0))) {
 				//更新成功
-				System.out.println(2);
 				request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UserLike/StudentPrfServlet"));
 			}else {
 				request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/StudentEditServlet"));
 			}
-			System.out.println(5);
-			System.out.println(s_id);
 
 			//ページにフォワードする
 			RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
