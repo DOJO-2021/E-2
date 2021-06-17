@@ -25,7 +25,7 @@
 
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -33,76 +33,92 @@
 	</header>
 
 		<main>
-			<!--メイン-->
-			<h2>プロフィール編集</h2>
-			<form method="POST" action="/UserLike/StudentEditServlet">
-				<input type="text"  name="S_NAME" value="${s_name}">
+		<!--メイン-->
+		<!-- 受講者自身のプロフィールを確認できる画面 -->
+        <div class="s-prf-edit_area">
 
-				<div class="cp_iptxt">
-				<label class="item_title">性別</label>
-				<input type="text"  name="GENDER" value="${gender}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">クラス</label>
-				<input type="text"  name="C_NAME" value="${c_name}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">Email</label>
-				<input type="email"  name="S_MAIL" value="${s_mail}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">プログラミング経験なし</label>
-				<input type="text"  name="EXP" value="${exp}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">出身学部</label>
-				<input type="text"  name="COLLEGE" value="${college}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">出身地</label>
-				<input type="text"  name="B_PLACE" value="${b_place}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">趣味</label>
-				<input type="text"  name="HOBBY" value="${hobby}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">特技</label>
-				<input type="text"  name="SKILL" value="${skill}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">好きな音楽</label>
-				<input type="text"  name="MUSIC" value="${music}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">バイト経験</label>
-				<input type="text"  name="JOB" value="${job}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">課外活動経験</label>
-				<input type="text"  name="ACTIVITY" value="${gender}">
-				</div>
-​
-				<div class="cp_iptxt">
-				<label class="item_title">自己PR</label>
-				<input type="text"  name="PR" value="${pr}">
-				</div>
-​
+        <label class="prf_edit">プロフィール</label>
+	    <div class="prf_edit_class">
+	 	<c:forEach var="e" items="${prfList}">
+
+			<p class="edit">プロフィール編集</p>
+			<form method="POST" action="/UserLike/StudentEditServlet">
+			<table class="edit_table">
+		          <tr>
+						<th><label class="prf_edit_title">名前</label></th>
+						<td><p><input type="text" name="S_NAME" value="${e.s_name}" class="s-form-text" /></p></td>
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">性別</label></th>
+						<td><p><input type="text" name="GENDER" value="${e.gender}" class="s-form-text" /></p></td>
+
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">クラス</label></th>
+						<td><p><input type="text" name="C_NAME" value="${e.c_name}" class="s-form-text" /></p></td>
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">Email</label></th>
+						<td><p><input type="text" name="S_MAIL" value="${e.s_mail}" class="s-form-text" /></p></td>
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">プログラミング経験</label></th>
+						<td><p><input type="text" name="EXP" value="${e.exp}" class="s-form-text" /></p></td>
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">出身学部</label></th>
+						<td><p><input type="text" name="COLLEGE" value="${e.college}" class="s-form-text" /></p></td>
+		          </tr>
+		          <tr>
+						<th><label class="prf_edit_title">出身地</label></th>
+						<td><p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-text" /></p></td>
+				  </tr>
+		        </table>
+		        <br>
+		​
+					<div id="HOBBY">
+						<label class="prf_edit_titles">趣味</label>
+						<p><input type="text" name="HOBBY" value="${e.hobby}" class="s-form-text" /></p>
+					</div>
+					<br>
+		​
+					<div id="SKILL">
+						<label class="prf_edit_titles">特技</label>
+						<p><input type="text" name="SKILL" value="${e.skill}" class="s-form-text" /></p>
+					</div>
+					<br>
+		​
+					<div id="MUSIC">
+						<label class="prf_edit_titles">好きな音楽</label>
+						<p><input type="text" name="MUSIC" value="${e.music}" class="s-form-text" /></p>
+					</div>
+					<br>
+		​​
+					<div id="JOB">
+						<label class="prf_edit_titles">バイト経験</label>
+						<p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-text" /></p>
+					</div>
+					<br>
+		​
+					<div id="ACTIVITY">
+						<label class="prf_edit_titles">課外活動経験</label>
+						<p><input type="text" name="ACTIVITY" value="${e.activity}" class="s-form-text" /></p>
+					</div>
+		            <br>
+					<div id="PR">
+						<label class="prf_edit_titles">自己PR</label>
+						<p><input type="text" name="PR" value="${e.pr}" class="s-form-text" /></p>
+					</div>
+		            <br>
+		            ​
 				<!-- 保存ボタン -->
 				<div class="button">
-					<input type="submit" name="submit" value="保存">
+					<input type="submit" name="SUBMIT" value="保存">
 				</div>
 			</form>
+			</c:forEach>
+			</div>
+			</div>
 		</main>
 
 	<footer class="footer"><!--フッター-->

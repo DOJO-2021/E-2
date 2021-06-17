@@ -10,6 +10,7 @@
 	<title>ヤザワスイッチ | ${result.title}</title>
 	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
+	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 
@@ -24,7 +25,7 @@
 
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -32,25 +33,29 @@
 	</header>
 
 
-		<main class="r_main">
+	<main class="r_main">
 			<!--メイン-->
-			<h2 class="r_title"><c:out value="${result.title}" /></h2>
+		<div class="s-log-form">
+			<h4 class="r_title"><c:out value="${result.title}" /></h4>
 			<div class=result>
 				<p><c:out value="${result.message}" /></p>
 			</div>
-
-			<div class="r-log-back">
-				<a href="${result.backTo}"><img style="vertical-align:middle;height:18px;padding-bottom:2px" src="img/back.png" >戻る</a>
+			<div class="yazawa_tea">
+				<p><!--<img style="vertical-align:middle;height:40px;padding-bottom:8px"  src="img/tea1.png" > -->いったんお茶を飲んでみよう！by.yazawa</p>
 			</div>
-		</main>
-
-		<footer class="footer"><!--フッター-->
-			<jsp:include page="footer.jsp" />
-		</footer>
-
+			<div class="r-log-back">
+				<a href="${result.backTo}"><img style="vertical-align:middle;height:18px;padding-bottom:2px" src="img/back.png" >戻る</a><br>
+			</div>
 		</div>
-		<script src="js/scroll.js"></script><!--トップに戻るボタン-->
-		<div id="page_top"><a href="#"></a></div>
-		</div>
+	</main>
+
+	<footer class="footer"><!--フッター-->
+		<jsp:include page="footer.jsp" />
+	</footer>
+
+	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
+	<div id="page_top"><a href="#"></a></div>
+</div>
+</div>
 </body>
 </html>

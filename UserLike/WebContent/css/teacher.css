@@ -73,6 +73,10 @@ footer {
 }
 
 /*------------------- 一覧表示テーブル ----------------------*/
+.htlist {
+	color: #808080;
+	font-weight: 600;
+}
 table{
   border-collapse: separate;
   border: solid 1px;
@@ -88,7 +92,7 @@ input{
 	margin-right: 5px;
 }
 
-table tbody tr:hover{
+.list-body tr:hover{
   background-color: #b3d4fc;
 }
 th{
@@ -100,8 +104,12 @@ th{
 .paginate_button.current,
 .dataTables_wrapper
 .dataTables_paginate
-.paginate_button.current:hover {
-	background: #fff;
+.paginate_button.current:hover,
+.dataTables_wrapper
+.dataTables_paginate
+.paginate_button:hover {
+	background: #ffffff;
+	color: #DCDCDC;
 }
 table.dataTable {
 	clear: none;
@@ -424,9 +432,47 @@ input[type="radio"],input[type="checkbox"]{
   position: relative;
   top: 2px;
 }
-/*-------------------------   s_prf.jsp    --------------------------------------*/
+/*-------------------------   t_prf.jsp    --------------------------------------*/
+/* 削除ボタン */
+.delete-button {
+	text-align: right;
+	margin: 10px;
+}
+.filelabel {
+	background-color: orange;  /* 背景色 */
+    color: white;              /* 文字色 */
+    border: 2px solid orange;  /* 枠線 */
+    border-radius: 6px;        /* 角丸 */
+    padding: 5px;         /* 内側の余白 */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+.filelabel:hover {
+  opacity: 0.5;
+}
+ /* 本来のファイル選択フォームは非表示 */
+.deletee {
+   display: none;
+}
+/* プロフィール情報と個人写真を横に並べる */
+.prf-matome {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+/* 個人写真 */
+.prf-imag {
+	display: inline;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+/* プロフィール情報 */
+.prf-matome-right {
+    display: inline;
+}
 /*----------  レイアウトを整える     -------------*/
- .s-prf-area {
+ .t-prf-area {
   width: 1000px;
   height: 100%;
   min-height: 185px;
@@ -454,7 +500,7 @@ input[type="radio"],input[type="checkbox"]{
   order: -1;
   color: #808080;
   border-radius: 4px;
-  border: solid 1px #b3d4fc;
+  border: solid 1px #ffa500;
 }
 
 /*--- ラジオボタンを非表示にする ---*/
@@ -464,7 +510,7 @@ input[name="tab_name"] {
 
 /*---  選択されたタブの背景色と文字色を変更する---*/
 input:checked + .tab_class-t {  /*----- 「+」マークは隣接セレクタ 直後に出てくる要素に適用する   ----*/
-  background-color: #b3d4fc;
+  background-color: #ffa500;
   color: aliceblue;
 }
 
@@ -478,24 +524,7 @@ input:checked + .tab_class-t {  /*----- 「+」マークは隣接セレクタ �
 input:checked + .tab_class-t + .content_class {
     display: block;
 }
-
-.edit-button {
-	text-align: right;
-}
-.edit a{
-	display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #808080;
-    border: solid 1px #ffa500;
-    border-radius: 3px;
-    transition: .4s;
-}
-.edit a:hover {
-	background: #ffa500;
-    color: white;
-}
-
+/* 基本プロフィール */
 .basic {
 	display: inline-block;
 	padding: 0.5em;
@@ -506,6 +535,7 @@ input:checked + .tab_class-t + .content_class {
     width: 600px;
     margin-left: auto;
 }
+/* 基本プロフィールテーブル */
 .basics {
 	border-radius: 6px;
 	border-collapse: collapse;
@@ -524,13 +554,14 @@ input:checked + .tab_class-t + .content_class {
 .basics th {
 	background-color: #ffff;
 	width: 200px;
-	color: #ffa500;
+	color: #808080;
 	vertical-align: top;
 	font-weight: normal;
 }
 .basics td {
 	width: 400px;
 }
+/* 基本プロフィール以外の個人情報見出し */
 .item_titlet {
 	display: inline-block;
 	padding: 0.5em;

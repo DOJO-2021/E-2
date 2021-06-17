@@ -17,12 +17,13 @@ public class Prf implements Serializable {
 	private String job;
 	private String activity;
 	private String pr;
-	private String know;
+	private int know;
+	private int unknow;
 
 
 	// 引数があるコンストラクタ
 	public Prf(String s_id, String s_name,String icon, String s_mail, String gender, String c_name, String exp,
-			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr, String know) {
+			String college, String b_place, String hobby, String skill, String music, String job, String activity, String pr, int know, int unknow) {
 		super();
 		this.s_id = s_id;
 		this.s_name = s_name;
@@ -40,6 +41,7 @@ public class Prf implements Serializable {
 		this.activity = activity;
 		this.pr = pr;
 		this.know = know;
+		this.unknow = unknow;
 	}
 
 	public String getS_id() {
@@ -82,7 +84,15 @@ public class Prf implements Serializable {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
+	public String getGenderString() {
+		if(this.gender.equals("M")) {
+			return "男性";
+		}
+		if(this.gender.equals("F")) {
+			return "女性";
+		}
+		return "";
+	}
 	public String getC_name() {
 		return c_name;
 	}
@@ -98,7 +108,15 @@ public class Prf implements Serializable {
 	public void setExp(String exp) {
 		this.exp = exp;
 	}
-
+	public String getExpString() {
+		if(this.exp.equals("Y")) {
+			return "経験あり";
+		}
+		if(this.exp.equals("N")) {
+			return "未経験";
+		}
+		return "";
+	}
 	public String getCollege() {
 		return college;
 	}
@@ -157,11 +175,18 @@ public class Prf implements Serializable {
 	public void setPr(String pr) {
 		this.pr = pr;
 	}
-	public String getKnow() {
+	public int getKnow() {
 		return know;
 	}
 
-	public void setKnow(String know) {
+	public void setKnow(int know) {
 		this.know = know;
+	}
+	public int getUnknow() {
+		return unknow;
+	}
+
+	public void setUnknow(int unknow) {
+		this.unknow = unknow;
 	}
 }

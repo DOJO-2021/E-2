@@ -157,15 +157,14 @@ h2 {
 }
 
 /*-------- 反応ボタン ----commom.css-----*/
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
 .reaction_button{
 	width: 100%;
 	text-align: center;
 }
-
-.know {
-	display:inline-block;
-}
-
 .imgknow:hover {
 	opacity:0.5;
 	cursor: pointer;
@@ -174,9 +173,6 @@ h2 {
 	position: relative;
 	top: 3px;
 }
-.unknow {
-	display:inline-block;
-}
 .imgunknow:hover {
 	opacity:0.5;
 	cursor: pointer;
@@ -184,14 +180,6 @@ h2 {
 .imgunknow:active {
 	position: relative;
 	top: 3px;
-}
-.nun-know {
-	display:inline-block;
-	margin: 20px 80px;
-}
-.nun-unknow {
-	display:inline-block;
-	margin: 20px 80px;
 }
 .reaction {
 	width: 110px;
@@ -205,25 +193,11 @@ h2 {
 	position: relative;
 	top: 3px;
 }
-
-/*-------- 反応ボタン ---------*/
-.reaction_button{
-	width: 100%;
-	text-align: center;
-}
-
 .know {
-	display:inline-block;
-	margin-right: 50px;
-}
-.unknow {
-	display:inline-block;
-}
-.nun-know {
 	display:inline-block;
 	margin: 20px 40px;
 }
-.nun-unknow {
+.unknow {
 	display:inline-block;
 	margin: 20px 40px;
 }
@@ -286,13 +260,7 @@ h2 {
 	text-align: center;
 	margin: 50px;
 }
-/*--------------  メイン部分nav 配置及び詳細設定  ---------------------*/
-.navnew li {
-	display: block;
-	list-style-type: none;
-	text-align: right;
-	margin: 20px;
-}
+
 
 /*--------------  result.jsp  ---------------------*/
 .r_main{
@@ -306,11 +274,16 @@ h2 {
 
 .result{
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 50px;
+}
+
+.result p{
+	font-size: 20px;
+	background: linear-gradient(transparent 50%, #ffa500 50%);
 }
 
 .r-log-back{
-	text-align: center;
+	/*text-align: center;*/
 	margin-top: 80px;
 }
 
@@ -319,6 +292,11 @@ h2 {
 	text-decoration : none;
 }
 
+.yazawa_tea{
+	text-align: center;
+	margin-top: 50px;
+	color: #777777;
+}
 
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {

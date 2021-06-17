@@ -23,38 +23,38 @@
 	</script>
 </head>
 
-
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
 		<jsp:include page="s_header.jsp" />
 	</header>
 
-		<main>
+	<main>
 		<!--メイン-->
 		<!-- 受講者自身のプロフィールを確認できる画面 -->
         <div class="s-prf-area">
 		<input type="radio" name="tab_name" id="tab1" checked>
         <label class="tab_class" for="tab1">プロフィール</label>
 	    <div class="content_class">
+	 	<c:forEach var="e" items="${prfList}">
 
-        	<!-- 編集ボタン -->
-			<form class="edit" method="GET" action="/UserLike/StudentEditServlet">
-            <div class="edit-button">
-				<a href= "/UserLike/StudentEditServlet" class="edit-btn">プロフィール編集</a>
-			</div>
-			</form>
+       	<!-- 編集ボタン -->
+		<form class="edit" method="GET" action="/UserLike/StudentEditServlet">
+           <div class="edit-button">
+			<input type="submit" name="submit" value="プロフィール編集">
+		</div>
+		</form>
 
-	 		<c:forEach var="e" items="${prfList}">
-			<!-- 写真 -->
-			<div>
-				<a><img style="height:100px" src="img/icon/noimage.png" ></a>
-			</div>
+        <div class="prf-matome">
+		<!-- 写真 -->
+		<div class="prf-imag">
+			<a><img style="height:100px" src="img/icon/noimage.png" ></a>
+		</div>
 
-			<div>
-	        <p class="basic">基本プロフィール</p>
+		<div class="prf-matome-right">
+        	<p class="basic">基本プロフィール</p>
 
 	        <table class="basics">
 				<tr>
@@ -63,7 +63,7 @@
 				</tr>
 				<tr>
 					<th><label class="item_title">性別</label></th>
-					<td><p>${e.gender}</p></td>
+					<td><p>${e.genderString}</p></td>
 				</tr>
 				<tr>
 					<th><label class="item_title">クラス</label></th>
@@ -75,7 +75,7 @@
 				</tr>
 				<tr>
 					<th><label class="item_title">プログラミング経験</label></th>
-					<td><p>${e.exp}</p></td>
+					<td><p>${e.expString}</p></td>
 				</tr>
 				<tr>
 					<th><label class="item_title">出身学部</label></th>
@@ -124,17 +124,20 @@
 				<p>${e.pr}</p>
 			</div>
             <br>
-
-			</div>
-            </c:forEach>
-		</div>
+        </div>
+   		</div>
+        </c:forEach>
+        </div>
 
 		<input type="radio" name="tab_name" id="tab2" >
     	<label class="tab_class" for="tab2">理解度情報</label>
-	    <div class="content_class">
-	    	<p>タブ2のコンテンツを表示します</p>
-	    </div>
 
+	    <div class="content_class">
+    	<c:forEach var="e" items="${prfList}">
+		    <p>わかった：${e.know}</p>
+		    <p>わからない：${e.unknow}</p>
+	    </c:forEach>
+	    </div>
 	    </div>
 		</main>
 
@@ -144,6 +147,7 @@
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
+
 </div>
 </div>
 </body>

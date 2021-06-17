@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script><!--グラフ機能読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -23,9 +24,8 @@
 	</script>
 </head>
 
-
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -35,60 +35,61 @@
 		<main>
 		<!--メイン-->
 		<!-- 受講者自身のプロフィールを確認できる画面 -->
-		<input type="hidden"  name="S_ID" value="${s_id}">
-
-
         <div class="t-prf-area">
         <input type="radio" name="tab_name" id="tab1" checked>
         <label class="tab_class-t" for="tab1">プロフィール</label>
 
         <div class="content_class">
  		<c:forEach var="e" items="${prfList}">
+
+        <!-- 削除ボタン -->
+		<form class="delete" method="POST" action="/UserLike/TeacherPrfServlet">
+		<div class="delete-button">
+		<input type="hidden"  name="S_ID" value="${s_id}">
+		<button type="submit" class="filelabel" title="個人データを削除">削除</button>
+		</div>
+
+		</form>
+
+    	<div class="prf-matome">
 		<!-- 写真 -->
-		<div>
+		<div class="prf-imag">
 			<a><img style="height:100px" src="img/icon/noimage.png" ></a>
 		</div>
 
-	    <!-- 削除ボタン -->
-		<form class="delete" method="POST" action="/USerLike/TeacherPrfServlet">
-		<div class="delete-button">
-			<input type="submit" name="submit" value="削除">
-		</div>
-		</form>
+		<div class="prf-matome-right">
+        	<p class="basic">基本プロフィール</p>
 
-		<div>
-        <p class="basic">基本プロフィール</p>
+	    	<table class="basics">
+			<tr>
+				<th><label class="item_title">名前</label></th>
+				<td><p>${e.s_name}</p></td>
+			</tr>
+			<tr>
+				<th><label class="item_title">性別</label></th>
+				<td><p>${e.genderString}</p></td>
+			</tr>
+			<tr>
+				<th><label class="item_title">クラス</label></th>
+				<td><p>${e.c_name}クラス</p></td>
+			</tr>
+			<tr>
+				<th><label class="item_title">Email</label></th>
+				<td><p>${e.s_mail}</p></td>
+			</tr>
+			<tr>
+				<th><label class="item_title">プログラミング経験</label></th>
+				<td><p>${e.expString}</p></td>
+			</tr>
+			<tr>
+				<th><label class="item_title">出身学部</label></th>
+				<td><p>${e.college}</p></td>
+				      </tr>
 
-	        <table class="basics">
-	          <tr>
-					<th><label class="item_title">名前</label></th>
-					<td><p>${e.s_name}</p></td>
-	          </tr>
-	          <tr>
-					<th><label class="item_title">性別</label></th>
-					<td><p>${e.gender}</p></td>
-	          </tr>
-	          <tr>
-					<th><label class="item_title">クラス</label></th>
-					<td><p>${e.c_name}クラス</p></td>
-	          </tr>
-	          <tr>
-					<th><label class="item_title">Email</label></th>
-					<td><p>${e.s_mail}</p></td>
-	          </tr>
-	          <tr>
-					<th><label class="item_title">プログラミング経験</label></th>
-					<td><p>${e.exp}</p></td>
-	          </tr>
-	          <tr>
-					<th><label class="item_title">出身学部</label></th>
-					<td><p>${e.college}</p></td>
-	          </tr>
-
-	          <tr>
-					<th><label class="item_title">出身地</label></th>
-					<td><p>${e.b_place}</p></td>
-			  </tr>
+			<tr>
+				<th><label class="item_title">出身地</label></th>
+				<td><p>${e.b_place}</p></td>
+				</tr>
 	        </table>
 	        <br>
 
@@ -122,20 +123,28 @@
 				<p>${e.activity}</p>
 			</div>
             <br>
+
 			<div id="PR">
 				<label class="item_titlet">自己PR</label>
 				<p>${e.pr}</p>
 			</div>
             <br>
-
-		</div>
+        </div>
+        </div>
         </c:forEach>
-		</div>
+        </div>
 
-			<input type="radio" name="tab_name" id="tab2" >
-	    	<label class="tab_class-t" for="tab2">理解度情報</label>
-		    <div class="content_class">
-		    <p>タブ2のコンテンツを表示します</p>
+		<input type="radio" name="tab_name" id="tab2" >
+    	<label class="tab_class-t" for="tab2">理解度情報</label>
+
+  	    <div class="content_class">
+	    <c:forEach var="e" items="${prfList}">
+		    <p>わかった：${e.know}</p>
+		    <p>わからない：${e.unknow}</p>
+			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
+			<canvas id="myChart"></canvas>
+			</div>
+	    </c:forEach>
 		</div>
 	    </div>
 		</main>
@@ -146,6 +155,24 @@
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
+
+	<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var chart = new Chart(ctx, {
+	    // 作成したいチャートのタイプ
+	    type: 'doughnut',
+	    // データセットのデータ
+		data: {
+	        labels: ["わかった","わからない"],
+	        datasets: [{
+	            backgroundColor: ['rgb(255, 165, 0)','rgb(179, 212, 252)'],
+	            data: [110,61],
+	        }],
+	    },
+	    // ここに設定オプションを書きます
+	    options: {}
+	});
+	</script>
 </div>
 </div>
 </body>

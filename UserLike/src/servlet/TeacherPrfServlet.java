@@ -39,7 +39,7 @@ public class TeacherPrfServlet extends HttpServlet {
 
 		//受講者のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0));
 
 		//検索結果をリクエストスコープに格納する
 		request.setAttribute("prfList",prfList);
@@ -56,17 +56,15 @@ public class TeacherPrfServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-	/*	HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		if (session.getAttribute("t_id") == null) {
 			response.sendRedirect("/UserLike/TeacherLoginServlet");
 			return;
-		}*/
+		}
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-
-		HttpSession hs = request.getSession();
-		String s_id = (String) hs.getAttribute("S_ID");
+		String s_id = request.getParameter("S_ID");
 
 		//削除を行う
 		PrfDAO PrfDAO = new PrfDAO();

@@ -39,7 +39,7 @@
 
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 	<!--ヘッダー-->
 	<header class="header">
 		<jsp:include page="t_header.jsp" />
@@ -47,33 +47,89 @@
 
 		<main>
 			<!--メイン-->
-			<h2>受講者一覧</h2>
 			<div>
-		 	<table id="foo-table" class="table compact" style="width:95%">
+		 	<table id="foo-table" class="table compact" style="width:95%;
+		 	                                            border: solid 1px #808080;
+		 	                                            overflow: hidden;
+                                                        border-radius:10px;
+                                                        border-spacing: 0;">
 		        <thead>
 		            <tr>
-			            <th>クラス</th>
-			            <th>氏名</th>
-			            <th>性別</th>
-			            <th>経験</th>
-			            <th>理解度</th>
-			            <th>ID</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;">クラス</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;">氏名</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;">性別</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;">経験</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;">理解度</th>
+			            <th style="font-weight: normal;
+			                       color:#696969;
+			                       border-bottom:1px solid #808080;
+			                       border-left:1px solid #808080;
+			                       border-left:1px solid;
+			                       :last-child th,border-bottom: none;"></th>
 		            </tr>
 		        </thead>
 
-		        <tbody>
+		        <tbody class="list-body">
 		        	<c:forEach var="e" items="${prfList}">
-		            <tr>
-			            <td>${e.c_name}</td>
-			            <td>${e.s_name}</td>
-			            <td>${e.gender}</td>
-			            <td>${e.exp}</td>
-			            <td>${e.know}</td>
-			            <td>
+		            <tr style="border-style: 1px solid #DCDCDC">
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC;
+                                   text-align:center">${e.c_name}</td>
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC">${e.s_name}</td>
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC;
+                                   text-align:center">${e.genderString}</td>
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC;
+                                   text-align:center">${e.expString}</td>
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC;
+                                   text-align:center">${e.know}/${e.unknow}</td>
+			            <td style="border-left: 1px dashed #DCDCDC;
+                                   border-right: 1px dashed #DCDCDC;
+                                   border-bottom: 1px solid #DCDCDC;
+                                   border-top: 1px solid #DCDCDC;
+                                   text-align: center">
 				            <form method="GET" action="/UserLike/TeacherPrfServlet">
 				            <div class="button">
-					            <input type="text" value="${e.s_id}" name="S_ID">
-								<input type="submit" value="送信">
+					            <input type="hidden" value="${e.s_id}" name="S_ID">
+								<input type="submit" value="詳細" style="margin: 2px 0">
 							</div>
 							</form>
 						</td>

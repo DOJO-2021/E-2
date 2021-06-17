@@ -24,12 +24,11 @@
 
 	<!-- vue.js開発バージョン、便利なコンソールの警告が含まれています -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
 </head>
 
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -38,30 +37,25 @@
 
 		<main>
 			<!--メイン-->
-			<h2>リアクション</h2>
-                <div class="reaction_button">
+            <div class="reaction_button">
 				<!--大理解度ボタン-->
-				<div class="knowns">
-					<form class="und_button" method="POST" action="/UserLike/StudentTopServlet">
+				<table class="understand" style=" margin-left:auto;margin-right:auto"><tr><td>
+				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
 					<div class="know">
-						<input type="image" src="img/button/Understood.png" alt="わかった" onclick="counter1()" class="imgknow">
+						<input type="hidden" name="SUBMIT" value="know">
+						<input type="image" src="img/button/Understood.png" alt="わかった" class="imgknow">
 					</div>
-					</form>
-
-					<div class="unknow">
-						<input type="image" src="img/button/CantUnderstand.png" alt="わからない" onclick="counter2()" class="imgunknow">
-					</div>
-                </div>
-
-                <form class="und_button" method="POST" action="/UserLike/StudentTopServlet">
-					<p class="nun-know">わかった: <object name="understood" id="understood">0</object></p>
-					<p class="nun-unknow">わからない: <object name="cantunderstand" id="cantunderstand">0</object></p>
-
-					<!-- 送信ボタン -->
-					<p class="send">
-						<input type="submit" name="send" value="送信">
-					</p>
 				</form>
+				</td>
+
+				<td>
+				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
+					<div class="unknow">
+						<input type="hidden" name="SUBMIT" value="unknow">
+						<input type="image" src="img/button/CantUnderstand.png" alt="わからない" class="imgunknow">
+					</div>
+				</form>
+                </td></tr></table>
 
 				<!--小反応ボタン-->
 				<input type="image" class="reaction" src="img/button2/Funny2.png" alt="笑い">
@@ -90,21 +84,10 @@
 		<jsp:include page="footer.jsp" />
 	</footer>
 
-	<script type="text/javascript">
-	var not = 0;
-	function counter1(){
-	not++;
-	document.getElementById("understood").innerHTML = not;
-	}
-	var cnot = 0;
-	function counter2(){
-	cnot++;
-	document.getElementById("cantunderstand").innerHTML = cnot;
-	}
-	</script>
-
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
+
+	<iframe name="f1" width=0 height=0 style="visibility:hidden"></iframe>
 </div>
 </div>
 </body>

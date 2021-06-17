@@ -25,11 +25,10 @@
 
 	<!-- vue.js開発バージョン、便利なコンソールの警告が含まれています -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -38,9 +37,8 @@
 
 		<main>
 			<!--メイン-->
-			<h2>リアクション状況</h2>
 			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
-			    <canvas id="myChart"></canvas>
+			<canvas id="myChart"></canvas>
 			    <a id="Funny"><span v-if="seen"><img src="img/button/Funny.png" class="logo_image"></span></a>
 				<a id="Clap"><span v-if="seen"><img src="img/button/Clap.png" class="logo_image"></span></a>
 				<a id="Help"><span v-if="seen"><img src="img/button/Help!.png" class="logo_image"></span></a>
@@ -60,10 +58,6 @@
 				<a id="Eiken"><span v-if="seen"><img src="img/button/Eiken.png" class="logo_image"></span></a>
 				<a id="Finished"><span v-if="seen"><img src="img/button/Finished.png" class="logo_image"></span></a>
 				<a id="Question"><span v-if="seen"><img src="img/button/Question.png" class="logo_image"></span></a>
-
-				<div id="app">
-				  {{ message }}
-				</div>
 			</div>
 		</main>
 
@@ -80,7 +74,6 @@
 	var chart = new Chart(ctx, {
 	    // 作成したいチャートのタイプ
 	    type: 'bar',
-
 	    // データセットのデータ
 		data: {
 	        labels: ["9時", "10時", "11時", "12時", "13時", "14時", "15時", "16時", "17時"],
@@ -96,11 +89,7 @@
 	            borderColor: 'rgb(179, 212, 252)',
 	            data: [15, 24, 62, 21, 37, 48, 20, 14, 8],
 	        }]
-
-
 	    },
-
-
 	    // ここに設定オプションを書きます
 	    options: {}
 	});

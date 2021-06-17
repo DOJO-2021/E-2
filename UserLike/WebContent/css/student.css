@@ -394,6 +394,20 @@ input[type="radio"],input[type="checkbox"]{
 
 /*-------------------------   s_prf.jsp    --------------------------------------*/
 /*----------  レイアウトを整える     -------------*/
+.prf-matome {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+.prf-imag {
+	display: inline;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+.prf-matome-right {
+    display: inline;
+    margin-right: 50px;
+}
  .s-prf-area {
   width: 1000px;
   height: 100%;
@@ -450,26 +464,13 @@ input:checked + .tab_class + .content_class {
 .edit-button {
 	text-align: right;
 }
-.edit a{
-	display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #808080;
-    border: solid 1px #ffa500;
-    border-radius: 3px;
-    transition: .4s;
-}
-.edit a:hover {
-	background: #ffa500;
-    color: white;
-}
 
 .basic {
 	display: inline-block;
 	padding: 0.5em;
     color: #808080;
     background: #F5F5F5;
-    border-left: solid 5px #ffa500;
+    border-left: solid 5px #b3d4fc;
     border-radius: 6px;
     width: 600px;
     margin-left: auto;
@@ -492,7 +493,7 @@ input:checked + .tab_class + .content_class {
 .basics th {
 	background-color: #ffff;
 	width: 200px;
-	color: #ffa500;
+	color: #808080;
 	vertical-align: top;
 	font-weight: normal;
 }
@@ -504,10 +505,108 @@ input:checked + .tab_class + .content_class {
 	padding: 0.5em;
     color: #808080;
     background: #F5F5F5;
-    border-left: solid 5px #ffa500;
+    border-left: solid 5px #b3d4fc;
     border-radius: 6px;
     width: 600px;
 }
+/*-------------------------   s_prf_edit.jsp    --------------------------------------*/
+/*----------  レイアウトを整える     -------------*/
+ .s-prf-edit_area {
+  width: 1000px;
+  height: 100%;
+  min-height: 185px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  background-color: #fff;
+ /* border: 1px solid #ccc;  */
+  border-top: 0;
+  /*box-shadow: 0 5px 5px -5px #333;*/
+  box-sizing: border-box;
+  /*border-radius: 4px;*/
+  justify-content: center;
+}
+
+.prf_edit {
+  width: 50%;
+  height: 50px;
+  background-color:#ffff;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+  color: #808080;
+  border-radius: 4px;
+  border: solid 1px #ffa500;
+}
+
+.edit {
+	display: inline-block;
+	padding: 0.5em;
+    color: #808080;
+    background: #F5F5F5;
+    border-left: solid 5px #b3d4fc;
+    border-radius: 6px;
+    width: 600px;
+    margin-left: auto;
+}
+.edit_table {
+	border-radius: 6px;
+	border-collapse: collapse;
+	border: solid 1px #bec2c7;
+	position: relative;
+	text-align: right;
+	/*margin-left: auto;*/
+
+}
+.edit_table th {
+	padding:8px;
+	border: 1px dashed #bec2c7;
+	text-align: left;
+
+}
+.edit_table th {
+	background-color: #ffff;
+	width: 200px;
+	color: #898989;
+	vertical-align: top;
+	font-weight: normal;
+}
+.edit_table td {
+	width: 400px;
+}
+.prf_edit_titles {
+	display: inline-block;
+	padding: 0.5em;
+    color: #808080;
+    background: #F5F5F5;
+    border-left: solid 5px #b3d4fc;
+    border-radius: 6px;
+    width: 600px;
+
+}
+
+
+.s-form-text {
+    height: 2.4em;
+    width: 80%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #fff inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.s-form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #b3d4fc inset;
+}
+
+
 
 
  /*---------------- レスポンシブ ------------------*/

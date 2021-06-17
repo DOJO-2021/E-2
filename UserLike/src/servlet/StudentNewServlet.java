@@ -69,7 +69,7 @@ public class StudentNewServlet extends HttpServlet {
 
 			// アカウント登録成功したらプロフィールの登録処理を行う
 			PrfDAO pDao = new PrfDAO();
-			if (pDao.insert(new Prf(s_id, s_name,icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, null))) {	// プロフ登録成功
+			if (pDao.insert(new Prf(s_id, s_name,icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, 0, 0))) {	// プロフ登録成功
 				request.setAttribute("result",
 				new Result("登録成功！", "アカウントを登録しました。", "/UserLike/StudentLoginServlet"));
 			}

@@ -37,7 +37,7 @@ public class StudentPrfServlet extends HttpServlet {
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0));
 
 		//検索結果をリクエストスコープから取得する
 		request.setAttribute("prfList", prfList);

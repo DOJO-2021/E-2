@@ -35,12 +35,12 @@ public class StudentEditServlet extends HttpServlet {
 
 
 		//ログインしているユーザーのIDを取得
-		request.setCharacterEncoding("UTF-8");
 		String s_id = (String) session.getAttribute("s_id");
+		System.out.println(s_id);
 
 		//自分のプロフィールを検索する
 		PrfDAO PrfDAO = new PrfDAO();
-		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null));
+		List<Prf> prfList =PrfDAO.show(new Prf(s_id, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0));
 
 		//検索結果をリクエストスコープから取得する
 		request.setAttribute("prfList",prfList);
@@ -59,16 +59,16 @@ public class StudentEditServlet extends HttpServlet {
 			response.sendRedirect("/UserLike/StudentLoginServlet");
 			return;
 		}
+		String s_id = (String) session.getAttribute("s_id");
 
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String s_id = request.getParameter("S_ID");
 		String s_name = request.getParameter("S_NAME");
-		String icon= request.getParameter("ICON");
+	//	String icon= request.getParameter("ICON");
+		String s_mail = request.getParameter("S_MAIL");
 		String gender = request.getParameter("GENDER");
 		String c_name = request.getParameter("C_NAME");
-		String s_mail = request.getParameter("S_MAIL");
 		String exp = request.getParameter("EXP");
 		String college = request.getParameter("COLLEGE");
 		String b_place = request.getParameter("B_PLACE");
@@ -79,18 +79,26 @@ public class StudentEditServlet extends HttpServlet {
 		String  activity= request.getParameter("ACTIVITY");
 		String pr = request.getParameter("PR");
 
+
+
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
-		if(PrfDAO.update(new Prf(s_id, s_name, icon, gender, c_name, s_mail, exp, college, b_place, hobby, skill, music, job,activity, pr, null))) {
-			//更新成功
-			request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UseLike/MainServlet"));
-		}else {
-			request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/MainServlet"));
-		}
+		if (request.getParameter("SUBMIT").equals("保存")) {
+			System.out.println(9);
+			if(PrfDAO.update(new Prf(s_id, s_name, null, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job,activity, pr, 0, 0))) {
+				//更新成功
+				System.out.println(2);
+				request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UserLike/StudentPrfServlet"));
+			}else {
+				request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/StudentEditServlet"));
+			}
+			System.out.println(5);
+			System.out.println(s_id);
 
-		//ページにフォワードする
-		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
-		dispatchar.forward(request,response);
+			//ページにフォワードする
+			RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+			dispatchar.forward(request,response);
+		}
 	}
 
 }

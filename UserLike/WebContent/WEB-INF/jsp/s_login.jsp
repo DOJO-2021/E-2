@@ -38,7 +38,7 @@
 
 
 <body>
-<div class="wrapper">
+<div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
 	<header class="header">
@@ -72,7 +72,7 @@
 				</div>
 
 				<div class="s-log-back">
-				  	<a href = "/UserLike/MainServlet"><img style="vertical-align:bottom" src="img/back.png" >戻る</a>
+				  	<a href = "/UserLike/MainServlet"><img style="vertical-align:middle;height:18px;padding-bottom:2px" src="img/back.png" >戻る</a>
 				</div>
 			</form>
 		</div>

@@ -50,7 +50,8 @@ public class PrfDAO {
 				rs.getString("job"),
 				rs.getString("activity"),
 				rs.getString("pr"),
-				rs.getString("Know")
+				rs.getInt("Know"),
+				rs.getInt("Unknow")
 				);
 				prfList.add(list);
 			}
@@ -121,7 +122,8 @@ public class PrfDAO {
 				rs.getString("job"),
 				rs.getString("activity"),
 				rs.getString("pr"),
-				rs.getString("Know")
+				rs.getInt("Know"),
+				rs.getInt("Unknow")
 				);
 				prfList.add(list);
 			}
@@ -165,7 +167,7 @@ public class PrfDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "insert into profile values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null)";
+			String sql = "insert into profile values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 0)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -291,7 +293,167 @@ public class PrfDAO {
 
 
 	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
-	public boolean update(Prf list) {
+	public boolean update(Prf card) {
+		Connection conn = null;
+		boolean result = false;
+
+
+
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
+
+			// SQL文を準備する
+			String sql = "update profile set s_name=?, icon=?, s_mail=?, gender=?, c_name=?, exp=?, college=?, b_place=?, hobby=?, skill=?, music=?, job=?, activity=?, pr=? where s_id=?";
+		//	System.out.printf("update profile set s_name=%s, icon=%s, s_mail=%s, gender=%s, c_name=%s, exp=%s, college=%s, b_place=%s, hobby=%s, skill=%s, music=%s, job=%s, activity=%s, pr=%s where s_id=%s",s_id, s_name, icon, gender, c_name, s_mail, exp, college, b_place, hobby, skill, music, job,activity, pr);
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+		/*	pStmt.setString(1,"zzz");
+			pStmt.setString(2,"");
+			pStmt.setString(3,"zzz");
+			pStmt.setString(4,"zzz");
+			pStmt.setString(5,"");
+			pStmt.setString(6,"sss");
+			pStmt.setString(7,"sss");
+			pStmt.setString(8,"sss");
+			pStmt.setString(9,"sss");
+			pStmt.setString(10,"sss");
+			pStmt.setString(11,"sss");
+			pStmt.setString(12,"sss");
+			pStmt.setString(13,"sss");
+			pStmt.setString(14,"sss");
+			pStmt.setString(15,card.getS_id()); */
+
+
+			// SQL文を完成させる
+			if (card.getS_name() != null) {
+				pStmt.setString(1, card.getS_name());
+			}
+			else {
+				pStmt.setString(1, "");
+			}
+
+			if (card.getIcon() != null) {
+				pStmt.setString(2, card.getIcon());
+			}
+			else {
+				pStmt.setString(2, null);
+			}
+
+			if (card.getS_mail() != null) {
+				pStmt.setString(3, card.getS_mail());
+			}
+			else {
+				pStmt.setString(3, null);
+			}
+			if (card.getGender() != null) {
+				pStmt.setString(4, card.getGender());
+			}
+			else {
+				pStmt.setString(4, null);
+			}
+			if (card.getC_name() != null) {
+				pStmt.setString(5, card.getC_name());
+			}
+			else {
+				pStmt.setString(5, "");
+			}
+			if (card.getExp() != null) {
+				pStmt.setString(6, card.getExp());
+			}
+			else {
+				pStmt.setString(6, null);
+			}
+			if (card.getCollege() != null) {
+				pStmt.setString(7, card.getCollege());
+			}
+			else {
+				pStmt.setString(7, null);
+			}
+			if (card.getB_place() != null) {
+				pStmt.setString(8, card.getB_place());
+			}
+			else {
+				pStmt.setString(8, null);
+			}
+			if (card.getHobby() != null) {
+				pStmt.setString(9, card.getHobby());
+			}
+			else {
+				pStmt.setString(9, null);
+			}
+			if (card.getSkill() != null) {
+				pStmt.setString(10, card.getSkill());
+			}
+			else {
+				pStmt.setString(10, null);
+			}
+			if (card.getMusic() != null) {
+				pStmt.setString(11, card.getMusic());
+			}
+			else {
+				pStmt.setString(11, null);
+			}
+			if (card.getJob() != null) {
+				pStmt.setString(12, card.getJob());
+			}
+			else {
+				pStmt.setString(12, null);
+			}
+			if (card.getActivity() != null) {
+				pStmt.setString(13, card.getActivity());
+			}
+			else {
+				pStmt.setString(13, null);
+			}
+			if (card.getPr() != null) {
+				pStmt.setString(14, card.getPr());
+			}
+			else {
+				pStmt.setString(14, null);
+			}
+			pStmt.setString(15,card.getS_id());
+
+
+			// SQL文を実行する
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		// 結果を返す
+		//result=true;
+		return result;
+
+
+	}
+
+
+
+	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
+	public boolean understand(Prf list) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -303,94 +465,14 @@ public class PrfDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update profile set s_name=?, s_mail=?, gender=?, c_name=?, exp=?, college=?, b_place=?, hobby=?, skill=?, music=?, job=?, activity=?, pr=? where id=?";
+			String sql = "update profile set know = know + 1 where s_id=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			if (list.getS_name() != null) {
-				pStmt.setString(1, list.getS_name());
-			}
-			else {
-				pStmt.setString(1, null);
-			}
-
-			if (list.getS_mail() != null) {
-				pStmt.setString(2, list.getS_mail());
-			}
-			else {
-				pStmt.setString(2, null);
-			}
-			if (list.getGender() != null) {
-				pStmt.setString(3, list.getGender());
-			}
-			else {
-				pStmt.setString(3, null);
-			}
-			if (list.getC_name() != null) {
-				pStmt.setString(4, list.getC_name());
-			}
-			else {
-				pStmt.setString(4, null);
-			}
-			if (list.getExp() != null) {
-				pStmt.setString(5, list.getExp());
-			}
-			else {
-				pStmt.setString(5, null);
-			}
-			if (list.getCollege() != null) {
-				pStmt.setString(6, list.getCollege());
-			}
-			else {
-				pStmt.setString(6, null);
-			}
-			if (list.getB_place() != null) {
-				pStmt.setString(7, list.getB_place());
-			}
-			else {
-				pStmt.setString(7, null);
-			}
-			if (list.getHobby() != null) {
-				pStmt.setString(8, list.getHobby());
-			}
-			else {
-				pStmt.setString(8, null);
-			}
-			if (list.getSkill() != null) {
-				pStmt.setString(9, list.getSkill());
-			}
-			else {
-				pStmt.setString(9, null);
-			}
-			if (list.getMusic() != null) {
-				pStmt.setString(10, list.getMusic());
-			}
-			else {
-				pStmt.setString(10, null);
-			}
-			if (list.getJob() != null) {
-				pStmt.setString(11, list.getJob());
-			}
-			else {
-				pStmt.setString(11, null);
-			}
-			if (list.getActivity() != null) {
-				pStmt.setString(12, list.getActivity());
-			}
-			else {
-				pStmt.setString(12, null);
-			}
-			if (list.getPr() != null) {
-				pStmt.setString(13, list.getPr());
-			}
-			else {
-				pStmt.setString(13, null);
-			}
-
+			pStmt.setString(1, list.getS_id());
 
 			// SQL文を実行する
-			pStmt.setString(14,list.getS_id());
 			if (pStmt.executeUpdate() == 1) {
 				result = true;
 			}
@@ -418,7 +500,7 @@ public class PrfDAO {
 	}
 
 	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
-	public boolean understand(Prf list) {
+	public boolean cantunderstand(Prf list) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -430,18 +512,12 @@ public class PrfDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update profile set know=? where id=?";
+			String sql = "update profile set unknow = unknow + 1 where s_id=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			if (list.getPr() != null) {
-				pStmt.setString(1, list.getPr());
-			}
-			else {
-				pStmt.setString(1, null);
-			}
-			pStmt.setString(2, list.getS_id());
+			pStmt.setString(1, list.getS_id());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -469,8 +545,6 @@ public class PrfDAO {
 		// 結果を返す
 		return result;
 	}
-
-
 
 	//【削除】引数numberで指定されたレコードを削除し、成功したらtrueを返す
 	public boolean delete(String s_id) {
