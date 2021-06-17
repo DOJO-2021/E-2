@@ -12,7 +12,8 @@
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/student.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -39,11 +40,12 @@
 			<!--メイン-->
             <div class="reaction_button">
 				<!--大理解度ボタン-->
-				<table class="understand" style=" margin-left:auto;margin-right:auto"><tr><td>
+				<table class="understand" style=" margin-left:auto;margin-right:auto"><tr><td class="buttonbox">
 				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
 					<div class="know">
-						<input type="hidden" name="SUBMIT" value="know">
-						<input type="image" src="img/button/Understood.png" alt="わかった" class="imgknow">
+						<button type="submit" class="react imgknow" name="SUBMIT" value="know">
+						<span class="material-icons" class="imgknow" style="color:#ffa500">sentiment_satisfied_alt</span>
+						</button>
 					</div>
 				</form>
 				</td>
@@ -51,8 +53,9 @@
 				<td>
 				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
 					<div class="unknow">
-						<input type="hidden" name="SUBMIT" value="unknow">
-						<input type="image" src="img/button/CantUnderstand.png" alt="わからない" class="imgunknow">
+						<button type="submit" class="react imgunknow" name="SUBMIT" value="unknow">
+						<span class="material-icons" class="imgunknow" style="color:#b3d4fc">sentiment_very_dissatisfied</span>
+						</button>
 					</div>
 				</form>
                 </td></tr></table>
@@ -60,60 +63,63 @@
 				<!--小反応ボタン-->
 				<form class="und_button" method="POST" action="/UserLike/StudentTopServlet" target="f1">
 					<button type="submit" class="react" name="react" value="1" onclick="sound1()">
-					<img src="img/button2/Funny2.png" alt="笑い" class="reaction">
+					<img src="img/button/Funny.png" alt="笑い" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="2" onclick="sound2()">
-					<img src="img/button2/Clap2.png" alt="拍手" class="reaction">
+					<img src="img/button/Clap.png" alt="拍手" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="3" onclick="sound3()">
-					<img src="img/button2/Help!2.png" alt="ヘルプ" class="reaction">
+					<img src="img/button/Help2.png" alt="ヘルプ" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="4" onclick="sound4()">
-					<img src="img/button2/Thanks2.png" alt="ありがとうございます" class="reaction">
+					<img src="img/button/Thanks.png" alt="ありがとうございます" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="5" onclick="sound5()">
-					<img src="img/button2/Goodmorning2.png" alt="おはようございます" class="reaction">
+					<img src="img/button/Goodmorning.png" alt="おはようございます" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="6" onclick="sound6()">
-					<img src="img/button2/Greetings2.png" alt="おつかれさまです" class="reaction">
+					<img src="img/button/Greetings.png" alt="おつかれさまです" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="7" onclick="sound7()">
-					<img src="img/button2/Finally2.png" alt="キター!!" class="reaction">
+					<img src="img/button/Finally2.png" alt="キター!!" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="8" onclick="sound8()">
-					<img src="img/button2/Group2.png" alt="ク゛ルーフ゜活動求む" class="reaction">
+					<img src="img/button/Group.png" alt="ク゛ルーフ゜活動求む" class="reaction">
 					</button>
+
 					<button type="submit" class="react" name="react" value="9" onclick="sound9()">
-					<img src="img/button2/Session2.png" alt="セッション希望" class="reaction">
+					<img src="img/button/Session2.png" alt="セッション希望" class="reaction">
 					</button>
+
 					<button type="submit" class="react" name="react" value="10" onclick="sound10()">
-					<img src="img/button2/Stop2.png" alt="ちょっとまった" class="reaction">
+					<img src="img/button/Stop2.png" alt="ちょっとまった" class="reaction">
 					</button>
+
 					<button type="submit" class="react" name="react" value="11" onclick="sound11()">
-					<img src="img/button2/TooQuick2.png" alt="ちょっと早い" class="reaction">
+					<img src="img/button/TooQuick2.png" alt="ちょっと早い" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="12" onclick="sound12()">
-					<img src="img/button2/AhHa2.png" alt="なるほど" class="reaction">
+					<img src="img/button/AhHa2.png" alt="なるほど" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="13" onclick="sound13()">
-					<img src="img/button2/Onemore2.png" alt="もう一度お願いします" class="reaction">
+					<img src="img/button/Onemore2.png" alt="もう一度お願いします" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="14" onclick="sound14()">
-					<img src="img/button2/Great2.png" alt="最高です" class="reaction">
+					<img src="img/button/Great2.png" alt="最高です" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="15" onclick="sound15()">
-					<img src="img/button2/Share2.png" alt="共有してください" class="reaction">
+					<img src="img/button/Share.png" alt="共有してください" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="16" onclick="sound16()">
@@ -121,15 +127,19 @@
 					</button>
 
 					<button type="submit" class="react" name="react" value="17" onclick="sound17()">
-					<img src="img/button2/Eiken2.png" alt="英検3級" class="reaction">
+					<img src="img/button/Eiken.png" alt="英検3級" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="18" onclick="sound18()">
-					<img src="img/button2/Finished2.png" alt="作業終わりました" class="reaction">
+					<img src="img/button/Finished.png" alt="作業終わりました" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="19" onclick="sound19()">
-					<img src="img/button2/Question2.png" alt="質問があります" class="reaction">
+					<img src="img/button/Question2.png" alt="質問があります" class="reaction">
+					</button>
+
+					<button type="submit" class="react" name="react" value="20" onclick="sound20()">
+					<img src="img/button/Write.png" alt="写経だ！" class="reaction">
 					</button>
 				</form>
 			</div>
@@ -200,11 +210,11 @@
 		audio.play();
 		}
 		function sound15(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Howisit.mp3');
 		audio.play();
 		}
 		function sound16(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Goodpoint.mp3');
 		audio.play();
 		}
 		function sound17(){
@@ -217,6 +227,10 @@
 		}
 		function sound19(){
 		var audio = new Audio('sound/What.mp3');
+		audio.play();
+		}
+		function sound20(){
+		var audio = new Audio('sound/Write.mp3');
 		audio.play();
 		}
 	</script>

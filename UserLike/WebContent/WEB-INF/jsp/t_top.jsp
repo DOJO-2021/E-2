@@ -41,7 +41,7 @@
 			<canvas id="myChart"></canvas>
 			    <a id="Funny"><span v-if="seen"><img src="img/button/Funny.png" class="logo_image"></span></a>
 				<a id="Clap"><span v-if="seen"><img src="img/button/Clap.png" class="logo_image"></span></a>
-				<a id="Help"><span v-if="seen"><img src="img/button/Help!.png" class="logo_image"></span></a>
+				<a id="Help"><span v-if="seen"><img src="img/button/Help.png" class="logo_image"></span></a>
 				<a id="Thanks"><span v-if="seen"><img src="img/button/Thanks.png" class="logo_image"></span></a>
 				<a id="Goodmorning"><span v-if="seen"><img src="img/button/Goodmorning.png" class="logo_image"></span></a>
 				<a id="Greetings"><span v-if="seen"><img src="img/button/Greetings.png" class="logo_image"></span></a>
@@ -58,6 +58,7 @@
 				<a id="Eiken"><span v-if="seen"><img src="img/button/Eiken.png" class="logo_image"></span></a>
 				<a id="Finished"><span v-if="seen"><img src="img/button/Finished.png" class="logo_image"></span></a>
 				<a id="Question"><span v-if="seen"><img src="img/button/Question.png" class="logo_image"></span></a>
+				<a id="Write"><span v-if="seen"><img src="img/button/Write.png" class="logo_image"></span></a>
 			</div>
 		</main>
 
