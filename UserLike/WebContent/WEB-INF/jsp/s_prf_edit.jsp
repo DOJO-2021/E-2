@@ -35,91 +35,147 @@
 		<main>
 		<!--メイン-->
 		<!-- 受講者自身のプロフィールを確認できる画面 -->
-        <div class="s-prf-edit_area">
+        <p class="edit">プロフィールを編集</p>
 
-        <label class="prf_edit">プロフィール</label>
 	    <div class="prf_edit_class">
 	 	<c:forEach var="e" items="${prfList}">
 
-			<p class="edit">プロフィール編集</p>
-			<form method="POST" action="/UserLike/StudentEditServlet">
+	 	<form method="POST" action="/UserLike/StudentEditServlet">
+	 	<!-- 保存ボタン -->
+				<div class="save-button">
+					<button type="submit" class="save" title="編集内容を保存する">保存</button>
+				</div>
+
+
+			<p class="edit-basic">基本プロフィール</p>
 			<table class="edit_table">
 		          <tr>
 						<th><label class="prf_edit_title">名前</label></th>
-						<td><p><input type="text" name="S_NAME" value="${e.s_name}" class="s-form-text" /></p></td>
+						<td><p><input type="text" name="S_NAME" value="${e.s_name}" class="s-form-texte" /></p></td>
 		          </tr>
-		          <tr>
-						<th><label class="prf_edit_title">性別</label></th>
-						<td><p><input type="text" name="GENDER" value="${e.gender}" class="s-form-text" /></p></td>
 
+				  <tr>
+					<th><label class="prf_edit_title">性別</label></th>
+					<c:if test="${e.gender == 'M'}">
+						<td><p><input type="radio" id="man" name="GENDER" checked="checked" value="男性" class="s-form-text" /><label class="radio02" for="man">男</label></p>
+						<p><input type="radio" name="GENDER" id="woman" value="女性" class="s-form-text" /><label class="radio02" for="woman">女</label></p></td>
+					</c:if>
+					<c:if test="${e.gender != 'M'}">
+						<td><p><input type="radio" id="man" name="GENDER" checked="checked" value="男性" class="s-form-text" /><label class="radio02" for="man">男</label></p>
+						<p><input type="radio" name="GENDER" id="woman" checked="checked" value="女性" class="s-form-text" /><label class="radio02" for="woman">女</label></p></td>
+					</c:if>
 		          </tr>
-		          <tr>
-						<th><label class="prf_edit_title">クラス</label></th>
-						<td><p><input type="text" name="C_NAME" value="${e.c_name}" class="s-form-text" /></p></td>
-		          </tr>
+
+				  <tr>
+					<th><label class="prf_edit_title">クラス</label></th>
+					<c:if test="${e.c_name == 'A'}">
+						<td><p><input type="radio" id="c1" name="C_NAME" checked="checked" value="A" class="radio02" /><label class="radio02" for="c1">A</label></p>
+						<p><input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label></p>
+						<p><input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label></p>
+						<p><input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label></p>
+						<p><input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></p></td>
+					</c:if>
+
+					<c:if test="${e.c_name == 'B'}">
+						<td><p><input type="radio" id="c1" name="C_NAME" value="A" class="radio02" /><label class="radio02" for="c1">A</label></p>
+						<p><input type="radio" id="c2" name="C_NAME" checked="checked" value="B" class="radio02" /><label class="radio02" for="c2">B</label></p>
+						<p><input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label></p>
+						<p><input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label></p>
+						<p><input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></p></td>
+					</c:if>
+
+					<c:if test="${e.c_name == 'C'}">
+						<td><p><input type="radio" id="c1" name="C_NAME" value="A" class="radio02" /><label class="radio02" for="c1">A</label></p>
+						<p><input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label></p>
+						<p><input type="radio" id="c3" name="C_NAME" checked="checked" value="C" class="radio02" /><label class="radio02" for="c3">C</label></p>
+						<p><input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label></p>
+						<p><input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></p></td>
+					</c:if>
+
+					<c:if test="${e.c_name == 'D'}">
+						<td><p><input type="radio" id="c1" name="C_NAME" value="A" class="radio02" /><label class="radio02" for="c1">A</label></p>
+						<p><input type="radio" id="c2" name="C_NAME" class="radio02" /><label class="radio02" for="c2">B</label></p>
+						<p><input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label></p>
+						<p><input type="radio" id="c4" name="C_NAME" checked="checked" value="D" class="radio02" /><label class="radio02" for="c4">D</label></p>
+						<p><input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></p></td>
+					</c:if>
+
+					<c:if test="${e.c_name == 'E'}">
+						<td><p><input type="radio" id="c1" name="C_NAME" value="A" class="radio02" /><label class="radio02" for="c1">A</label></p>
+						<p><input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label></p>
+						<p><input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label></p>
+						<p><input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label></p>
+						<p><input type="radio" id="c1" name="C_NAME" checked="checked" value="E" class="radio02" /><label class="radio02" for="c5">E</label></p></td>
+					</c:if>
+
 		          <tr>
 						<th><label class="prf_edit_title">Email</label></th>
 						<td><p><input type="text" name="S_MAIL" value="${e.s_mail}" class="s-form-text" /></p></td>
-		          </tr>
+				  </tr>
+
 		          <tr>
-						<th><label class="prf_edit_title">プログラミング経験</label></th>
-						<td><p><input type="text" name="EXP" value="${e.exp}" class="s-form-text" /></p></td>
+					<th><label class="prf_edit_title">プログラミング経験</label></th>
+					<c:if test="${e.exp == 'Y'}">
+						<td><p><input type="radio" id="yes" name="EXP" checked="checked" value="Y" class="radio2" /><label class="radio02" for="yes">あり</label></p>
+						<p><input type="radio" name="EXP" id="no" value="N" class="radio02" /><label class="radio02" for="no">なし</label></p></td>
+					</c:if>
+					<c:if test="${e.exp != 'Y'}">
+						<td><p><input type="radio" id="yes" name="EXP" value="Y" class="radio02" /><label class="radio02" for="no">あり</label></p>
+						<p><input type="radio" name="EXP" id="no" value="N" checked="checked" class="radio2" /><label class="radio02" for="no">なし</label></p></td>
+					</c:if>
 		          </tr>
+
 		          <tr>
 						<th><label class="prf_edit_title">出身学部</label></th>
-						<td><p><input type="text" name="COLLEGE" value="${e.college}" class="s-form-text" /></p></td>
+						<td><p><input type="text" name="COLLEGE" value="${e.college}" class="s-form-texte" /></p></td>
 		          </tr>
 		          <tr>
 						<th><label class="prf_edit_title">出身地</label></th>
-						<td><p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-text" /></p></td>
+						<td><p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-texte" /></p></td>
 				  </tr>
 		        </table>
 		        <br>
-		​
-					<div id="HOBBY">
-						<label class="prf_edit_titles">趣味</label>
-						<p><input type="text" name="HOBBY" value="${e.hobby}" class="s-form-text" /></p>
-					</div>
-					<br>
-		​
-					<div id="SKILL">
-						<label class="prf_edit_titles">特技</label>
-						<p><input type="text" name="SKILL" value="${e.skill}" class="s-form-text" /></p>
-					</div>
-					<br>
-		​
-					<div id="MUSIC">
-						<label class="prf_edit_titles">好きな音楽</label>
-						<p><input type="text" name="MUSIC" value="${e.music}" class="s-form-text" /></p>
-					</div>
-					<br>
-		​​
-					<div id="JOB">
-						<label class="prf_edit_titles">バイト経験</label>
-						<p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-text" /></p>
-					</div>
-					<br>
-		​
-					<div id="ACTIVITY">
-						<label class="prf_edit_titles">課外活動経験</label>
-						<p><input type="text" name="ACTIVITY" value="${e.activity}" class="s-form-text" /></p>
-					</div>
-		            <br>
-					<div id="PR">
-						<label class="prf_edit_titles">自己PR</label>
-						<p><input type="text" name="PR" value="${e.pr}" class="s-form-text" /></p>
-					</div>
-		            <br>
-		            ​
-				<!-- 保存ボタン -->
-				<div class="button">
-					<input type="submit" name="SUBMIT" value="保存">
+
+				<div id="HOBBY">
+					<label class="prf_edit_titles">趣味</label>
+					<p><input type="text" name="HOBBY" value="${e.hobby}" class="s-form-text" /></p>
 				</div>
+				<br>
+
+				<div id="SKILL">
+					<label class="prf_edit_titles">特技</label>
+					<p><input type="text" name="SKILL" value="${e.skill}" class="s-form-text" /></p>
+				</div>
+				<br>
+
+				<div id="MUSIC">
+					<label class="prf_edit_titles">好きな音楽</label>
+					<p><input type="text" name="MUSIC" value="${e.music}" class="s-form-text" /></p>
+				</div>
+				<br>
+
+				<div id="JOB">
+					<label class="prf_edit_titles">バイト経験</label>
+					<p><input type="text" name="B_PLACE" value="${e.b_place}" class="s-form-text" /></p>
+				</div>
+				<br>
+
+				<div id="ACTIVITY">
+					<label class="prf_edit_titles">課外活動経験</label>
+					<p><input type="text" name="ACTIVITY" value="${e.activity}" class="s-form-text" /></p>
+				</div>
+	            <br>
+				<div id="PR">
+					<label class="prf_edit_titles">自己PR</label>
+					<p><input type="text" name="PR" value="${e.pr}" class="s-form-text" /></p>
+				</div>
+	            <br>
+
 			</form>
 			</c:forEach>
 			</div>
-			</div>
 		</main>
+
 
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
