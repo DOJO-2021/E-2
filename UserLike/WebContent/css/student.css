@@ -510,39 +510,26 @@ input:checked + .tab_class + .content_class {
     width: 600px;
 }
 /*-------------------------   s_prf_edit.jsp    --------------------------------------*/
-/*----------  レイアウトを整える     -------------*/
- .s-prf-edit_area {
-  width: 1000px;
-  height: 100%;
-  min-height: 185px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  display: flex;
-  background-color: #fff;
- /* border: 1px solid #ccc;  */
-  border-top: 0;
-  /*box-shadow: 0 5px 5px -5px #333;*/
-  box-sizing: border-box;
-  /*border-radius: 4px;*/
-  justify-content: center;
+.prf_edit_class {
+	width: 1000px;
+    height: 100%;
+    min-height: 185px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #fff;
+    border-top: 0;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-.prf_edit {
-  width: 50%;
-  height: 50px;
-  background-color:#ffff;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  display: block;
-  float: left;
-  order: -1;
-  color: #808080;
-  border-radius: 4px;
-  border: solid 1px #ffa500;
-}
 
 .edit {
+	text-align: center;
+	color: #808080;
+    font-size: 20px;
+}
+.edit-basic {
 	display: inline-block;
 	padding: 0.5em;
     color: #808080;
@@ -551,32 +538,32 @@ input:checked + .tab_class + .content_class {
     border-radius: 6px;
     width: 600px;
     margin-left: auto;
+    margin-top:30px;
 }
+/* 基本プロフィールテーブル */
 .edit_table {
 	border-radius: 6px;
-	border-collapse: collapse;
-	border: solid 1px #bec2c7;
+	/*border-collapse: collapse;*/
+	/*border: solid 1px #bec2c7;*/
 	position: relative;
 	text-align: right;
-	/*margin-left: auto;*/
-
 }
-.edit_table th {
-	padding:8px;
-	border: 1px dashed #bec2c7;
+.edit_table th, .edit_table td {
+    padding:5px;
 	text-align: left;
-
 }
 .edit_table th {
 	background-color: #ffff;
 	width: 200px;
-	color: #898989;
-	vertical-align: top;
+	color: #808080;
 	font-weight: normal;
+	border-bottom: solid 1px #b3d4fc;
 }
 .edit_table td {
 	width: 400px;
+	border-bottom: dashed 1px #bec2c7;
 }
+
 .prf_edit_titles {
 	display: inline-block;
 	padding: 0.5em;
@@ -585,25 +572,52 @@ input:checked + .tab_class + .content_class {
     border-left: solid 5px #b3d4fc;
     border-radius: 6px;
     width: 600px;
-
 }
-
 
 .s-form-text {
-    height: 2.4em;
-    width: 80%;
-    padding: 0 16px;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 0 0 0 1px #fff inset;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+	width:100%;
+    background:#ffff;
+    padding:15px;
+    border-bottom: dashed 1px #bec2c7;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 15px;
 }
-
 .s-form-text:focus {
+	border: 1px solid #b3d4fc;
+    z-index: 10;
     outline: 0;
-    box-shadow: 0 0 0 2px #b3d4fc inset;
+}
+.s-form-texte {
+	width:100%;
+    background:#ffff;
+    padding:15px;
+    border: none;
+    margin-top: 10px;
+}
+.s-form-texte:focus {
+	border: 1px solid #b3d4fc;
+    z-index: 10;
+    outline: 0;
+}
+/* 保存ボタン */
+.save-button {
+    text-align: right;
+	margin: 10px;
+}
+.save {
+	background-color: #b3d4fc;
+    color: white;
+    border: 2px solid #b3d4fc;
+    border-radius: 6px;
+    padding: 5px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+.save:hover {
+  opacity: 0.5;
 }
 
 
