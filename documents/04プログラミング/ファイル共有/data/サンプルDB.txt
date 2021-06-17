@@ -1,0 +1,77 @@
+//プロフィール登録
+insert into profile 
+values('momodesu','桃太郎',null,'momodesu@icloud.com',
+'M','E','Y','桃研究大学','神奈川県','桃狩り','団子配り',
+'大塚愛のPEACH','果物屋','鬼退治','私は桃から生まれました。','2','43');
+
+insert into profile 
+values ('room','彦星',null,'orihime.yahoo.co.jp',
+'M','E','N','月見大学','愛知県','読書','裁縫',
+'thank u','next','無し','努力家','120','61');
+
+
+insert into profile 
+values ('abcdef','かぐや姫',null,'kaguya@icloud.com',
+'F','B','Y','姫市立大学','神奈川県','散歩','料理',
+'yoasobiの夜にかける','コンビニ','特になし','竹に住んでいたことがあります。','30','53');
+
+
+insert into profile 
+values ('room','織姫',null,'kaguya@icloud.com',
+'F','B','Y','姫市立大学','神奈川県','散歩','料理',
+'yoasobiの夜にかける','コンビニ','特になし','竹に住んでいたことがあります。','30','70');
+
+
+//受講者IDPW登録
+insert into s_idpw 
+values('momodesu','doumo');
+
+
+//講師IDPW登録
+insert into t_idpw 
+values('melon','daisuki');
+
+
+//profileテーブルとs_idpwテーブルのs_idを結合して表示する
+select * from s_idpw inner join profile on s_idpw.s_id=profile.s_id;
+
+//検索文（性別検索出来たほうがグループ分けしやすい）
+prfDAO.select(new profile ('','s_name','','',
+'gender','c_name','exp','','','','', 
+'','','','','')); 
+
+//profile 編集
+prfDAO.update(new profile ('','s_name','icon','s_mail','gender','c_name','exp','colleg','b_place','hobby','skill', 'music','job','activity','pr','know','unknow')); 
+
+
+insert into profile(icon) select 0,BulkColumn from openrowset(bulk n'C:/pleiades/workspace/E-2/gazou/kumo.png',single_blob);
+
+
+//ここからデータベース登録
+create table profile (		
+s_id varchar (20) primary key,		
+s_name varchar (100) Not null,		
+icon varchar,		
+s_mail varchar (30),		
+gender char,		
+c_name char Not null,		
+exp char,		
+college varchar ,		
+b_place varchar ,		
+hobby varchar (100),		
+skill varchar (100),		
+music varchar (100),		
+job varchar (100),		
+activity varchar (100),		
+pr varchar (100),		
+know int,
+unknow int);		
+
+create table t_idpw (	
+t_id varchar (20) primary key,	
+t_pw varchar (20) not null,	
+c_name char not null);	
+
+create table s_idpw (	
+s_id varchar (20) primary key,	
+s_pw varchar (20) not null);	

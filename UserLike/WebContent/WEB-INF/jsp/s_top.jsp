@@ -148,7 +148,7 @@
 		audio.play();
 		}
 		function sound2(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Claps.mp3');
 		audio.play();
 		}
 		function sound3(){
@@ -164,7 +164,7 @@
 		audio.play();
 		}
 		function sound6(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Greetings.mp3');
 		audio.play();
 		}
 		function sound7(){
@@ -172,7 +172,7 @@
 		audio.play();
 		}
 		function sound8(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Breakout.mp3');
 		audio.play();
 		}
 		function sound9(){
@@ -196,7 +196,7 @@
 		audio.play();
 		}
 		function sound14(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Nice.mp3');
 		audio.play();
 		}
 		function sound15(){
@@ -212,15 +212,11 @@
 		audio.play();
 		}
 		function sound18(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Great.mp3');
 		audio.play();
 		}
 		function sound19(){
 		var audio = new Audio('sound/What.mp3');
-		audio.play();
-		}
-		function sound20(){
-		var audio = new Audio('sound/.mp3');
 		audio.play();
 		}
 	</script>
