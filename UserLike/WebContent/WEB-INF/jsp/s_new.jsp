@@ -57,6 +57,8 @@
 									    margin:50px auto;
 									    border:1px solid #b3d4fc;   /* 枠の線の細さと色*/
 									    z-index: 2">
+
+
 			<form id="formCheck" method="POST" action="/UserLike/StudentNewServlet">
 			<h4>新規登録</h4>
 
@@ -69,7 +71,9 @@
 				<div class="cp_iptxt">
 					<label>パスワード(6文字以上)</label><br>
 					<input type="password" name="S_PW" class="s-new-input validate[required,minSize[6]]" name="password" placeholder="password">
-					<span class="focus_line"></span>
+					<span class="focus_line">
+					<i toggle="password-field" class="mdi mdi-eye toggle-password"></i>
+					</span>
 				</div><br>
 
 				<div class="cp_iptxt">
@@ -169,7 +173,22 @@
 		<jsp:include page="footer.jsp" />
 	</footer>
 
-	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
+	<script src="js/scroll.js">
+	$(".toggle-password").click(function () {
+	    // iconの切り替え
+	    $(this).toggleClass("mdi-eye mdi-eye-off");
+
+	    // 入力フォームの取得
+	    let input = $(this).parent().prev("input");
+	    // type切替
+	    if (input.attr("type") == "password") {
+	        input.attr("type", "text");
+	    } else {
+	        input.attr("type", "password");
+	    }
+	});
+
+	</script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
 </div>
 </div>

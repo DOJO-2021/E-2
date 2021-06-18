@@ -42,18 +42,95 @@
     </div>
 	</header>
 
-
 		<main>
-	        <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
-	        <nav class="navnew">
-	        <ul>
-		        <li><a href="/UserLike/TeacherLoginServlet" class="t-min">講師の方はこちら</a></li>
-		        <li><a href="/UserLike/StudentLoginServlet" class="s-min">受講生の方はこちら</a></li>
-	        </ul>
-	        </nav>
+        <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
+           <nav class="navnew">
+             <ul>
+                 <li><a href="/UserLike/TeacherLoginServlet" class="t-min">講師の方はこちら</a></li>
+                 <li><a href="/UserLike/StudentLoginServlet" class="s-min">受講生の方はこちら</a></li>
+             </ul>
+           </nav>
+	       <!-- メインロゴ挿入 -->
+	       <div class="fluffy">
+	       <h3 class="mainlogo"><a href="/USerLike/MainServlet"><img src="img/5.png" class="mainlogo_image"></a></h3>
+           </div>
+           <div class="main-ys">
+           <p class="main-y">YAZAWA</p>
+           <p class="main-s">SWITCH</p>
+           </div>
 
-	        <!-- メインロゴ挿入 -->
-	        <h3 class="mainlogo"><a href="/USerLike/MainServlet"><img src="img/5.png" class="mainlogo_image"></a></h3>
+
+
+           <p class="abt-yzw">about ヤザワスイッチ</p>
+
+         <div class="yzw-rea-matome">
+           <img src="img/main1.png" class="main1-image">
+           <p class="abt-rea">リアクションボタンによりオンラインでも<br>
+           リアルタイムで理解できたかどうか等の反応ができる！<br>
+           <br>
+           オンライン研修、対面研修のように講師に何かしらの反応を送りたい！<br>
+           そう思ったことがある方は多いのではないでしょうか？
+           <br>
+           ヤザワスイッチならスイッチ１つで「質問があります。」<br>
+           「理解できませんでした。」「もう一度お願いします。」<br>
+           などの反応を講師に送ることができます。
+           </p>
+         </div>
+
+         <div class="yzw-trea-matome">
+           <p class="abt-trea">講師は反応を見て研修内容を考えることができる！<br>
+           <br>
+           <br>
+           対面研修では受講者の反応がわかりづらく、本当に理解できているのか心配になる…<br>
+           ヤザワスイッチはそんなお悩みも軽減できます。<br>
+           <br>
+           受講者からリアルタイムで送られた反応をスイッチ別にグラフ化！<br>
+           グラフを参考に理解できていないところを再度次の講義で説明するなど、<br>
+           受講者に合わせて講義を考えることができます。</p>
+           <img src="img/main2.png" class="main2-image">
+         </div>
+
+         <div class="yzw-prea-matome">
+           <img src="img/main3.png" class="main3-image">
+           <p class="abt-prea">受講者のプロフィールが閲覧できるから、コミュニケーションをとるきっかけづくりになる！<br>
+           <br>
+           <br>
+           対面のように直接話す機会をなかなかとることができないオンライン研修。<br>
+           受講者のプロフィールを確認することができ、受講者の特徴をつかみやすい他、<br>
+           話すきっかけになり、よりコミュニケーションがとりやすくなります。</p>
+         </div>
+
+
+           <p class="cct-yzw" id="contact">お問い合わせ</p>
+
+
+          <div class="cct-form">
+            <form method="post" action="#">
+
+            <div class="cct-matome">
+             <label class="yzw-name">お名前</label><sup>※必須</sup><br>
+               <input class="cct" type="text" name="cct-name"><br>
+
+             <label class="yzw-cpn">貴社名</label><sup>※必須</sup><br>
+               <input class="cct" type="text" name="cct-cpn"><br>
+
+             <label class="yzw-emal">メールアドレス</label><sup>※必須</sup><br>
+               <input class="cct" type="text" name="cct-emal"><br>
+
+             <label class="yzw-tel">お電話番号</label><br>
+               <input class="cct" type="text" name="cct-tel"><br>
+
+           </div>
+
+             <div class="yzw-taa">
+               <label class="yzw-cts">ご要望・ご質問</label><br>
+               <textarea rows="10" cols="25">ご要望やご質問などがあればこちらにご記入ください。</textarea><br>
+             </div>
+             <div class="confii">
+             <button class="yzw-confi">確認画面へ</button>
+             </div>
+            </form>
+           </div>
 		</main>
 
 	<footer class="footer"><!--フッター-->

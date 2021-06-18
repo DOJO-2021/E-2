@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
@@ -120,7 +121,10 @@
                                    border-right: 1px dashed #DCDCDC;
                                    border-bottom: 1px solid #DCDCDC;
                                    border-top: 1px solid #DCDCDC;
-                                   text-align:center">${e.know}/${e.unknow}</td>
+                                   text-align:center">
+                        <span class="material-icons" style="font-size:17px;color:#ffa500">sentiment_satisfied_alt
+                        </span>${e.know}<span class="material-icons" style="margin-left:10px;font-size:17px;color:#b3d4fc">sentiment_very_dissatisfied
+                        </span>${e.unknow}</td>
 			            <td style="border-left: 1px dashed #DCDCDC;
                                    border-right: 1px dashed #DCDCDC;
                                    border-bottom: 1px solid #DCDCDC;
@@ -129,7 +133,7 @@
 				            <form method="GET" action="/UserLike/TeacherPrfServlet">
 				            <div class="button">
 					            <input type="hidden" value="${e.s_id}" name="S_ID">
-								<input type="submit" value="詳細" style="margin: 2px 0">
+								<button type="submit" class="prflabel" style="margin: 2px 0" value="詳細">詳細</button>
 							</div>
 							</form>
 						</td>

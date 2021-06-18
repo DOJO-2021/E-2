@@ -266,6 +266,189 @@ table {
 	text-align: center;
 	margin: 50px;
 }
+.fluffy {
+  animation: fluffy1 3s ease infinite;
+}
+@keyframes fluffy1 {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-15px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-15px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
+.main-y {
+	text-align: center;
+	font-size: 20px;
+	color: #ffa500;
+	display: inline;
+	margin-right: 30px;
+	font-family:fantasy;
+	letter-spacing: 1em;
+}
+.main-s {
+	text-align: center;
+	font-size: 20px;
+	color: #b3d4fc;
+	display: inline;
+	font-family:fantasy;
+	letter-spacing: 1em;
+}
+.main-ys {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+/*--------------  メイン部分nav 配置及び詳細設定  ---------------------*/
+.navnew li {
+	display: block;
+	list-style-type: none;
+	text-align: right;
+	margin: 20px;
+}
+.t-min {
+	position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #898989;
+  background: #ECECEC;
+  border-radius: 15px 0 0 15px;
+  transition: .4s;
+}
+.t-min:hover {
+	background: #ffa500;
+	color: #ffff;
+}
+.s-min {
+	position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #898989;
+  background: #ECECEC;
+  border-radius: 15px 0 0 15px;
+  transition: .4s;
+}
+.s-min:hover {
+	background: #b3d4fc;
+	color: #ffff;
+}
+
+
+.abt-yzw {
+	text-align:center;
+	margin-top: 300px;
+	margin-bottom: 50px;
+	font-weight:800;
+	font-size: 30px;
+	color: #ffa500;
+}
+.yzw-rea-matome {
+	display: flex;
+
+}
+.abt-rea {
+	text-align: left;
+	margin: 30px;
+
+}
+.main1-image {
+	width: 30%;
+	display: inline;
+	margin-left: 30px;
+}
+.yzw-trea-matome {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+.abt-trea {
+	text-align: left;
+	margin: 30px;
+}
+.main2-image {
+	width: 30%;
+	display: inline;
+}
+.yzw-prea-matome {
+	display: flex;
+}
+.main3-image {
+	width: 30%;
+	display: inline;
+	margin-left: 50px;
+}
+.abt-prea {
+	text-align: left;
+	margin: 30px;
+}
+/*-----お問い合わせフォーム----------*/
+.cct-yzw {
+	text-align:center;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	font-weight:800;
+	font-size: 30px;
+	color: #ffa500;
+}
+/* お問い合わせフォーム全体 */
+.cct-form {
+	display: flex;
+    padding:20px 8px;
+    position: center;
+    justify-content: center;
+
+}
+/* お名前～電話番号までのまとめ */
+.cct-matome {
+	float: left;
+	margin-right: 30px;
+}
+/* ご要望・ご質問まとめ */
+.yzw-taa {
+	float: right;
+	margin-bottom: 30px;
+}
+/* お問い合わせ  input text */
+.cct {
+	width:100%;
+    background:#f5f5f5;
+    border:0;
+    padding:15px;
+    border-radius:6px;
+    margin-bottom:10px;
+    margin-right: 30px;
+    border:1px solid #eee;
+    height: 20px;
+}
+/* 必須項目 */
+sup {
+	color: #DC143C;
+	font-size: 10px;
+
+}
+/* お問い合わせボタン */
+.yzw-confi {
+   position: relative;
+   display: inline-block;
+   font-weight: bold;
+   padding: 10px;
+   text-decoration: none;
+   color: #808080;
+   background: #ECECEC;
+   border-radius: 10px 10px 10px 10px;
+   border: solid 1px #808080;
+   transition: .4s;
+}
+.yzw-confi:active {
+  top:3px;
+  box-shadow:none;
+}
 
 
 /*--------------  result.jsp  ---------------------*/

@@ -91,7 +91,14 @@ input{
 	margin-bottom: 10px;
 	margin-right: 5px;
 }
-
+.prflabel {
+    padding: 5px;         /* 内側の余白 */
+    display: inline-block;
+	background: none;
+	border: 0;
+    text-align: center;
+    background-color: #c0c0c0;
+}
 .list-body tr:hover{
   background-color: #b3d4fc;
 }

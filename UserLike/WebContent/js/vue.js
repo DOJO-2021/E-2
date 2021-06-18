@@ -131,3 +131,10 @@ var b19 = new Vue({
     seen: false
   }
 })
+
+var b20 = new Vue({
+  el: '#Write',
+  data: {
+    seen: false
+  }
+})
