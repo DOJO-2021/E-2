@@ -154,7 +154,7 @@ public class PrfDAO {
 		return prfList;
 	}
 
-
+	//【追加】新規登録
 	public boolean insert(Prf card) {
 		Connection conn = null;
 		boolean result = false;
@@ -452,7 +452,7 @@ public class PrfDAO {
 
 
 
-	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
+	//【更新】 「わかった」に１追加
 	public boolean understand(Prf list) {
 		Connection conn = null;
 		boolean result = false;
@@ -499,7 +499,7 @@ public class PrfDAO {
 		return result;
 	}
 
-	//【更新】 引数listで指定されたレコードを更新し、成功したらtrueを返す
+	//【更新】 「わからない」に１追加
 	public boolean cantunderstand(Prf list) {
 		Connection conn = null;
 		boolean result = false;
@@ -546,7 +546,7 @@ public class PrfDAO {
 		return result;
 	}
 
-	//【削除】引数numberで指定されたレコードを削除し、成功したらtrueを返す
+	//【削除】引数s_idで指定されたレコードを削除し、成功したらtrueを返す
 	public boolean delete(String s_id) {
 		Connection conn = null;
 		boolean result = false;

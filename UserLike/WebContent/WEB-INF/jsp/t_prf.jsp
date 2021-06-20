@@ -45,7 +45,7 @@
         <!-- 削除ボタン -->
 		<form class="delete" method="POST" action="/UserLike/TeacherPrfServlet">
 		<div class="delete-button">
-		<input type="hidden"  name="S_ID" value="${s_id}">
+		<input type="hidden"  name="S_ID" value="${e.s_id}">
 		<button type="submit" class="filelabel" title="個人データを削除">削除</button>
 		</div>
 

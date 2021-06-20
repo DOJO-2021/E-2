@@ -51,7 +51,7 @@
         <div class="prf-matome">
 		<!-- 写真 -->
 		<div class="prf-imag">
-			<a><img style="height:100px" src="img/icon/noimage.png" ></a>
+			<a><img style="height:100px" src="img/icon/${e.icon}" ></a>
 		</div>
 
 		<div class="prf-matome-right">

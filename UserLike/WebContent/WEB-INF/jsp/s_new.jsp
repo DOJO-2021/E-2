@@ -46,7 +46,6 @@
 	</header>
 
 		<main>
-		<div class="area" >
 		<!--メイン-->
 		<div class="s-new-form" style="position: relative;
 									    background: #fff;
@@ -66,20 +65,18 @@
 					<label>ユーザーID</label><br>
 					<input type="text" name="S_ID" class="s-new-input validate[required,maxSize[20]]" placeholder="ID">
 					<span class="focus_line"></span>
-				</div>
-​
+				</div><br>
+
 				<div class="cp_iptxt">
 					<label>パスワード(6文字以上)</label><br>
-					<input type="password" name="S_PW" class="s-new-input validate[required,minSize[6]]" name="password" placeholder="password">
-					<span class="focus_line">
-					<i toggle="password-field" class="mdi mdi-eye toggle-password"></i>
-					</span>
+					<input type="password" name="S_PW" class="s-new-input validate[required,minSize[6]]" id="password1" name="password" placeholder="password">
+					<span id="buttonEye1" class="fa fa-eye" onclick="pushHideButton1()"></span>
 				</div><br>
 
 				<div class="cp_iptxt">
 					<label>パスワード(再入力)</label><br>
-					<input  type="password" name="S_PW2" class="s-new-input validate[required,equals[password]]"  id="password" placeholder="password">
-					<span class="focus_line"></span>
+					<input  type="password" name="S_PW2" class="s-new-input validate[required,equals[password1]]"  id="password2" placeholder="password">
+					<span id="buttonEye2" class="fa fa-eye" onclick="pushHideButton2()"></span>
 				</div><br>
 
 				<div class="cp_iptxt">
@@ -162,16 +159,40 @@
 					<input type="text" name="PR" class="s-new-input validate[maxSize[100]]" placeholder="得意なことや苦手なことなど">
 					<span class="focus_line"></span>
 				</div>
-​
+
 				<button class="s-new-btn">登録</button>
 			</form>
 		</div>
-		</div >
 		</main>
 
-	<footer class="footer"><!--フッター-->
+	<footer class="footer" style="position:absolute;bottom:0"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
+
+    <script>
+      function pushHideButton1() {
+        var txtPass = document.getElementById("password1");
+        var btnEye = document.getElementById("buttonEye1");
+        if (txtPass.type === "text") {
+          txtPass.type = "password";
+          btnEye.className = "fa fa-eye";
+        } else {
+          txtPass.type = "text";
+          btnEye.className = "fa fa-eye-slash";
+        }
+      }
+      function pushHideButton2() {
+          var txtPass = document.getElementById("password2");
+          var btnEye = document.getElementById("buttonEye2");
+          if (txtPass.type === "text") {
+            txtPass.type = "password";
+            btnEye.className = "fa fa-eye";
+          } else {
+            txtPass.type = "text";
+            btnEye.className = "fa fa-eye-slash";
+          }
+        }
+    </script>
 
 	<script src="js/scroll.js">
 	$(".toggle-password").click(function () {
@@ -194,3 +215,4 @@
 </div>
 </body>
 </html>
+

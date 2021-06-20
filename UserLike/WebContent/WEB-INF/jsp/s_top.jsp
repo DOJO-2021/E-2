@@ -123,7 +123,7 @@
 					</button>
 
 					<button type="submit" class="react" name="react" value="16" onclick="sound16()">
-					<img src="img/button2/Suggestion2.png" alt="提案があります" class="reaction">
+					<img src="img/button/Suggestion2.png" alt="提案があります" class="reaction">
 					</button>
 
 					<button type="submit" class="react" name="react" value="17" onclick="sound17()">

@@ -58,10 +58,13 @@
 					<input type="text" name="ID" class="s-log-input validate[required]">
 				</div>
 
+
 				<div class="cp_iptxt">
 					<p>パスワード</p>
-					<input type="password" name="PW" class="s-log-input validate[required]">
-				</div>
+      				<input type="password" id="textPassword" name="PW" class="s-log-input validate[required]">
+      				<span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+    			</div>
+
 
 				<button class="s-log-btn">ログイン</button>
 
@@ -95,6 +98,20 @@
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
+
+    <script>
+      function pushHideButton() {
+        var txtPass = document.getElementById("textPassword");
+        var btnEye = document.getElementById("buttonEye");
+        if (txtPass.type === "text") {
+          txtPass.type = "password";
+          btnEye.className = "fa fa-eye";
+        } else {
+          txtPass.type = "text";
+          btnEye.className = "fa fa-eye-slash";
+        }
+      }
+    </script>
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>

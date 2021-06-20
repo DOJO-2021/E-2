@@ -18,14 +18,16 @@ margin: 0;
 
 body {
   margin: 0;
-  overflow-y: hidden;
+/*  overflow-y: hidden;*/
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 header {
@@ -36,12 +38,15 @@ header {
 main {
   flex: 1;
   background-color: #fff;
-  overflow-y: scroll;
+/*  overflow-y: scroll;*/
 }
 
 footer {
   z-index: 10;
-  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
 }
 
 #page_top {
@@ -156,7 +161,6 @@ h2 {
 .s-min:hover {
 	background: #b3d4fc;
 }
-
 /*-------- 反応ボタン ----commom.css-----*/
 table {
     margin-left: auto;
@@ -221,7 +225,8 @@ table {
 	background: #898989;
 	opacity: 0.6;
 	border-radius: 50%;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
+	z-index: 100;
 }
 #page_top a{
 	position: relative;
@@ -358,7 +363,6 @@ table {
 
 }
 .main1-image {
-	width: 30%;
 	display: inline;
 	margin-left: 30px;
 }
@@ -372,14 +376,12 @@ table {
 	margin: 30px;
 }
 .main2-image {
-	width: 30%;
 	display: inline;
 }
 .yzw-prea-matome {
 	display: flex;
 }
 .main3-image {
-	width: 30%;
 	display: inline;
 	margin-left: 50px;
 }
@@ -512,5 +514,11 @@ sup {
 	.unknow {
 		display:inline-block;
 		margin: 0;
+	}
+	.main1-image,
+	.main2-image,
+	.main3-image{
+		height:200px;
+		width:auto;
 	}
 }

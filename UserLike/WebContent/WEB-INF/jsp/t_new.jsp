@@ -47,7 +47,6 @@
 	</header>
 
 		<main>
-		<div class="area" >
 		<!--メイン-->
 		<div class="t-new-form"  style="position: relative;
 									    background: #fff;
@@ -69,14 +68,14 @@
 ​
 				<div class="cp_iptxt">
 					<label>パスワード(6文字以上)</label><br>
-					<input type="password" name="T_PW" class="t-new-input validate[required,minSize[6]]" id="password"  name="password" placeholder="password">
-					<span class="focus_line"></span>
+					<input type="password" name="T_PW" class="t-new-input validate[required,minSize[6]]" id="password1"  name="password" placeholder="password">
+					<span id="buttonEye1" class="fa fa-eye" onclick="pushHideButton1()"></span>
 				</div><br>
 
 				<div class="cp_iptxt">
 					<label>パスワード(再入力)</label><br>
-					<input  type="password" name="T_PW2" class="t-new-input validate[required,equals[password]]" placeholder="password">
-					<span class="focus_line"></span>
+					<input  type="password" name="T_PW2" class="t-new-input validate[required,equals[password1]]" id="password2" placeholder="password">
+					<span id="buttonEye2" class="fa fa-eye" onclick="pushHideButton2()"></span>
 				</div><br>
 
 				<div>
@@ -92,12 +91,36 @@
 ​
 			</form>
 		</div>
-		</div >
 		</main>
 
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
+
+    <script>
+      function pushHideButton1() {
+        var txtPass = document.getElementById("password1");
+        var btnEye = document.getElementById("buttonEye1");
+        if (txtPass.type === "text") {
+          txtPass.type = "password";
+          btnEye.className = "fa fa-eye";
+        } else {
+          txtPass.type = "text";
+          btnEye.className = "fa fa-eye-slash";
+        }
+      }
+      function pushHideButton2() {
+          var txtPass = document.getElementById("password2");
+          var btnEye = document.getElementById("buttonEye2");
+          if (txtPass.type === "text") {
+            txtPass.type = "password";
+            btnEye.className = "fa fa-eye";
+          } else {
+            txtPass.type = "text";
+            btnEye.className = "fa fa-eye-slash";
+          }
+        }
+    </script>
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>

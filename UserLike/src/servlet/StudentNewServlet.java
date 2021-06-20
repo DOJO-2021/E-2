@@ -15,22 +15,11 @@ import model.Prf;
 import model.Result;
 import model.StuIdpw;
 
-/*
-import dao.PrfDAO;
-import model.Prf;
-import model.Result;
-*/
 
-/**
- * Servlet implementation class StudentNewServlet
- */
 @WebServlet("/StudentNewServlet")
 public class StudentNewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 登録ページにフォワードする
@@ -38,9 +27,7 @@ public class StudentNewServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// リクエストパラメータを取得する
@@ -69,9 +56,9 @@ public class StudentNewServlet extends HttpServlet {
 
 			// アカウント登録成功したらプロフィールの登録処理を行う
 			PrfDAO pDao = new PrfDAO();
-			if (pDao.insert(new Prf(s_id, s_name,icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, 0, 0))) {	// プロフ登録成功
-				request.setAttribute("result",
-				new Result("登録成功！", "アカウントを登録しました。", "/UserLike/StudentLoginServlet"));
+			if (pDao.insert(new Prf(s_id, s_name, icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, 0, 0))) {	// プロフ登録成功
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/s_login.jsp");
+				dispatcher.forward(request, response);
 			}
 			else {												// プロフ登録失敗
 				request.setAttribute("result",

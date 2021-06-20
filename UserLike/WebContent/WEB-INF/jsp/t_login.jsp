@@ -49,17 +49,18 @@
 		<!--メイン-->
 		<div class="t-log-form">
 			<form id="formCheck" method="POST" action="/UserLike/TeacherLoginServlet">
-			<h4>ログイン</h4>
+				<h4>ログイン</h4>
 
-			<div class="cp_iptxt">
-				<p>ユーザーID</p>
-				<input type="text" name="ID" class="t-log-input validate[required]">
-			</div>
+				<div class="cp_iptxt">
+					<p>ユーザーID</p>
+					<input type="text" name="ID" class="t-log-input validate[required]">
+				</div>
 
-			<div class="cp_iptxt">
-				<p>パスワード</p>
-				<input type="password" name="PW" class="t-log-input validate[required]">
-			</div>
+				<div class="cp_iptxt">
+					<p>パスワード</p>
+	      			<input type="password" id="textPassword"  name="PW" class="t-log-input validate[required]">
+				    <span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+				</div>
 
 				<button class="t-log-btn">ログイン</button>
 
@@ -94,6 +95,19 @@
 	<footer class="footer"><!--フッター-->
 		<jsp:include page="footer.jsp" />
 	</footer>
+	<script>
+      function pushHideButton() {
+        var txtPass = document.getElementById("textPassword");
+        var btnEye = document.getElementById("buttonEye");
+        if (txtPass.type === "text") {
+          txtPass.type = "password";
+          btnEye.className = "fa fa-eye";
+        } else {
+          txtPass.type = "text";
+          btnEye.className = "fa fa-eye-slash";
+        }
+      }
+    </script>
 
 	<script src="js/scroll.js"></script><!--トップに戻るボタン-->
 	<div id="page_top"><a href="#"></a></div>
@@ -101,3 +115,4 @@
 </div>
 </body>
 </html>
+

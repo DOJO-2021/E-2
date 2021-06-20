@@ -17,20 +17,6 @@ html * {
 #FFFFFF　白
 */
 
-body {
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-}
-
-header {
-  background-color: #fff;
-}
 
 a {
 	text-decoration : none;
@@ -65,10 +51,6 @@ a {
 }
 main {
   flex: 1;
-  background-color: #fff;
-}
-
-footer {
   background-color: #fff;
 }
 
@@ -154,11 +136,16 @@ span {
 .t-log-input {
   width:100%;
   background:#f5f5f5;
-  border:0;
+  border:none;
   padding:20px;
   border-radius:6px;
   margin-bottom:10px;
   border:1px solid #eee;
+}
+.t-log-input:focus {
+	border: 1px solid #ffa500;
+    z-index: 10;
+    outline: 0;
 }
 .t-log-btn {
   position:relative;
@@ -195,6 +182,12 @@ span {
 .t-log-back{
 	margin-top: 30px;
 	margin-left: 10px;
+}
+#buttonEye{
+	position: relative;
+	left: 280px;
+	top: -48px;
+	color: #898989;
 }
 
 /*--------------- ふわふわ背景 --------------*/
@@ -359,11 +352,16 @@ span {
 .t-new-input {
   width:100%;
   background:#FFEFD5;
-  border:0;
+  border:none;
   padding:20px;
   border-radius:6px;
   margin-bottom:10px;
   border:1px solid #fff;
+}
+.t-new-input:focus {
+	border: 2px solid #ffa500;
+    z-index: 10;
+    outline: 0;
 }
 .t-new-btn {
   position:relative;
@@ -388,7 +386,13 @@ span {
   text-align: center;
   font-size: 12px;
 }
-​
+
+.fa,fa-eye{
+	position: relative;
+	left: 380px;
+	top: -48px;
+	color: #898989;
+}
 ​
 /*--------ラジオボタン  ----------*/
 ​
@@ -443,7 +447,8 @@ input[type="radio"],input[type="checkbox"]{
 /* 削除ボタン */
 .delete-button {
 	text-align: right;
-	margin: 10px;
+	margin-right: 5%;
+	margin-top: 1%;
 }
 .filelabel {
 	background-color: orange;  /* 背景色 */
@@ -453,7 +458,6 @@ input[type="radio"],input[type="checkbox"]{
     padding: 5px;         /* 内側の余白 */
     display: inline-block;
     width: 100px;
-    text-align: center;
 }
 .filelabel:hover {
   opacity: 0.5;
@@ -467,12 +471,13 @@ input[type="radio"],input[type="checkbox"]{
 	display: flex;
 	margin: 0 auto;
 	justify-content: center;
+	width: 80%;
 }
 /* 個人写真 */
 .prf-imag {
 	display: inline;
-	margin-right: 50px;
-	margin-left: 50px;
+	margin-right:6%;
+	margin-left: 2%;
 }
 /* プロフィール情報 */
 .prf-matome-right {
@@ -480,18 +485,15 @@ input[type="radio"],input[type="checkbox"]{
 }
 /*----------  レイアウトを整える     -------------*/
  .t-prf-area {
-  width: 1000px;
+  width: 90%;
   height: 100%;
   min-height: 185px;
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
   background-color: #fff;
- /* border: 1px solid #ccc;  */
   border-top: 0;
-  /*box-shadow: 0 5px 5px -5px #333;*/
   box-sizing: border-box;
-  /*border-radius: 4px;*/
   justify-content: center;
 }
 
@@ -539,7 +541,7 @@ input:checked + .tab_class-t + .content_class {
     background: #F5F5F5;
     border-left: solid 5px #ffa500;
     border-radius: 6px;
-    width: 600px;
+    width: 100%;
     margin-left: auto;
 }
 /* 基本プロフィールテーブル */
@@ -549,7 +551,7 @@ input:checked + .tab_class-t + .content_class {
 	border: solid 1px #bec2c7;
 	position: relative;
 	text-align: right;
-	/*margin-left: auto;*/
+	width: 100%;
 
 }
 .basics th,.basics td {
@@ -560,13 +562,13 @@ input:checked + .tab_class-t + .content_class {
 }
 .basics th {
 	background-color: #ffff;
-	width: 200px;
+	width: 30%;
 	color: #808080;
 	vertical-align: top;
 	font-weight: normal;
 }
 .basics td {
-	width: 400px;
+	width: 70%;
 }
 /* 基本プロフィール以外の個人情報見出し */
 .item_titlet {
@@ -578,6 +580,7 @@ input:checked + .tab_class-t + .content_class {
     border-radius: 6px;
     width: 600px;
 }
+
 
  /*---------------- レスポンシブ ------------------*/
 @keyframes animate {
@@ -599,6 +602,9 @@ input:checked + .tab_class-t + .content_class {
 /*++++++++++++++++++++++++++++++++++++++++ スマホ向け +++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 767px) {
 	.t-log-form {
-    width:90%;
+    width:320px;
+	}
+	#buttonEye{
+	left: 214px;
 	}
 }

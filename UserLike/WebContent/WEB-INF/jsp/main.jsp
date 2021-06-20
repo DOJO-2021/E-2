@@ -20,6 +20,19 @@
 		jQuery(".animsition").animsition();
 	});
 	</script>
+
+	<script src="js/jquery.validationEngine.js"></script><!-- jQuery読み込み / 入力チェック -->
+	<script src="js/jquery.validationEngine-ja.js"></script><!-- jQuery読み込み / 入力チェック -->
+	<link rel="stylesheet" href="css/validationEngine.css"><!--CSS読み込み / 入力チェック用CSS-->
+	<script type="text/javascript"><!-- jquery / 入力チェック -->
+    	jQuery(function(){
+       	 //<form>タグのidを指定
+       	 jQuery("#formCheck").validationEngine(
+           	 'attach', {
+              	  promptPosition: "topRight"//エラーメッセージ位置の指定
+           	 });
+   	 });
+	</script>
 </head>
 
 
@@ -105,20 +118,20 @@
 
 
           <div class="cct-form">
-            <form method="post" action="#">
+            <form id="formCheck"  method="post" action="#">
 
             <div class="cct-matome">
-             <label class="yzw-name">お名前</label><sup>※必須</sup><br>
-               <input class="cct" type="text" name="cct-name"><br>
+             <label class="yzw-name cp_iptxt">お名前</label><sup>※必須</sup><br>
+               <input class="cct validate[required]" type="text" name="cct-name"><br>
 
-             <label class="yzw-cpn">貴社名</label><sup>※必須</sup><br>
-               <input class="cct" type="text" name="cct-cpn"><br>
+             <label class="yzw-cpn cp_iptxt">貴社名</label><sup>※必須</sup><br>
+               <input class="cct validate[required]" type="text" name="cct-cpn"><br>
 
-             <label class="yzw-emal">メールアドレス</label><sup>※必須</sup><br>
-               <input class="cct" type="text" name="cct-emal"><br>
+             <label class="yzw-emal cp_iptxt">メールアドレス</label><sup>※必須</sup><br>
+               <input class="cct validate[required]" type="text" name="cct-emal"><br>
 
              <label class="yzw-tel">お電話番号</label><br>
-               <input class="cct" type="text" name="cct-tel"><br>
+               <input class="cct " type="text" name="cct-tel"><br>
 
            </div>
 

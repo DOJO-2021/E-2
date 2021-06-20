@@ -9,7 +9,7 @@
 	<ul>
 		<li><a class=t_link href="/UserLike/TeacherTopServlet">TOP</a></li>
 		<li><a class=t_link href="/UserLike/TeacherListServlet">UserList</a></li>
-		<li><a class=t_link href="/UserLike/TeacherLoginServlet">Logout</a></li>
+		<li><a class=t_link href="/UserLike/TeacherLogoutServlet">Logout</a></li>
 	</ul>
 </nav>
 </div>
