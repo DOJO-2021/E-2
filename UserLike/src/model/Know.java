@@ -1,9 +1,8 @@
 package model;
 import java.io.Serializable;
-import java.sql.Date;
 
 public class Know implements Serializable {
-	private Date date;
+	private String date;
 	private int know9;
 	private int unknow9;
 	private int know10;
@@ -26,7 +25,7 @@ public class Know implements Serializable {
 	private int unknowday;
 
 	// 引数があるコンストラクタ
-	public Know(Date date,
+	public Know(String date,
 			int know9, int unknow9,
 			int know10, int unknow10,
 			int know11, int unknow11,
@@ -61,11 +60,11 @@ public class Know implements Serializable {
 		this.unknowday = unknowday;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 

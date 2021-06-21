@@ -26,7 +26,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -67,12 +67,12 @@ public class KnowDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update know set know9 = know9 + 1 where date=? where date=?where date=?";
+			String sql = "update know set know9 = know9 + 1 where date=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -117,7 +117,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -162,7 +162,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -207,7 +207,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -252,7 +252,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -297,7 +297,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -342,7 +342,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -387,7 +387,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -432,7 +432,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -477,7 +477,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -522,7 +522,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -567,7 +567,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -612,7 +612,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -657,7 +657,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -702,7 +702,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -747,7 +747,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -792,7 +792,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -837,7 +837,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setDate(1, list.getDate());
+			pStmt.setString(1, list.getDate());
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {

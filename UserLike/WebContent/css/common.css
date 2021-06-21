@@ -162,11 +162,359 @@ h2 {
 	background: #b3d4fc;
 }
 /*-------- 反応ボタン ----commom.css-----*/
+
+.greeting-rea {
+	padding:10px;
+	width: 100%;
+}
+.plus-rea {
+	padding:10px;
+	width: 100%;
+}
+.minus-rea {
+	padding:10px;
+	width: 100%;
+}
+
+
+.know:hover span.s_topremark1 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFa500;
+}
+ .know span.s_topremark1 {
+  display: none;
+}
+.unknow:hover span.s_topremark2 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+ .unknow span.s_topremark2 {
+  display: none;
+}
+.react:hover span.s_topremark3 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark3 {
+  display: none;
+}
+.react:hover span.s_topremark4 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark4 {
+  display: none;
+}
+.react:hover span.s_topremark5 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark5 {
+  display: none;
+}
+.react:hover span.s_topremark6 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark6 {
+  display: none;
+}
+.react:hover span.s_topremark7 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark7 {
+  display: none;
+}
+.react:hover span.s_topremark8 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark8 {
+  display: none;
+}
+.react:hover span.s_topremark9 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark9 {
+  display: none;
+}
+.react:hover span.s_topremark10 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark10 {
+  display: none;
+}
+.react:hover span.s_topremark11 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark11 {
+  display: none;
+}
+.react:hover span.s_topremark12 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark12 {
+  display: none;
+}
+.react:hover span.s_topremark13 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark13 {
+  display: none;
+}
+.react:hover span.s_topremark14 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #ffa500;
+}
+.react span.s_topremark14 {
+  display: none;
+}
+.react:hover span.s_topremark15 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark15 {
+  display: none;
+}
+.react:hover span.s_topremark16 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #ffa500;
+}
+.react span.s_topremark16 {
+  display: none;
+}
+.react:hover span.s_topremark17 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark17 {
+  display: none;
+}
+.react:hover span.s_topremark18 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark18 {
+  display: none;
+}
+.react:hover span.s_topremark19 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #FFA500;
+}
+.react span.s_topremark19 {
+  display: none;
+}
+.react:hover span.s_topremark20 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark20 {
+  display: none;
+}
+.react:hover span.s_topremark21 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark21 {
+  display: none;
+}
+.react:hover span.s_topremark22 {
+    background-color: #ffff;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    border-radius:15px;
+    border: 2px solid #b3d4fc;
+}
+.react span.s_topremark22 {
+  display: none;
+}
+
+
 table {
     margin-left: auto;
     margin-right: auto;
 }
 .react{
+	position: relative;
 	background:#fff;
 	border: 0;
 }
@@ -195,6 +543,7 @@ table {
 	top: 3px;
 }
 .reaction {
+	position: relative;
 	width: 110px;
 	height: 110px;
 }
@@ -207,10 +556,12 @@ table {
 	top: 3px;
 }
 .know {
+	position: relative;
 	display:inline-block;
 	margin: 20px 40px;
 }
 .unknow {
+	position: relative;
 	display:inline-block;
 	margin: 20px 40px;
 }
