@@ -45,9 +45,8 @@ public class TeacherNewServlet extends HttpServlet {
 		// 登録処理を行う
 		TeacherIdpwDAO tDao = new TeacherIdpwDAO();
 		if (tDao.insert(new TeachIdpw(t_id, t_pw, c_name))) {	// 登録成功
-			// ログインページにフォワードする
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_login.jsp");
-			dispatcher.forward(request, response);
+			request.setAttribute("result",
+			new Result("登録成功！", "レコードを登録できました。", "/UserLike/TeacherLoginServlet"));
 		}
 		else {												// 登録失敗
 			request.setAttribute("result",

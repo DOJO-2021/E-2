@@ -58,12 +58,15 @@
 									    z-index: 2">
 
 
-			<form id="formCheck" method="POST" action="/UserLike/StudentNewServlet">
+			<form id="formCheck" method="POST"   enctype="multipart/form-data" action="/UserLike/StudentNewServlet">
 			<h4>新規登録</h4>
 
+				<label class="item_title">画像</label>
+					<input type="file" name="file" value="noimage.png"/>
+
 				<div class="cp_iptxt">
-					<label>ユーザーID</label><br>
-					<input type="text" name="S_ID" class="s-new-input validate[required,maxSize[20]]" placeholder="ID">
+					<label>ユーザーID(6文字以上12文字以下)</label><br>
+					<input type="text" name="S_ID" class="s-new-input validate[required,minSize[6],maxSize[12]]" placeholder="ID">
 					<span class="focus_line"></span>
 				</div><br>
 

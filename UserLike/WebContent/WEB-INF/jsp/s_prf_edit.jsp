@@ -67,6 +67,11 @@
 				</tr>
 
 				<tr>
+						<th><label class="prf_edit_title">画像</label></th>
+						<td><p><input type="text" name="ICON" value="${e.icon}" /></p></td>
+				</tr>
+
+				<tr>
 						<th><label class="prf_edit_title">名前</label></th>
 						<td><p><input type="text" name="S_NAME" value="${e.s_name}" class="s-form-texte validate[required,maxSize[100]]" /></p></td>
 				</tr>

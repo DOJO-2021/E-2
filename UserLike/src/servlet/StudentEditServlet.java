@@ -53,6 +53,7 @@ public class StudentEditServlet extends HttpServlet {
 	}
 
 
+	@SuppressWarnings("null")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
@@ -62,33 +63,13 @@ public class StudentEditServlet extends HttpServlet {
 			return;
 		}
 
-		request.setCharacterEncoding("utf-8");
-
-		//Collection<Part> plist = request.getParts();
-
-		Part part = request.getPart("file"); // getPartで取得
-
-		String image = this.getFileName(part);
-		request.setAttribute("image", image);
-		// サーバの指定のファイルパスへファイルを保存
-        //場所はクラス名↑の上に指定してある
-		part.write(image);
-		System.out.println(part);
-		System.out.println(image);
-
-
-	    //response.sendRedirect("s_prf.jsp");
-
 		//ログインしているユーザーのIDを取得
 		String s_id = (String) session.getAttribute("s_id");
-
-
-
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		String s_name = request.getParameter("S_NAME");
-	//	String icon= request.getParameter("ICON");
+		String icon= request.getParameter("ICON");
 		String s_mail = request.getParameter("S_MAIL");
 		String gender = request.getParameter("GENDER");
 		String c_name = request.getParameter("C_NAME");
@@ -102,11 +83,22 @@ public class StudentEditServlet extends HttpServlet {
 		String activity= request.getParameter("ACTIVITY");
 		String pr = request.getParameter("PR");
 
-		String icon = image;
-		System.out.println(icon);
+        try {
+        	Part part = request.getPart("file"); // getPartで取得
+    		String image = this.getFileName(part);
+
+    			request.setAttribute("image", image);
+    			//System.out.println(image);
+    			// サーバの指定のファイルパスへファイルを保存
+    	        //場所はクラス名↑の上に指定してある
+    			part.write(image);
+    			icon = image;
+
+        }  catch (IOException e) {
+        	request.setAttribute("icon", icon);
+        }
 
 
-      //  job="ボクサー";
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
 		if (request.getParameter("SUBMIT").equals("保存")) {

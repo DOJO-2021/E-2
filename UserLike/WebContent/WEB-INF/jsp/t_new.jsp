@@ -61,8 +61,8 @@
 			<h4>新規登録</h4>
 
 ​				<div class="cp_iptxt">
-					<label>ユーザーID</label><br>
-					<input type="text" name="T_ID" class="t-new-input validate[required,maxSize[20]]" placeholder="ID">
+					<label>ユーザーID(13文字以上20文字以下)</label><br>
+					<input type="text" name="T_ID" class="t-new-input validatevalidate[required,minSize[13],maxSize[20]" placeholder="ID">
 					<span class="focus_line"></span>
 				</div>
 ​
