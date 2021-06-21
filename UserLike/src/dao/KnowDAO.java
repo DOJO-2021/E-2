@@ -3,15 +3,18 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Know;
 
 public class KnowDAO {
-	//【表示】
-	public boolean showall(Know list) {
+	//【検索】全件検索
+	public List<Know> show(Know know) {
 		Connection conn = null;
-		boolean result = false;
+		List<Know> knowList = new ArrayList<Know>();
 
 		try {
 			// JDBCドライバを読み込む
@@ -20,24 +23,51 @@ public class KnowDAO {
 			// データベースに接続する
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
+
 			// SQL文を準備する
-			String sql = "update know set know9 = know9 + 1 where date=?";
-
+			String sql = "select * from know where date=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, know.getDate());
 
-			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			// SQL文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
 
-			// SQL文を実行する
-			if (pStmt.executeUpdate() == 1) {
-				result = true;
+			// 結果表をコレクションにコピーする
+			while (rs.next()) {
+				Know list = new Know(
+				rs.getString("date"),
+				rs.getInt("know9"),
+				rs.getInt("unknow9"),
+				rs.getInt("know10"),
+				rs.getInt("unknow10"),
+				rs.getInt("know11"),
+				rs.getInt("unknow11"),
+				rs.getInt("know12"),
+				rs.getInt("unknow12"),
+				rs.getInt("know13"),
+				rs.getInt("unknow13"),
+				rs.getInt("know14"),
+				rs.getInt("unknow14"),
+				rs.getInt("know15"),
+				rs.getInt("unknow15"),
+				rs.getInt("know16"),
+				rs.getInt("unknow16"),
+				rs.getInt("know17"),
+				rs.getInt("unknow17"),
+				rs.getInt("knowday"),
+				rs.getInt("unknowday")
+				);
+				knowList.add(list);
 			}
+
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
+			knowList = null;
 		}
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
+			knowList = null;
 		}
 		finally {
 			// データベースを切断
@@ -47,15 +77,18 @@ public class KnowDAO {
 				}
 				catch (SQLException e) {
 					e.printStackTrace();
+					knowList = null;
 				}
 			}
 		}
-	// 結果を返す
-	return result;
+
+		// 結果を返す
+		return knowList;
 	}
+
 
 	//【更新】
-	public boolean know9(Know list) {
+	public boolean know9(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -72,7 +105,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -100,7 +133,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow9(Know list) {
+	public boolean unknow9(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -117,7 +150,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -145,7 +178,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know10(Know list) {
+	public boolean know10(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -162,7 +195,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -190,7 +223,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean ubknow10(Know list) {
+	public boolean unknow10(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -207,7 +240,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -235,7 +268,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know11(Know list) {
+	public boolean know11(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -252,7 +285,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -280,7 +313,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow11(Know list) {
+	public boolean unknow11(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -297,7 +330,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -325,7 +358,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know12(Know list) {
+	public boolean know12(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -342,7 +375,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -370,7 +403,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow12(Know list) {
+	public boolean unknow12(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -387,7 +420,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -415,7 +448,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know13(Know list) {
+	public boolean know13(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -432,7 +465,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -460,7 +493,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow13(Know list) {
+	public boolean unknow13(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -477,7 +510,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -505,7 +538,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know14(Know list) {
+	public boolean know14(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -522,7 +555,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -550,7 +583,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow14(Know list) {
+	public boolean unknow14(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -567,7 +600,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -595,7 +628,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know15(Know list) {
+	public boolean know15(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -612,7 +645,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -640,7 +673,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow15(Know list) {
+	public boolean unknow15(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -657,7 +690,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -685,7 +718,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know16(Know list) {
+	public boolean know16(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -702,7 +735,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -730,7 +763,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow16(Know list) {
+	public boolean unknow16(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -747,7 +780,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -775,7 +808,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean know17(Know list) {
+	public boolean know17(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -792,7 +825,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -820,7 +853,7 @@ public class KnowDAO {
 	return result;
 	}
 
-	public boolean unknow17(Know list) {
+	public boolean unknow17(String date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -837,7 +870,7 @@ public class KnowDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getDate());
+			pStmt.setString(1, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {

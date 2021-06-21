@@ -192,7 +192,7 @@
 
 	<script type="text/javascript">
 		function sound1(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Laugh.mp3');
 		audio.play();
 		}
 		function sound2(){
@@ -204,7 +204,7 @@
 		audio.play();
 		}
 		function sound4(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Thanks.mp3');
 		audio.play();
 		}
 		function sound5(){
@@ -216,7 +216,7 @@
 		audio.play();
 		}
 		function sound7(){
-		var audio = new Audio('sound/.mp3');
+		var audio = new Audio('sound/Yay.mp3');
 		audio.play();
 		}
 		function sound8(){

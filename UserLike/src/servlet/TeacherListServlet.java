@@ -35,7 +35,6 @@ public class TeacherListServlet extends HttpServlet {
 		//プロフ情報取得
 		PrfDAO prf = new PrfDAO();
 		List<Prf> prfList = prf.showall();
-		System.out.println(3);
 
 
 		// 検索結果をリクエストスコープに格納する

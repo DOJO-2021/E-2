@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.PrfDAO;
+import dao.StudentIdpwDAO;
 import model.Prf;
 import model.Result;
 
@@ -69,10 +70,21 @@ public class TeacherPrfServlet extends HttpServlet {
 		//削除を行う
 		PrfDAO PrfDAO = new PrfDAO();
 		if(PrfDAO.delete(s_id)) {
-			request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike/TeacherListServlet"));
+
+			//プロフィールの削除成功時だけIDPWの削除を行う
+			StudentIdpwDAO StuDAO = new StudentIdpwDAO();
+			if(StuDAO.deleteId(s_id)) {
+				request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike/TeacherListServlet"));
+			}else {
+				request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
+			}
+
 		}else {
 			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
 		}
+
+
+
 
 		//結果ページにフォワードする
 		RequestDispatcher dispatchar = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");

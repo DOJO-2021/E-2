@@ -297,9 +297,6 @@ public class PrfDAO {
 		Connection conn = null;
 		boolean result = false;
 
-
-
-
 		try {
 			// JDBCドライバを読み込む
 			Class.forName("org.h2.Driver");
@@ -446,14 +443,12 @@ public class PrfDAO {
 		// 結果を返す
 		//result=true;
 		return result;
-
-
 	}
 
 
 
 	//【更新】 「わかった」に１追加
-	public boolean understand(Prf list) {
+	public boolean understand(String s_id) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -470,7 +465,7 @@ public class PrfDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getS_id());
+			pStmt.setString(1, s_id);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
@@ -500,7 +495,7 @@ public class PrfDAO {
 	}
 
 	//【更新】 「わからない」に１追加
-	public boolean cantunderstand(Prf list) {
+	public boolean cantunderstand(String s_id) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -517,7 +512,7 @@ public class PrfDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			pStmt.setString(1, list.getS_id());
+			pStmt.setString(1, s_id);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {

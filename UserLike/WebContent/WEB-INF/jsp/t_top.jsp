@@ -82,13 +82,17 @@
 	            label: "わかった",
 	            backgroundColor: 'rgb(255, 165, 0)',
 	            borderColor: 'rgb(255, 165, 0)',
-	            data: [0, 10, 5, 2, 20, 30, 45, 67, 39],
+	            <c:forEach var="e" items="${knowList}">
+	            data: [${e.know9}, ${e.know10}, ${e.know11}, ${e.know12}, ${e.know13}, ${e.know14}, ${e.know15}, ${e.know16}, ${e.know17}],
+	            </c:forEach>
 	        },
 	        {
 	            label: "わからない",
 	            backgroundColor: 'rgb(179, 212, 252)',
 	            borderColor: 'rgb(179, 212, 252)',
-	            data: [15, 24, 62, 21, 37, 48, 20, 14, 8],
+	            <c:forEach var="e" items="${knowList}">
+	            data: [${e.unknow9}, ${e.unknow10}, ${e.unknow11}, ${e.unknow12}, ${e.unknow13}, ${e.unknow14}, ${e.unknow15}, ${e.unknow16}, ${e.unknow17}],
+	            </c:forEach>
 	        }]
 	    },
 	    // ここに設定オプションを書きます
