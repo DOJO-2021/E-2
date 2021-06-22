@@ -48,6 +48,7 @@
 
 		<main>
 			<!--メイン-->
+			<h4>受講者一覧</h4>
 			<div>
 		 	<table id="foo-table" class="table compact" style="width:95%;
 		 	                                            border: solid 1px #808080;
@@ -102,7 +103,7 @@
                                    border-right: 1px dashed #DCDCDC;
                                    border-bottom: 1px solid #DCDCDC;
                                    border-top: 1px solid #DCDCDC;
-                                   text-align:center">${e.c_name}</td>
+                                   text-align:center">${e.c_name}クラス</td>
 			            <td style="border-left: 1px dashed #DCDCDC;
                                    border-right: 1px dashed #DCDCDC;
                                    border-bottom: 1px solid #DCDCDC;

@@ -20,7 +20,9 @@ body {
   margin: 0;
 /*  overflow-y: hidden;*/
 }
-
+header{
+  position: fixed;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -32,13 +34,15 @@ body {
 }
 
 header {
-  z-index: 10;
-  background-color: #fff;
+	z-index: 10;
+	background-color: #fff;
+	height: 63px;
+	width:100%;
 }
-
 main {
   flex: 1;
   background-color: #fff;
+  padding-top:66px;
 /*  overflow-y: scroll;*/
 }
 
@@ -80,6 +84,8 @@ footer {
 	padding-right: 20px;
 	padding-bottom: 20px;
 	margin-top: -56px;
+	position: fixed;
+    right: 0;
 }
 
 .nav li {
@@ -588,6 +594,9 @@ table {
 	display:inline-block;
 	margin: 20px 40px;
 }
+.react-result{
+	display:inline-box;
+}
 
 /*----------------------  main.jsp  -------------------------------------*/
 /*-------------logo とnavを横に並べる----------------*/
@@ -596,10 +605,6 @@ table {
     position: fixed;
     background: #fff;
     width: 100%;
-    margin-top: -17px;
-}
-.main {
-	margin-top:66px;
 }
 .navitem{
 	margin-top: 16px;
@@ -609,9 +614,16 @@ table {
 	list-style-type: none;
 	padding-right: 30px;
 }
+.slider-content{
+	text-align:center;
+}
 /*----------------ヤザワスイッチ mainlogo大きさ変更   --------------*/
 .mainlogo_image {
 	width: 60%;
+}
+.slider-image{
+	width:200px;
+	margin: 0 auto;
 }
 /*----------------------ヤザワスイッチlogoを真ん中に移動---------------------------*/
 .mainlogo {

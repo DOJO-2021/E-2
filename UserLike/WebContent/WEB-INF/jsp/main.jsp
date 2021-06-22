@@ -11,7 +11,7 @@
 	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--jquery読み込み-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -38,9 +38,7 @@
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script><!--スライダーjavascript読み込み-->
 	<script type="text/javascript"><!--お気に入り表示用スライダー-->
 	$(document).ready(function(){
-		 $('.bxslider').bxSlider({
-
-		});
+		 $('.bxslider').bxSlider();
 	});
 	</script>
 </head>
@@ -120,13 +118,13 @@
            受講者に合わせて講義を考えることができます。</p>
            <img src="img/main2.png" class="main2-image">
             <div class="maincircle-2"></div>
-	         </div>
+         </div>
 
 
-	         <div class="maincircle-3"></div>
-	         <p class="abt-yzw4">その３！</p>
-	         <p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
-	         コミュニケーションをとるきっかけづくりになる！</p>
+         <div class="maincircle-3"></div>
+         <p class="abt-yzw4">その３！</p>
+         <p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
+         コミュニケーションをとるきっかけづくりになる！</p>
 
 
            <div class="maincircle-1"></div>
@@ -146,25 +144,25 @@
 
 			<div class="bxslider">
 
-				<div><br><h2>テーマはOnlineFun！</h2>
-				オンラインでも、講師・受講生の双方が楽しく研修をに取り組むことのできるシステムを作る！</div>
-				<div><br><h2>受講者</h2>
+				<div class="slider-content"><img src="img/main_tap.png" class="slider-image"><br><h2>テーマはOnlineFun！</h2>
+				オンラインでも、講師・受講生の双方が楽しく研修をに取り組むことのできるシステム！</div>
+				<div class="slider-content"><img src="img/main_button.png" class="slider-image"><br><h2>受講者</h2>
 				講師に自分の思っていることが簡単に楽しく伝えられる！</div>
-				<div><br><h2>講師</h2>
+				<div class="slider-content"><img src="img/main_teacher.png" class="slider-image"><br><h2>講師</h2>
 				受講者のリアクションがたくさんあると楽しく、いろんな情報を提供したくなる！</div>
-				<div><br><h2></h2>
-				研修でプログラミングの楽しさを伝えてくださる矢澤講師とより楽しく研修ができるようにこのシステムは作られました。</div>
-				<div><br><h2></h2>
-				楽しくポップな雰囲気にしたいということでテーマカラーはオレンジと水色にしました。</div>
-				<div><br><h2></h2>
-				矢澤講師の明るさや優しさをイメージしてオレンジのカラーを取り入れました。</div>
-				<div><br><h2></h2>
-				研修の雰囲気に合うタイトル画像を考えたところ、あのピタゴラスイッチのようになったことから「ヤザワスイッチ」という名前になりました。</div>
+				<div class="slider-content"><img src="img/button/Eiken.png" class="slider-image"><br><h2>師匠</h2>
+				研修中いつも笑顔でプログラミングの楽しさを伝えてくださった矢澤講師をイメージしてこのシステムは作られました。</div>
+				<div class="slider-content"><img src="img/button/Great2.png" class="slider-image"><br><h2>イメージカラー</h2>
+				矢澤講師のパッションや優しさをイメージしてオレンジのカラーを取り入れました。</div>
+				<div class="slider-content"><img src="img/button/Session2.png" class="slider-image"><br><h2>カラーテーマ</h2>
+				楽しくポップな雰囲気にしたいということでカラーテーマはオレンジと水色にしました。</div>
+				<div class="slider-content"><img src="img/logo2.png" class="slider-image"><br><h2>タイトル</h2>
+				音のなる様々なボタンから着想を得て、「ヤザワスイッチ」という名前になりました。</div>
 
 			</div>
 		</div>
 
-           <p class="cct-yzw" id="contactyzw">CONTACT</p>
+             <p class="cct-yzw" id="contactyzw">CONTACT</p>
            <p class="cct-yzw2">お問い合わせ</p>
 
 
@@ -193,7 +191,7 @@
              </div>
               <button class="yzw-confi">確認画面へ</button>
             </form>
-            </div>
+           </div>
 		</main>
 
 

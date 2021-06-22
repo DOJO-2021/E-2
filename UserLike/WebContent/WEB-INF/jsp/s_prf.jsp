@@ -44,7 +44,7 @@
        	<!-- 編集ボタン -->
 		<form class="edit" method="GET" action="/UserLike/StudentEditServlet">
            <div class="edit-button">
-			<input type="submit" name="submit" value="プロフィール編集">
+			<input type="submit" name="submit" value="プロフィール編集" class="filelabels">
 		</div>
 		</form>
 

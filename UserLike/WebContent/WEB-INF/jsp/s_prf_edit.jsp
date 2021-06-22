@@ -63,12 +63,8 @@
 			<table class="edit_table">
 		        <tr>
 					<th><label class="item_title">画像</label></th>
-					<td><input type="file" name="file"/></td>
-				</tr>
-
-				<tr>
-						<th><label class="prf_edit_title">画像</label></th>
-						<td><p><input type="text" name="ICON" value="${e.icon}" /></p></td>
+					<td><input type="hidden" name="ICON" value="${e.icon}" />
+					<input type="file" name="file"/></td>
 				</tr>
 
 				<tr>
@@ -95,7 +91,7 @@
 						<input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label>
 						<input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label>
 						<input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label>
-						<input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
+						<input type="radio" id="c5" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
 					</c:if>
 
 					<c:if test="${e.c_name == 'B'}">
@@ -103,7 +99,7 @@
 						<input type="radio" id="c2" name="C_NAME" checked="checked" value="B" class="radio02" /><label class="radio02" for="c2">B</label>
 						<input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label>
 						<input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label>
-						<input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
+						<input type="radio" id="c5" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
 					</c:if>
 
 					<c:if test="${e.c_name == 'C'}">
@@ -111,7 +107,7 @@
 						<input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label>
 						<input type="radio" id="c3" name="C_NAME" checked="checked" value="C" class="radio02" /><label class="radio02" for="c3">C</label>
 						<input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label>
-						<input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
+						<input type="radio" id="c5" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
 					</c:if>
 
 					<c:if test="${e.c_name == 'D'}">
@@ -119,7 +115,7 @@
 						<input type="radio" id="c2" name="C_NAME" class="radio02" /><label class="radio02" for="c2">B</label>
 						<input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label>
 						<input type="radio" id="c4" name="C_NAME" checked="checked" value="D" class="radio02" /><label class="radio02" for="c4">D</label>
-						<input type="radio" id="c1" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
+						<input type="radio" id="c5" name="C_NAME" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
 					</c:if>
 
 					<c:if test="${e.c_name == 'E'}">
@@ -127,7 +123,7 @@
 						<input type="radio" id="c2" name="C_NAME" value="B" class="radio02" /><label class="radio02" for="c2">B</label>
 						<input type="radio" id="c3" name="C_NAME" value="C" class="radio02" /><label class="radio02" for="c3">C</label>
 						<input type="radio" id="c4" name="C_NAME" value="D" class="radio02" /><label class="radio02" for="c4">D</label>
-						<input type="radio" id="c1" name="C_NAME" checked="checked" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
+						<input type="radio" id="c5" name="C_NAME" checked="checked" value="E" class="radio02" /><label class="radio02" for="c5">E</label></td>
 					</c:if>
 				</tr>
 
@@ -139,12 +135,12 @@
 				<tr>
 					<th><label class="prf_edit_title">プログラミング経験</label></th>
 					<c:if test="${e.exp == 'Y'}">
-						<td><input type="radio" id="yes" name="EXP" checked="checked" value="Y" class="radio2" /><label class="radio02" for="yes">あり</label>
+						<td><input type="radio" id="yes" name="EXP" checked="checked" value="Y" class="radio02" /><label class="radio02" for="yes">あり</label>
 						<input type="radio" name="EXP" id="no" value="N" class="radio02" /><label class="radio02" for="no">なし</label></td>
 					</c:if>
 					<c:if test="${e.exp != 'Y'}">
-						<td><input type="radio" id="yes" name="EXP" value="Y" class="radio02" /><label class="radio02" for="no">あり</label>
-						<input type="radio" name="EXP" id="no" value="N" checked="checked" class="radio2" /><label class="radio02" for="no">なし</label></td>
+						<td><input type="radio" id="yes" name="EXP" value="Y" class="radio02" /><label class="radio02" for="yes">あり</label>
+						<input type="radio" name="EXP" checked="checked" id="no" value="N" class="radio02" /><label class="radio02" for="no">なし</label></td>
 					</c:if>
 				</tr>
 

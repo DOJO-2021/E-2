@@ -24,117 +24,117 @@ var b3 = new Vue({
 var b4 = new Vue({
   el: '#Thanks',
   data: {
-    seen: false
+    seen: true
   }
 })
 var b5 = new Vue({
   el: '#Goodmorning',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b6 = new Vue({
   el: '#Greetings',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b7 = new Vue({
   el: '#Finally',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b8 = new Vue({
   el: '#Group',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b9 = new Vue({
   el: '#Session',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b10 = new Vue({
   el: '#Wait',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b11 = new Vue({
   el: '#TooQuick',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b12 = new Vue({
   el: '#AhHa',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b13 = new Vue({
   el: '#Onemore',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b14 = new Vue({
   el: '#Great',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b15 = new Vue({
   el: '#Share',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b16 = new Vue({
   el: '#Suggestion',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b17 = new Vue({
   el: '#Eiken',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b18 = new Vue({
   el: '#Finished',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b19 = new Vue({
   el: '#Question',
   data: {
-    seen: false
+    seen: true
   }
 })
 
 var b20 = new Vue({
   el: '#Write',
   data: {
-    seen: false
+    seen: true
   }
 })

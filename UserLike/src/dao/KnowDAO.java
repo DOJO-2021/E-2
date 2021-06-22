@@ -102,7 +102,6 @@ public class KnowDAO {
 			String sql = "insert into know (date) values (?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, date);
-			pStmt.setString(2, date);
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
