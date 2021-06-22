@@ -28,6 +28,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   position: relative;
+	overflow: hidden;
 }
 
 header {
@@ -895,6 +896,62 @@ sup {
 .yzw-confi:hover {
 	background: #ffa500;
 	color: #ffff;
+}
+
+/* 動くまる */
+.maincircle-1,.maincircle-2,main1-image, main2-image, main3-image {
+	position: absolute;
+}
+
+.maincircle-1 {
+	width: 580px;
+    height:600px;
+    left: 10%;
+    mix-blend-mode: multiply;
+}
+.maincircle-1 {
+  background: #F0F8FF;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  animation: border-animation 10s infinite linear;
+}
+.maincircle-2 {
+	width: 580px;
+    height:600px;
+    left: 60%;
+    mix-blend-mode: multiply;
+}
+.maincircle-2 {
+  background: #F0F8FF;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  animation: border-animation 10s infinite linear;
+}
+.maincircle-3 {
+	position: absolute;
+	width: 380px;
+    height:400px;
+    left: 50%;
+    mix-blend-mode: multiply;
+
+    background: #FFFACD;
+    border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+    animation: border-animation 10s infinite linear;
+}
+.maincircle-4 {
+	position: absolute;
+	width: 380px;
+    height:400px;
+    left: 15%;
+    mix-blend-mode: multiply;
+
+    background: #FFFACD;
+    border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+    animation: border-animation 10s infinite linear;
+}
+
+
+/* Animation */
+@keyframes border-animation {
+  to { transform: rotate(360deg); }
 }
 
 

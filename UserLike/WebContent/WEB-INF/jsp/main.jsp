@@ -85,12 +85,13 @@
 
            <p class="abt-yzw" id="abtyzw">ABOUT</p>
            <p class="abt-yzw2">ヤザワスイッチってなに？？</p>
-           <!--  <p class="abt-yzw3">ヤザワスイッチの特徴</p>--->
+           <div class="maincircle-3"></div>
            <p class="abt-yzw4">特徴その１！</p>
            <p class="abt-yzw5">オンラインでもリアルタイムで<br>
            理解できたかどうか等の反応ができる！<br></p>
 
          <div class="yzw-rea-matome">
+         <div class="maincircle-1"></div>
            <img src="img/main1.png" class="main1-image">
 
            <br>
@@ -103,7 +104,9 @@
            </p>
          </div>
 
+
            <p class="abt-yzw6">その2！</p>
+           <div class="maincircle-4"></div>
            <p class="abt-yzw7">講師は反応を見て<br>
            研修内容を考えることができる！</p>
 
@@ -116,16 +119,20 @@
            グラフを参考に理解できていないところを再度次の講義で説明するなど、<br>
            受講者に合わせて講義を考えることができます。</p>
            <img src="img/main2.png" class="main2-image">
-         </div>
+            <div class="maincircle-2"></div>
+	         </div>
 
 
-         <p class="abt-yzw4">その３！</p>
-         <p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
-         コミュニケーションをとるきっかけづくりになる！</p>
+	         <div class="maincircle-3"></div>
+	         <p class="abt-yzw4">その３！</p>
+	         <p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
+	         コミュニケーションをとるきっかけづくりになる！</p>
 
 
+           <div class="maincircle-1"></div>
            <div class="yzw-prea-matome">
            <img src="img/main3.png" class="main3-image">
+
            <p class="abt-prea">
            対面のように直接話す機会をなかなかとることができないオンライン研修。<br>
            受講者のプロフィールを確認することができ、受講者の特徴をつかみやすい他、<br>
@@ -139,13 +146,20 @@
 
 			<div class="bxslider">
 
-				<div>OnlineFun！オンラインでも受講者も講師も楽しく研修をしていただけるシステムを作る！</div>
-				<div>受講者→講師に自分の思っていることが簡単に楽しく伝えられる！</div>
-				<div>講師→受講者のリアクションがたくさんあると楽しく、いろんな情報を提供したくなる！</div>
-				<div>研修でプログラミングの楽しさを伝えてくださる矢澤講師とより楽しく研修ができるようにこのシステムは作られました。</div>
-				<div>楽しくポップな雰囲気にしたいということでテーマカラーはオレンジと水色にしました。</div>
-				<div>矢澤講師の明るさや優しさをイメージしてオレンジのカラーを取り入れました。</div>
-				<div>研修の雰囲気に合うタイトル画像を考えたところ、あのピタゴラスイッチのようになったことから「ヤザワスイッチ」という名前になりました。</div>
+				<div><br><h2>テーマはOnlineFun！</h2>
+				オンラインでも、講師・受講生の双方が楽しく研修をに取り組むことのできるシステムを作る！</div>
+				<div><br><h2>受講者</h2>
+				講師に自分の思っていることが簡単に楽しく伝えられる！</div>
+				<div><br><h2>講師</h2>
+				受講者のリアクションがたくさんあると楽しく、いろんな情報を提供したくなる！</div>
+				<div><br><h2></h2>
+				研修でプログラミングの楽しさを伝えてくださる矢澤講師とより楽しく研修ができるようにこのシステムは作られました。</div>
+				<div><br><h2></h2>
+				楽しくポップな雰囲気にしたいということでテーマカラーはオレンジと水色にしました。</div>
+				<div><br><h2></h2>
+				矢澤講師の明るさや優しさをイメージしてオレンジのカラーを取り入れました。</div>
+				<div><br><h2></h2>
+				研修の雰囲気に合うタイトル画像を考えたところ、あのピタゴラスイッチのようになったことから「ヤザワスイッチ」という名前になりました。</div>
 
 			</div>
 		</div>
@@ -154,7 +168,8 @@
            <p class="cct-yzw2">お問い合わせ</p>
 
 
-          	<div class="cct-form">
+
+          <div class="cct-form">
             <form id="formCheck"  method="post" action="#">
 
             <div class="cct-matome">
@@ -178,9 +193,7 @@
              </div>
               <button class="yzw-confi">確認画面へ</button>
             </form>
-           </div>
-
-
+            </div>
 		</main>
 
 
