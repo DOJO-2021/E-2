@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.KnowDAO;
 import dao.PrfDAO;
+import dao.ReactionDAO;
 
 @WebServlet("/StudentTopServlet")
 public class StudentTopServlet extends HttpServlet {
@@ -66,48 +67,55 @@ public class StudentTopServlet extends HttpServlet {
 		//更新を行う
 		PrfDAO PrfDAO = new PrfDAO();
 		KnowDAO KnowDAO = new KnowDAO();
-		if (request.getParameter("SUBMIT").equals("unknow")) {
-			PrfDAO.cantunderstand(s_id);
-			if (hour.equals("09")) {
-				KnowDAO.know9(date);
-			} else if (hour.equals("10")) {
-				KnowDAO.know10(date);
-			} else if (hour.equals("11")) {
-				KnowDAO.know11(date);
-			} else if (hour.equals("12")) {
-				KnowDAO.know12(date);
-			} else if (hour.equals("13")) {
-				KnowDAO.know13(date);
-			} else if (hour.equals("14")) {
-				KnowDAO.know14(date);
-			} else if (hour.equals("15")) {
-				KnowDAO.know15(date);
-			} else if (hour.equals("16")) {
-				KnowDAO.know16(date);
-			} else if (hour.equals("17")) {
-				KnowDAO.know17(date);
+		try {
+			if (request.getParameter("SUBMIT").equals("know")) {
+				PrfDAO.understand(s_id);
+				if (hour.equals("09")) {
+					KnowDAO.know9(date);
+				} else if (hour.equals("10")) {
+					KnowDAO.know10(date);
+				} else if (hour.equals("11")) {
+					KnowDAO.know11(date);
+				} else if (hour.equals("12")) {
+					KnowDAO.know12(date);
+				} else if (hour.equals("13")) {
+					KnowDAO.know13(date);
+				} else if (hour.equals("14")) {
+					KnowDAO.know14(date);
+				} else if (hour.equals("15")) {
+					KnowDAO.know15(date);
+				} else if (hour.equals("16")) {
+					KnowDAO.know16(date);
+				} else if (hour.equals("17")) {
+					KnowDAO.know17(date);
+				}
+			} else if (request.getParameter("SUBMIT").equals("unknow")) {
+				PrfDAO.cantunderstand(s_id);
+				if (hour.equals("09")) {
+					KnowDAO.unknow9(date);
+				} else if (hour.equals("10")) {
+					KnowDAO.unknow10(date);
+				} else if (hour.equals("11")) {
+					KnowDAO.unknow11(date);
+				} else if (hour.equals("12")) {
+					KnowDAO.unknow12(date);
+				} else if (hour.equals("13")) {
+					KnowDAO.unknow13(date);
+				} else if (hour.equals("14")) {
+					KnowDAO.unknow14(date);
+				} else if (hour.equals("15")) {
+					KnowDAO.unknow15(date);
+				} else if (hour.equals("16")) {
+					KnowDAO.unknow16(date);
+				} else if (hour.equals("17")) {
+					KnowDAO.unknow17(date);
+				}
 			}
-		} else if (request.getParameter("SUBMIT").equals("know")) {
-			PrfDAO.understand(s_id);
-			if (hour.equals("09")) {
-				KnowDAO.unknow9(date);
-			} else if (hour.equals("10")) {
-				KnowDAO.unknow10(date);
-			} else if (hour.equals("11")) {
-				KnowDAO.unknow11(date);
-			} else if (hour.equals("12")) {
-				KnowDAO.unknow12(date);
-			} else if (hour.equals("13")) {
-				KnowDAO.unknow13(date);
-			} else if (hour.equals("14")) {
-				KnowDAO.unknow14(date);
-			} else if (hour.equals("15")) {
-				KnowDAO.unknow15(date);
-			} else if (hour.equals("16")) {
-				KnowDAO.unknow16(date);
-			} else if (hour.equals("17")) {
-				KnowDAO.unknow17(date);
-			}
+		} catch(Exception e) {
+			String react = request.getParameter("react");
+			ReactionDAO ReactionDAO = new ReactionDAO();
+			ReactionDAO.count(react);
 		}
+
 	}
 }

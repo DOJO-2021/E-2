@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.KnowDAO;
 import dao.TeacherIdpwDAO;
 import model.Result;
 import model.TeachLoginUser;
@@ -42,8 +45,23 @@ public class TeacherLoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("t_id", new TeachLoginUser(t_id));
 
+			try {
+				//カレンダークラスのオブジェクトを生成する
+		        Calendar cl = Calendar.getInstance();
+
+		        //フォーマットを指定する
+		        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		        String date = sdf.format(cl.getTime());
+
+				KnowDAO know = new KnowDAO();
+				know.insert(date);
+			} catch(Exception e) {
+				System.out.print("Date already added");
+			}
+			finally {
 			// メニューサーブレットにリダイレクトする
 			response.sendRedirect("/UserLike/TeacherTopServlet");
+			}
 		}
 		else {									// ログイン失敗
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する

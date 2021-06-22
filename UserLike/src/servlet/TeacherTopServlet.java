@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.KnowDAO;
+import dao.ReactionDAO;
 import model.Know;
+import model.Reaction;
 
 /**
  * Servlet implementation class TeacherTopServlet
@@ -44,8 +46,13 @@ public class TeacherTopServlet extends HttpServlet {
 		KnowDAO Know = new KnowDAO();
 		List<Know> knowList = Know.show(new Know(date, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
 
+		//リアクション情報（回数）取得
+		ReactionDAO Reaction = new ReactionDAO();
+		List<Reaction> reactionList = Reaction.show();
+
 		//検索結果をリクエストスコープに格納する
 		request.setAttribute("knowList", knowList);
+		request.setAttribute("reactionList", reactionList);
 
 		// ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_top.jsp");

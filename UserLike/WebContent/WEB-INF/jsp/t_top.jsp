@@ -7,6 +7,7 @@
 	<!--情報-->
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="6; URL=">
 	<title>ヤザワスイッチ | トップ</title>
 	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
@@ -60,6 +61,10 @@
 				<a id="Question"><span v-if="seen"><img src="img/button/Question.png" class="logo_image"></span></a>
 				<a id="Write"><span v-if="seen"><img src="img/button/Write.png" class="logo_image"></span></a>
 			</div>
+
+			    <c:forEach var="e" items="${reactionList}">
+	            <p>${e.count}</p>
+	            </c:forEach>
 		</main>
 
 	<footer class="footer"><!--フッター-->

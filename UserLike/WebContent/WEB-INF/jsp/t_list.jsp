@@ -23,7 +23,7 @@
 	});
 	</script>
 
- 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/r-2.2.9/datatables.min.css"/><!-- jqueryテーブルCSS読み込み -->
+ 	<link rel="stylesheet" href="css/datatables.min.css"/><!-- jqueryテーブルCSS読み込み -->
 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/r-2.2.9/datatables.min.js"></script><!-- jqueryテーブル読み込み -->
     <script>
         jQuery(function($){

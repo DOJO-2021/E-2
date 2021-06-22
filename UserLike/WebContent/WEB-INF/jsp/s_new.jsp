@@ -61,8 +61,6 @@
 			<form id="formCheck" method="POST"   enctype="multipart/form-data" action="/UserLike/StudentNewServlet">
 			<h4>新規登録</h4>
 
-				<label class="item_title">画像</label>
-					<input type="file" name="file" value="noimage.png"/>
 
 				<div class="cp_iptxt">
 					<label>ユーザーID(6文字以上12文字以下)</label><br>
@@ -80,6 +78,11 @@
 					<label>パスワード(再入力)</label><br>
 					<input  type="password" name="S_PW2" class="s-new-input validate[required,equals[password1]]"  id="password2" placeholder="password">
 					<span id="buttonEye2" class="fa fa-eye" onclick="pushHideButton2()"></span>
+				</div><br>
+
+				<div class="cp_iptxt">
+				<label class="item_title">プロフィール画像</label><br>
+				<input type="file" name="file" value="noimage.png"/>
 				</div><br>
 
 				<div class="cp_iptxt">

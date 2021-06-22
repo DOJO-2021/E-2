@@ -279,7 +279,7 @@ public class KnowDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update know set ubknow10 = unknow10 + 1 where date=?";
+			String sql = "update know set unknow10 = unknow10 + 1 where date=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
@@ -909,7 +909,7 @@ public class KnowDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update know set know17 = know17 + 1 where date=?";
+			String sql = "update know set unknow17 = unknow17 + 1 where date=?";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 

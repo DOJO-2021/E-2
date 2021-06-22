@@ -11,7 +11,7 @@
 	<link rel="icon"  href="/UserLike/img/favicon.ico" ><!--ファビコン-->
 	<link rel="stylesheet" href="css/common.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--jquery読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -25,13 +25,23 @@
 	<script src="js/jquery.validationEngine-ja.js"></script><!-- jQuery読み込み / 入力チェック -->
 	<link rel="stylesheet" href="css/validationEngine.css"><!--CSS読み込み / 入力チェック用CSS-->
 	<script type="text/javascript"><!-- jquery / 入力チェック -->
-    	jQuery(function(){
-       	 //<form>タグのidを指定
-       	 jQuery("#formCheck").validationEngine(
-           	 'attach', {
-              	  promptPosition: "topRight"//エラーメッセージ位置の指定
-           	 });
-   	 });
+   	jQuery(function(){
+     	 //<form>タグのidを指定
+     	 jQuery("#formCheck").validationEngine(
+         	 'attach', {
+            	  promptPosition: "topRight"//エラーメッセージ位置の指定
+         });
+ 	});
+	</script>
+
+	<link rel="stylesheet" href="css/jquery.bxslider.css"><!--スライダー用CSS読み込み-->
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script><!--スライダーjavascript読み込み-->
+	<script type="text/javascript"><!--お気に入り表示用スライダー-->
+	$(document).ready(function(){
+		 $('.bxslider').bxSlider({
+
+		});
+	});
 	</script>
 </head>
 
@@ -40,22 +50,22 @@
 <div class="wrapper animsition">
 <div class="container">
 	<!--ヘッダー-->
-	<header class="header">
+	<header class="heditem">
 	<div class="mainitem">
 		<h1 class="logo"><a href="/USerLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 		<!-- ヘッダー部分ナビゲーション -->
 	    <nav class="navitem">
 	    <ul>
-	        <li><a href="#"></a>Home</li>
-	        <li><a href="#"></a>service</li>
-	        <li><a href="#"></a>about</li>
-	        <li><a href="#"></a>contact</li>
+	        <li><a href="#tmin">Home</a></li>
+	        <li><a href="#abtyzw">about</a></li>
+	        <li><a href="#conceptyzw">concept</a></li>
+	        <li><a href="#contactyzw">contact</a></li>
 	    </ul>
 	    </nav>
     </div>
 	</header>
 
-		<main>
+		<main class="main">
         <!--メイン部分ナビゲーション 各ログイン画面へ遷移 -->
            <nav class="navnew">
              <ul>
@@ -73,12 +83,10 @@
            </div>
 
 
-		<!--コンテンツ01-->
-		<div class="mainarea1">
            <p class="abt-yzw" id="abtyzw">ABOUT</p>
            <p class="abt-yzw2">ヤザワスイッチってなに？？</p>
-           <p class="abt-yzw3">ヤザワスイッチの特徴</p>
-           <p class="abt-yzw4">その１！</p>
+           <!--  <p class="abt-yzw3">ヤザワスイッチの特徴</p>--->
+           <p class="abt-yzw4">特徴その１！</p>
            <p class="abt-yzw5">オンラインでもリアルタイムで<br>
            理解できたかどうか等の反応ができる！<br></p>
 
@@ -115,25 +123,38 @@
          <p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
          コミュニケーションをとるきっかけづくりになる！</p>
 
-         <div class="yzw-prea-matome">
+
+           <div class="yzw-prea-matome">
            <img src="img/main3.png" class="main3-image">
            <p class="abt-prea">
            対面のように直接話す機会をなかなかとることができないオンライン研修。<br>
            受講者のプロフィールを確認することができ、受講者の特徴をつかみやすい他、<br>
            話すきっかけになり、よりコミュニケーションがとりやすくなります。</p>
          </div>
+
+		<!--コンテンツ03-->
+		<div class="mainarea2">
+           <p class="cct-yzw" id="conceptyzw">CONCEPT</p>
+           <p class="cct-yzw2">コンセプト</p>
+
+			<div class="bxslider">
+
+				<div>OnlineFun！オンラインでも受講者も講師も楽しく研修をしていただけるシステムを作る！</div>
+				<div>受講者→講師に自分の思っていることが簡単に楽しく伝えられる！</div>
+				<div>講師→受講者のリアクションがたくさんあると楽しく、いろんな情報を提供したくなる！</div>
+				<div>研修でプログラミングの楽しさを伝えてくださる矢澤講師とより楽しく研修ができるようにこのシステムは作られました。</div>
+				<div>楽しくポップな雰囲気にしたいということでテーマカラーはオレンジと水色にしました。</div>
+				<div>矢澤講師の明るさや優しさをイメージしてオレンジのカラーを取り入れました。</div>
+				<div>研修の雰囲気に合うタイトル画像を考えたところ、あのピタゴラスイッチのようになったことから「ヤザワスイッチ」という名前になりました。</div>
+
+			</div>
 		</div>
 
-
-
-		<!--コンテンツ02-->
-		<div class="mainarea2">
            <p class="cct-yzw" id="contactyzw">CONTACT</p>
            <p class="cct-yzw2">お問い合わせ</p>
 
 
-
-          <div class="cct-form">
+          	<div class="cct-form">
             <form id="formCheck"  method="post" action="#">
 
             <div class="cct-matome">
@@ -153,12 +174,11 @@
 
              <div class="yzw-taa">
                <label class="yzw-cts">ご要望・ご質問</label><br>
-               <textarea rows="15" cols="30">ご要望やご質問などがあればこちらにご記入ください。</textarea><br>
+               <textarea rows="20" cols="30" class="textarea1">ご要望やご質問などがあればこちらにご記入ください。</textarea><br>
              </div>
               <button class="yzw-confi">確認画面へ</button>
             </form>
            </div>
-		</div>
 
 
 		</main>

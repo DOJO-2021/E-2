@@ -80,6 +80,11 @@
 					<img src="img/button/Greetings.png" alt="おつかれさまです" class="reaction">
 					<span class="s_topremark8">お疲れ様です。</span>
 					</button>
+
+					<button type="submit" class="react" name="react" value="17" onclick="sound17()">
+					<img src="img/button/Eiken.png" alt="英検3級" class="reaction">
+					<span class="s_topremark19">英検3級！</span>
+					</button>
 			      </div>
 
 
@@ -109,9 +114,14 @@
 					<span class="s_topremark16">最高です！</span>
 					</button>
 
-					<button type="submit" class="react" name="react" value="17" onclick="sound17()">
-					<img src="img/button/Eiken.png" alt="英検3級" class="reaction">
-					<span class="s_topremark19">英検3級！</span>
+					<button type="submit" class="react" name="react" value="16" onclick="sound16()">
+					<img src="img/button/Suggestion2.png" alt="提案があります" class="reaction">
+					<span class="s_topremark18">提案があります。</span>
+					</button>
+
+					<button type="submit" class="react" name="react" value="18" onclick="sound18()">
+					<img src="img/button/Finished.png" alt="作業終わりました" class="reaction">
+					<span class="s_topremark20">作業が終わりました。</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="20" onclick="sound20()">
@@ -122,14 +132,24 @@
 				</div>
 
 				<div class="minus-rea">
+					<button type="submit" class="react" name="react" value="11" onclick="sound11()">
+					<img src="img/button/TooQuick.png" alt="ちょっと早い" class="reaction">
+					<span class="s_topremark13">ちょっと早いです...</span>
+					</button>
+
+					<button type="submit" class="react" name="react" value="13" onclick="sound13()">
+					<img src="img/button/Onemore.png" alt="もう一度お願いします" class="reaction">
+					<span class="s_topremark15">もう一度お願いします。</span>
+					</button>
+
 				    <button type="submit" class="react" name="react" value="3" onclick="sound3()">
 					<img src="img/button/Help2.png" alt="ヘルプ" class="reaction">
 					<span class="s_topremark5">Helpです。</span>
 					</button>
 
-					<button type="submit" class="react" name="react" value="8" onclick="sound8()">
-					<img src="img/button/Group.png" alt="ク゛ルーフ゜活動求む" class="reaction">
-					<span class="s_topremark10">グループ活動求む！</span>
+					<button type="submit" class="react" name="react" value="19" onclick="sound19()">
+					<img src="img/button/Question2.png" alt="質問があります" class="reaction">
+					<span class="s_topremark21">質問があります。</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="9" onclick="sound9()">
@@ -142,40 +162,14 @@
 					<span class="s_topremark12">待ってください！</span>
 					</button>
 
-					<button type="submit" class="react" name="react" value="11" onclick="sound11()">
-					<img src="img/button/TooQuick2.png" alt="ちょっと早い" class="reaction">
-					<span class="s_topremark13">ちょっと早いです...</span>
+					<button type="submit" class="react" name="react" value="8" onclick="sound8()">
+					<img src="img/button/Group.png" alt="ク゛ルーフ゜活動求む" class="reaction">
+					<span class="s_topremark10">グループ活動求む！</span>
 					</button>
-
-
-
-					<button type="submit" class="react" name="react" value="13" onclick="sound13()">
-					<img src="img/button/Onemore2.png" alt="もう一度お願いします" class="reaction">
-					<span class="s_topremark15">もう一度お願いします。</span>
-					</button>
-
-
 
 					<button type="submit" class="react" name="react" value="15" onclick="sound15()">
 					<img src="img/button/Share.png" alt="共有してください" class="reaction">
 					<span class="s_topremark17">共有してください！</span>
-					</button>
-
-					<button type="submit" class="react" name="react" value="16" onclick="sound16()">
-					<img src="img/button/Suggestion2.png" alt="提案があります" class="reaction">
-					<span class="s_topremark18">提案があります。</span>
-					</button>
-
-
-
-					<button type="submit" class="react" name="react" value="18" onclick="sound18()">
-					<img src="img/button/Finished.png" alt="作業終わりました" class="reaction">
-					<span class="s_topremark20">作業が終わりました。</span>
-					</button>
-
-					<button type="submit" class="react" name="react" value="19" onclick="sound19()">
-					<img src="img/button/Question2.png" alt="質問があります" class="reaction">
-					<span class="s_topremark21">質問があります。</span>
 					</button>
 
 				</div>

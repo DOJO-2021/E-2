@@ -43,18 +43,17 @@
  		<c:forEach var="e" items="${prfList}">
 
         <!-- 削除ボタン -->
-		<form class="delete" method="POST" action="/UserLike/TeacherPrfServlet">
+		<form class="delete" method="POST" action="/UserLike/TeacherPrfServlet" onSubmit="return check()">
 		<div class="delete-button">
-		<input type="hidden"  name="S_ID" value="${e.s_id}">
-		<button type="submit" class="filelabel" title="個人データを削除">削除</button>
+			<input type="hidden"  name="S_ID" value="${e.s_id}">
+			<input type="submit" name="btn" class="filelabel" title="個人データを削除" value="削除">
 		</div>
-
 		</form>
 
     	<div class="prf-matome">
 		<!-- 写真 -->
 		<div class="prf-imag">
-			<a><img style="height:100px" src="img/icon/${e.icon}" ></a>
+			<a><img style="height:100px" src="img/icon/noimage.png" ></a>
 		</div>
 
 		<div class="prf-matome-right">
@@ -172,6 +171,18 @@
 	    // ここに設定オプションを書きます
 	    options: {}
 	});
+	</script>
+
+	<script type="text/javascript">
+	function check(){
+		if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+			return true; // 「OK」時は送信を実行
+		}
+		else{ // 「キャンセル」時の処理
+			window.alert('キャンセルされました'); // 警告ダイアログを表示
+			return false; // 送信を中止
+		}
+	}
 	</script>
 </div>
 </div>
