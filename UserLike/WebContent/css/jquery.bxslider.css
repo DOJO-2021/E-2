@@ -226,9 +226,4 @@ ul.bxslider {
 
 }
 
-@media (min-width: 1250px){
-  .bx-wrapper {
-    margin-top: -500px;
-    margin-bottom: 300px;
-  }
-}
+

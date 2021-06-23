@@ -58,7 +58,6 @@ footer {
 	margin-right:22px;
 	margin-bottom:4px;
 }
-
 /*--------- logoとnavを横に並べる  ------*/
 .t-heditem {
     display: flex;
@@ -606,6 +605,10 @@ table {
     background: #fff;
     width: 100%;
 }
+.mainlink{
+	padding-top: 60px;
+    margin-top:-60px;
+}
 .navitem{
 	margin-top: 16px;
 }
@@ -1035,5 +1038,9 @@ sup {
 	.main3-image{
 		height:200px;
 		width:auto;
+	}
+	.cct-yzw{
+		margin-top:100px;
+		margin-bottom:100px;
 	}
 }
