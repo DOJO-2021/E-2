@@ -74,16 +74,14 @@ public class TeacherPrfServlet extends HttpServlet {
 			//プロフィールの削除成功時だけIDPWの削除を行う
 			StudentIdpwDAO StuDAO = new StudentIdpwDAO();
 			if(StuDAO.deleteId(s_id)) {
-				request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike/TeacherListServlet"));
+				request.setAttribute("result",new Result("削除が成功しました","レコードを削除しました","/UserLike/TeacherListServlet", "暗記じゃないよ、テクノロジーは。by.Yazawa"));
 			}else {
-				request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
+				request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 			}
 
 		}else {
-			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet"));
+			request.setAttribute("result",new Result("削除が失敗しました","レコードを削除できませんでした","/UserLike/MainServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 		}
-
-
 
 
 		//結果ページにフォワードする

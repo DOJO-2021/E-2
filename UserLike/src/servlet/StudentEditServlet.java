@@ -104,9 +104,9 @@ public class StudentEditServlet extends HttpServlet {
 		if (request.getParameter("SUBMIT").equals("保存")) {
 			if(PrfDAO.update(new Prf(s_id, s_name, icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job,activity, pr, 0, 0))) {
 				//更新成功
-				request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UserLike/StudentPrfServlet"));
+				request.setAttribute("result", new Result("更新が完了しました","レコードを更新しました","/UserLike/StudentPrfServlet", "暗記じゃないよ、テクノロジーは。by.Yazawa"));
 			}else {
-				request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/StudentEditServlet"));
+				request.setAttribute("result", new Result("更新が失敗しました","レコードを更新できませんでした","/UserLike/StudentEditServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 			}
 
 			//ページにフォワードする

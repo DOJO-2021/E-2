@@ -69,7 +69,7 @@ public class ReactionDAO {
 		return ReactionList;
 	}
 
-	public static boolean count(String button) {
+	public boolean count(String button) {
 		Connection conn = null;
 		boolean result = false;
 

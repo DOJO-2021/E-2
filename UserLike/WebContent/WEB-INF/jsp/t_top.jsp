@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script><!--グラフ機能読み込み-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.1/chart.js"></script><!--グラフ機能読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -28,7 +28,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
-<body>
+<body class="fadeout">
 <div class="wrapper animsition">
 <div class="container" style="overflow:auto">
 	<!--ヘッダー-->
@@ -117,7 +117,9 @@
 	        }]
 	    },
 	    // ここに設定オプションを書きます
-	    options: {}
+	    options: {
+	    	//animation: false
+	    }
 	});
 	</script>
 </div>

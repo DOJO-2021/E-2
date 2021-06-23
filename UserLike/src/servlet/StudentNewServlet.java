@@ -80,16 +80,16 @@ public class StudentNewServlet extends HttpServlet {
 			PrfDAO pDao = new PrfDAO();
 			if (pDao.insert(new Prf(s_id, s_name, icon, s_mail, gender, c_name, exp, college, b_place, hobby, skill, music, job, activity, pr, 0, 0))) {	// プロフ登録成功
 				request.setAttribute("result",
-				new Result("登録成功！", "レコードを登録できました。", "/UserLike/StudentLoginServlet"));
+				new Result("登録成功！", "レコードを登録できました。", "/UserLike/StudentLoginServlet", "暗記じゃないよ、テクノロジーは。by.Yazawa"));
 			}
 			else {												// プロフ登録失敗
 				request.setAttribute("result",
-				new Result("登録失敗！", "プロフィールを登録できませんでした。", "/UserLike/StudentLoginServlet"));
+				new Result("登録失敗！", "プロフィールを登録できませんでした。", "/UserLike/StudentLoginServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 			}
 		}
 		else {												// アカウント登録失敗
 			request.setAttribute("result",
-			new Result("登録失敗！", "アカウントを登録できませんでした。", "/UserLike/StudentNewServlet"));
+			new Result("登録失敗！", "アカウントを登録できませんでした。", "/UserLike/StudentNewServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 		}
 
 		// ページにフォワードする

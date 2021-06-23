@@ -46,11 +46,11 @@ public class TeacherNewServlet extends HttpServlet {
 		TeacherIdpwDAO tDao = new TeacherIdpwDAO();
 		if (tDao.insert(new TeachIdpw(t_id, t_pw, c_name))) {	// 登録成功
 			request.setAttribute("result",
-			new Result("登録成功！", "レコードを登録できました。", "/UserLike/TeacherLoginServlet"));
+			new Result("登録成功！", "レコードを登録できました。", "/UserLike/TeacherLoginServlet", "暗記じゃないよ、テクノロジーは。by.Yazawa"));
 		}
 		else {												// 登録失敗
 			request.setAttribute("result",
-			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/TeacherNewServlet"));
+			new Result("登録失敗！", "レコードを登録できませんでした。", "/UserLike/TeacherNewServlet", "いったんお茶を飲んでみよう！by.Yazawa"));
 		}
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");

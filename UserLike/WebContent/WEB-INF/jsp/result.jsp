@@ -41,7 +41,7 @@
 				<p><c:out value="${result.message}" /></p>
 			</div>
 			<div class="yazawa_tea">
-				<p><!--<img style="vertical-align:middle;height:40px;padding-bottom:8px"  src="img/tea1.png" > -->いったんお茶を飲んでみよう！by.yazawa</p>
+				<p><!--<img style="vertical-align:middle;height:40px;padding-bottom:8px"  src="img/tea1.png" > -->${result.maxim}</p>
 			</div>
 			<div class="r-log-back">
 				<a href="${result.backTo}"><img style="vertical-align:middle;height:18px;padding-bottom:2px" src="img/back.png" >戻る</a><br>
