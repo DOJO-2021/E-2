@@ -443,6 +443,26 @@ input[type="radio"],input[type="checkbox"]{
   position: relative;
   top: 2px;
 }
+/*------t_top.jsp-----*/
+.aikon {
+	position: absolute;
+	/*padding:5px;*/
+  top: -55px;
+  left: 65%;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #FFD700;
+  border: 4px solid #FFD700;
+  color: #000000;
+  text-align: center;
+}
+.react-result {
+	position: relative;
+}
+
 /*-------------------------   t_prf.jsp    --------------------------------------*/
 /* 削除ボタン */
 .delete-button {
