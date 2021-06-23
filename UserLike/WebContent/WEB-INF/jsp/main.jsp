@@ -157,7 +157,7 @@
 				<div class="slider-content"><img src="img/button/Session2.png" class="slider-image"><br><h2>カラーテーマ</h2>
 				楽しくポップな雰囲気にしたいということでカラーテーマはオレンジと水色にしました。</div>
 				<div class="slider-content"><img src="img/logo2.png" class="slider-image"><br><h2>タイトル</h2>
-				音のなる様々なボタンから着想を得て、「ヤザワスイッチ」という名前になりました。</div>
+				矢沢講師とリアクションボタンから着想を得て、「ヤザワスイッチ」という名前になりました。</div>
 
 			</div>
 		</div>
