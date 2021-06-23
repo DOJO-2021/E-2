@@ -69,7 +69,7 @@ public class ReactionDAO {
 		return ReactionList;
 	}
 
-	public boolean count(String button) {
+	public static boolean count(String button) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -113,6 +113,48 @@ public class ReactionDAO {
 	// 結果を返す
 	return result;
 	}
+
+	//【更新】全ての値を0にアップデートすることでリセット
+	public static boolean reset() throws ClassNotFoundException {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/E-2/data/UserLike", "sa", "");
+
+
+			// SQL文を準備する
+			String sql = "update reaction set count=0";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を実行し、結果表を取得する
+			pStmt.executeUpdate();
+
+
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+			// 結果を返す
+			//result=true;
+			return result;
+		}
 }
-
-

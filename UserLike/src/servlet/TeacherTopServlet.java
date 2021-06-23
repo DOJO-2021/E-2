@@ -58,4 +58,47 @@ public class TeacherTopServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_top.jsp");
 		dispatcher.forward(request, response);
 	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+			HttpSession session = request.getSession();
+			if (session.getAttribute("t_id") == null) {
+				response.sendRedirect("/UserLike/TeacherLoginServlet");
+				return;
+			}
+
+			//カレンダークラスのオブジェクトを生成する
+	        Calendar cl = Calendar.getInstance();
+
+	        //フォーマットを指定する
+	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	        String date = sdf.format(cl.getTime());
+
+			//理解度情報取得
+			KnowDAO Know = new KnowDAO();
+			List<Know> knowList = Know.show(new Know(date, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
+
+			//リアクション情報（回数）リセット
+			try {
+				ReactionDAO.reset();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+
+			//リアクション情報（回数）取得
+			ReactionDAO Reaction = new ReactionDAO();
+			List<Reaction> reactionList = Reaction.show();
+
+			//検索結果をリクエストスコープに格納する
+			request.setAttribute("knowList", knowList);
+			request.setAttribute("reactionList", reactionList);
+
+			// ページにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/t_top.jsp");
+			dispatcher.forward(request, response);
+		}
+
+
 }

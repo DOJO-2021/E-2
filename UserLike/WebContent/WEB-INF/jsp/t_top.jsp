@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/teacher.css"><!--CSS読み込み-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"><!--アイコン用フォント読み込み-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jquery読み込み-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.1/chart.js"></script><!--グラフ機能読み込み-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script><!--グラフ機能読み込み-->
 
 	<link rel="stylesheet" href="css/animsition.min.css"><!--CSS読み込み / ページフェード切り替えCSS-->
 	<script src="js/animsition.min.js"></script><!-- jQuery読み込み / ページフェード切り替え -->
@@ -28,7 +28,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
-<body class="fadeout">
+<body>
 <div class="wrapper animsition">
 <div class="container" style="overflow:auto">
 	<!--ヘッダー-->
@@ -39,6 +39,7 @@
 		<main>
 			<!--メイン-->
 			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
+
 			<canvas id="myChart"></canvas>
 			    <a class="react-result" id="Funny"><span v-if="0 != ${reactionList[0].count}"><img src="img/button/Funny.png" class="logo_image">${reactionList[0].count}</span>
 			    <span v-else></span></a>
@@ -80,6 +81,13 @@
 				<span v-else></span></a>
 				<a class="react-result" id="Write"><span v-if="0 != ${reactionList[19].count}"><img src="img/button/Write.png" class="logo_image">${reactionList[19].count}</span>
 				<span v-else></span></a>
+
+			<form action="/UserLike/TeacherTopServlet" method="post">
+				<div style="text-align:right">
+				<input type="submit" class="filelabel" value="リセット">
+				</div>
+			</form>
+
 			</div>
 		</main>
 
@@ -117,9 +125,7 @@
 	        }]
 	    },
 	    // ここに設定オプションを書きます
-	    options: {
-	    	//animation: false
-	    }
+	    options: {}
 	});
 	</script>
 </div>
