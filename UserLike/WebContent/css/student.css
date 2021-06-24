@@ -406,6 +406,7 @@ input[type="radio"],input[type="checkbox"]{
 	display: inline;
 	margin-right: 6%;
 	margin-left: 2%;
+
 }
 .prf-matome-right {
     display: inline;
@@ -475,7 +476,7 @@ input:checked + .tab_class + .content_class {
     border-radius: 6px;
     padding: 5px;
     display: inline-block;
-    width: 190ppx;
+    width: 170px;
 }
 .filelabels:hover {
   opacity: 0.5;
@@ -496,7 +497,7 @@ input:checked + .tab_class + .content_class {
 	border: solid 1px #bec2c7;
 	position: relative;
 	text-align: right;
-	width: 100%;
+	width: 500px;
 
 }
 .basics th,.basics td {
@@ -522,7 +523,7 @@ input:checked + .tab_class + .content_class {
     background: #F5F5F5;
     border-left: solid 5px #b3d4fc;
     border-radius: 6px;
-    width: 600px;
+    width: 100%;
     margin-bottom: 2%;
 }
 .s-pform-text {
@@ -536,6 +537,9 @@ input:checked + .tab_class + .content_class {
     margin-top: 10px;
 }
 /*-------------------------   s_prf_edit.jsp    --------------------------------------*/
+#formCheck td{
+	position: relative;
+}
 .prf_edit_class {
 	width: 100%;
     height: 100%;

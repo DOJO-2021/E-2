@@ -135,7 +135,7 @@
 
 	    <div class="content_class">
 	    <c:forEach var="e" items="${prfList}">
-			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 700px; margin-right:auto; margin-left:auto">
+			<div class="chart-container" style="position: relative; height:40vh; width:80vw; max-width: 500px; margin-right:auto; margin-left:auto">
 			<canvas id="myChart"></canvas>
 			</div>
 	    </c:forEach>

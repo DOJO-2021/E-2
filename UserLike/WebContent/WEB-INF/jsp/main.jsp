@@ -50,7 +50,7 @@
 	<!--ヘッダー-->
 	<header class="heditem">
 	<div class="mainitem">
-		<h1 class="logo"><a href="/USerLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
+		<h1 class="logo"><a href="/UserLike/MainServlet"><img src="img/logo.png" class="logo_image"></a></h1>
 		<!-- ヘッダー部分ナビゲーション -->
 	    <nav class="navitem">
 	    <ul>

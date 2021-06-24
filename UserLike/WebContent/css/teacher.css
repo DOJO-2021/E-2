@@ -571,7 +571,7 @@ input:checked + .tab_class-t + .content_class {
 	border: solid 1px #bec2c7;
 	position: relative;
 	text-align: right;
-	width: 100%;
+	width: 500px;
 
 }
 .basics th,.basics td {
@@ -598,7 +598,7 @@ input:checked + .tab_class-t + .content_class {
     background: #F5F5F5;
     border-left: solid 5px #ffa500;
     border-radius: 6px;
-    width: 600px;
+    width: 100%;
     margin-bottom: 3%;
 }
 
