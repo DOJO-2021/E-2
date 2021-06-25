@@ -88,15 +88,15 @@
 		<p class="abt-yzw2">ヤザワスイッチってなに？？</p>
 
 			<div class="maincircle-3"></div>
-			<p class="abt-yzw4">特徴その１！</p>
-			<p class="abt-yzw5">オンラインでもリアルタイムで<br>
+			<p class="abt-yzw4 main_topics">特徴その１！</p>
+			<p class="abt-yzw5 main_topics">オンラインでもリアルタイムで<br>
 			理解できたかどうか等の反応ができる！<br></p>
 
-			<div class="yzw-rea-matome">
+			<div class="yzw-rea-matome main_divide">
 				<div class="maincircle-1"></div>
 				<img src="img/main1.png" class="main1-image"><br>
 
-				<p class="abt-rea">オンライン研修を受ける中で、対面研修のように講師に何かしらの反応を送りたい！<br>
+				<p class="abt-rea main_text">オンライン研修を受ける中で、対面研修のように講師に何かしらの反応を送りたい！<br>
 				そう思ったことがある方は多いのではないでしょうか？
 				<br>
 				ヤザワスイッチならスイッチ１つで「質問があります。」<br>
@@ -106,14 +106,14 @@
 			</div>
 
 
-			<p class="abt-yzw6">その2！</p>
+			<p class="abt-yzw6 main_topics">その2！</p>
 			<div class="maincircle-4"></div>
-			<p class="abt-yzw7">講師は反応を見て<br>
+			<p class="abt-yzw7 main_topics">講師は反応を見て<br>
 			研修内容を考えることができる！</p>
 
 
-			<div class="yzw-trea-matome">
-				<p class="abt-trea">対面研修では受講者の反応がわかりづらく、本当に理解できているのか心配になる…<br>
+			<div class="yzw-trea-matome main_divide">
+				<p class="abt-trea main_text">対面研修では受講者の反応がわかりづらく、本当に理解できているのか心配になる…<br>
 				ヤザワスイッチはそんなお悩みも軽減できます。<br>
 				<br>
 				受講者からリアルタイムで送られた反応をスイッチ別にグラフ化！<br>
@@ -125,15 +125,15 @@
 
 
 			<div class="maincircle-3"></div>
-			<p class="abt-yzw4">その３！</p>
-			<p class="abt-yzw5">受講者のプロフィールが閲覧できるから、<br>
+			<p class="abt-yzw4 main_topics">その３！</p>
+			<p class="abt-yzw5 main_topics">受講者のプロフィールが閲覧できるから、<br>
 			コミュニケーションをとるきっかけづくりになる！</p>
 
 
 			<div class="maincircle-1"></div>
-			<div class="yzw-prea-matome">
+			<div class="yzw-prea-matome main_divide">
 				<img src="img/main3.png" class="main3-image">
-				<p class="abt-prea">
+				<p class="abt-prea main_text">
 				対面のように直接話す機会をなかなかとることができないオンライン研修。<br>
 				受講者のプロフィールを確認することができ、受講者の特徴をつかみやすい他、<br>
 				話すきっかけになり、よりコミュニケーションがとりやすくなります。</p>
@@ -171,7 +171,7 @@
 			<div class="cct-form">
 	            <form id="formCheck"  method="post" action="#">
 
-	            <div class="cct-matome">
+	            <div class="cct-matome main_form">
 					<label class="yzw-name cp_iptxt">お名前</label><sup>※必須</sup><br>
 					<input class="cct validate[required]" type="text" name="cct-name"><br>
 
@@ -185,11 +185,11 @@
 					<input class="cct " type="text" name="cct-tel"><br>
 				</div>
 
-	             <div class="yzw-taa">
+	             <div class="yzw-taa main_form">
 		             <label class="yzw-cts">ご要望・ご質問</label><br>
 		             <textarea rows="20" cols="30" class="textarea1">ご要望やご質問などがあればこちらにご記入ください。</textarea><br>
 	             </div>
-	             <button class="yzw-confi">確認画面へ</button>
+	             <button class="yzw-confi  main_form">確認画面へ</button>
 	            </form>
 	    	</div>
     	</div>

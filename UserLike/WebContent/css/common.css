@@ -1070,6 +1070,12 @@ sup {
 		display:inline-block;
 		margin: 0;
 	}
+	mainlogo_image{
+		width:90%;
+	}
+	.mainlogo{
+		margin:0;
+	}
 	.main1-image,
 	.main2-image,
 	.main3-image{
@@ -1079,5 +1085,21 @@ sup {
 	.cct-yzw{
 		margin-top:100px;
 		margin-bottom:100px;
+	}
+	.main_topics{
+		margin:10px;
+		font-size:22px;
+	}
+	.main_divide{
+		display:block;
+	}
+	.main_text{
+		margin:30px;
+	}
+	.main_form{
+		float:none;
+	}
+	.main-ys{
+		display:none
 	}
 }

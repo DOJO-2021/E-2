@@ -218,7 +218,7 @@
 		audio.play();
 		}
 		function sound9(){
-		var audio = new Audio('sound/Teachme.mp3');
+		var audio = new Audio('sound/What.mp3');
 		audio.play();
 		}
 		function sound10(){
@@ -258,7 +258,7 @@
 		audio.play();
 		}
 		function sound19(){
-		var audio = new Audio('sound/What.mp3');
+		var audio = new Audio('sound/Teachme.mp3');
 		audio.play();
 		}
 		function sound20(){
