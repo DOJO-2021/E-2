@@ -90,12 +90,12 @@
 
 				<div class="plus-rea">
 				    <button type="submit" class="react" name="react" value="1" onclick="sound1()">
-					<img src="img/button/Funny.png" alt="笑い" class="reaction">
+					<img src="img/button/Funny2.png" alt="笑い" class="reaction">
 					<span class="s_topremark3">アハハ！</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="2" onclick="sound2()">
-					<img src="img/button/Clap.png" alt="拍手" class="reaction">
+					<img src="img/button/Clap2.png" alt="拍手" class="reaction">
 					<span class="s_topremark4">拍手！！</span>
 					</button>
 
@@ -120,12 +120,12 @@
 					</button>
 
 					<button type="submit" class="react" name="react" value="18" onclick="sound18()">
-					<img src="img/button/Finished.png" alt="作業終わりました" class="reaction">
+					<img src="img/button/Finished2.png" alt="作業終わりました" class="reaction">
 					<span class="s_topremark20">作業が終わりました。</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="20" onclick="sound20()">
-					<img src="img/button/Write.png" alt="写経だ！" class="reaction">
+					<img src="img/button/Write2.png" alt="写経だ！" class="reaction">
 					<span class="s_topremark22">写経だ！</span>
 					</button>
 
@@ -133,12 +133,12 @@
 
 				<div class="minus-rea">
 					<button type="submit" class="react" name="react" value="11" onclick="sound11()">
-					<img src="img/button/TooQuick.png" alt="ちょっと早い" class="reaction">
+					<img src="img/button/TooQuick2.png" alt="ちょっと早い" class="reaction">
 					<span class="s_topremark13">ちょっと早いです...</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="13" onclick="sound13()">
-					<img src="img/button/Onemore.png" alt="もう一度お願いします" class="reaction">
+					<img src="img/button/Onemore2.png" alt="もう一度お願いします" class="reaction">
 					<span class="s_topremark15">もう一度お願いします。</span>
 					</button>
 
@@ -163,12 +163,12 @@
 					</button>
 
 					<button type="submit" class="react" name="react" value="8" onclick="sound8()">
-					<img src="img/button/Group.png" alt="ク゛ルーフ゜活動求む" class="reaction">
+					<img src="img/button/Group2.png" alt="ク゛ルーフ゜活動求む" class="reaction">
 					<span class="s_topremark10">グループ活動求む！</span>
 					</button>
 
 					<button type="submit" class="react" name="react" value="15" onclick="sound15()">
-					<img src="img/button/Share.png" alt="共有してください" class="reaction">
+					<img src="img/button/Share2.png" alt="共有してください" class="reaction">
 					<span class="s_topremark17">共有してください！</span>
 					</button>
 

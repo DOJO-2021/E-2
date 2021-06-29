@@ -42,17 +42,17 @@
 			<canvas id="myChart"></canvas>
 
 			    <a class="react-result" id="Funny"><span v-if="0 != ${reactionList[0].count}">
-			    <img src="img/button/Funny.png" class="logo_image">
+			    <img src="img/button/Funny2.png" class="logo_image">
 			    <span class="aikon">${reactionList[0].count}</span></span>
 			    <span v-else></span></a>
 
 				<a class="react-result" id="Clap"><span v-if="0 != ${reactionList[1].count}">
-				<img src="img/button/Clap.png" class="logo_image">
+				<img src="img/button/Clap2.png" class="logo_image">
 				<span class="aikon">${reactionList[1].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Help"><span v-if="0 != ${reactionList[2].count}">
-				<img src="img/button/Help.png" class="logo_image">
+				<img src="img/button/Help2.png" class="logo_image">
 				<span class="aikon">${reactionList[2].count}</span></span>
 				<span v-else></span></a>
 
@@ -72,52 +72,52 @@
 				<span v-else></span></a>
 
 				<a class="react-result" id="Finally"><span v-if="0 != ${reactionList[6].count}">
-				<img src="img/button/Finally.png" class="logo_image">
+				<img src="img/button/Finally2.png" class="logo_image">
 				<span class="aikon">${reactionList[6].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Group"><span v-if="0 != ${reactionList[7].count}">
-				<img src="img/button/Group.png" class="logo_image">
+				<img src="img/button/Group2.png" class="logo_image">
 				<span class="aikon">${reactionList[7].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Session"><span v-if="0 != ${reactionList[8].count}">
-				<img src="img/button/Session.png" class="logo_image">
+				<img src="img/button/Session2.png" class="logo_image">
 				<span class="aikon">${reactionList[8].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Wait"><span v-if="0 != ${reactionList[9].count}">
-				<img src="img/button/Stop.png" class="logo_image">
+				<img src="img/button/Stop2.png" class="logo_image">
 				<span class="aikon">${reactionList[9].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="TooQuick"><span v-if="0 != ${reactionList[10].count}">
-				<img src="img/button/TooQuick.png" class="logo_image">
+				<img src="img/button/TooQuick2.png" class="logo_image">
 				<span class="aikon">${reactionList[10].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="AhHa"><span v-if="0 != ${reactionList[11].count}">
-				<img src="img/button/AhHa.png" class="logo_image">
+				<img src="img/button/AhHa2.png" class="logo_image">
 				<span class="aikon">${reactionList[11].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Onemore"><span v-if="0 != ${reactionList[12].count}">
-				<img src="img/button/Onemore.png" class="logo_image">
+				<img src="img/button/Onemore2.png" class="logo_image">
 				<span class="aikon">${reactionList[12].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Great"><span v-if="0 != ${reactionList[13].count}">
-				<img src="img/button/Great.png" class="logo_image">
+				<img src="img/button/Great2.png" class="logo_image">
 				<span class="aikon">${reactionList[13].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Share"><span v-if="0 != ${reactionList[14].count}">
-				<img src="img/button/Share.png" class="logo_image">
+				<img src="img/button/Share2.png" class="logo_image">
 				<span class="aikon">${reactionList[14].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Suggestion"><span v-if="0 != ${reactionList[15].count}">
-				<img src="img/button/Suggestion.png" class="logo_image">
+				<img src="img/button/Suggestion2.png" class="logo_image">
 				<span class="aikon">${reactionList[15].count}</span></span>
 				<span v-else></span></a>
 
@@ -127,17 +127,17 @@
 				<span v-else></span></a>
 
 				<a class="react-result" id="Finished"><span v-if="0 != ${reactionList[17].count}">
-				<img src="img/button/Finished.png" class="logo_image">
+				<img src="img/button/Finished2.png" class="logo_image">
 				<span class="aikon">${reactionList[17].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Question"><span v-if="0 != ${reactionList[18].count}">
-				<img src="img/button/Question.png" class="logo_image">
+				<img src="img/button/Question2.png" class="logo_image">
 				<span class="aikon">${reactionList[18].count}</span></span>
 				<span v-else></span></a>
 
 				<a class="react-result" id="Write"><span v-if="0 != ${reactionList[19].count}">
-				<img src="img/button/Write.png" class="logo_image">
+				<img src="img/button/Write2.png" class="logo_image">
 				<span class="aikon">${reactionList[19].count}</span></span>
 				<span v-else></span></a>
 
